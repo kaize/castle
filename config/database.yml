@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: castle_development
+  pool: 5
+  username: castle
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: castle_test
+  pool: 5
+  username: castle
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: castle_production
+  pool: 5
+  username: castle
+  password:
