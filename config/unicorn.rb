@@ -1,6 +1,6 @@
 # coding: UTF-8
 
-APP_PATH = "/u/apps/deadline_camp"
+APP_PATH = "/u/apps/castle"
 
 # Sample verbose configuration file for Unicorn (not Rack)
 #

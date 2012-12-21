@@ -1,5 +1,5 @@
 set :rails_env, :staging
-set :branch, 'develop'
+set :branch, 'staging'
 set :user, 'castle_staging'
 set :keep_releases, 5
 
