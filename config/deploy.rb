@@ -4,8 +4,8 @@ set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 require 'capi/unicorn'
 
-set :application, "deadline_camp"
-set :rvm_type, :system
+set :application, "castle"
+set :rvm_type, :user
 
 set :scm, :git
 set :repository,  "git://github.com/kaize/castle.git"
