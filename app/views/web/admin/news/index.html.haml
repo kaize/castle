@@ -1,0 +1,28 @@
+.page-header
+  %h1=t '.title'
+
+= link_to t('.new'), new_admin_news_path, :class => 'btn btn-primary'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link @q, :id
+      %th= sort_link @q, :title
+      %th= sort_link @q, :published_at
+      %th= sort_link @q, :state
+      %th
+  %tbody
+    - @news.each do |item|
+      %tr
+        %td= item.id
+        %td= item.title
+        %td= l item.published_at, format: :short
+        %td= item.human_state_name
+        %td
+          .pull-right.btn-group
+            = link_to edit_admin_news_path(item), :class => 'btn btn-mini' do
+              %i.icon-pencil
+            = link_to admin_news_path(item), :method => :delete, :data => { :confirm => t('.confirm') }, :class => 'btn btn-mini btn-danger' do
+              %i.icon-trash
+
+= paginate @news

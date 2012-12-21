@@ -1,0 +1,105 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  base_name: Ульяновский областной Дворец творчества детей и молодёжи
+  logo_title: Дворец пионеров
+  web:
+    confirm: &confirm Вы уверены?
+    new: &new Добавить
+    cancel: &cancel Отменить
+    admin:
+      pages:
+        index:
+          title: &pages Страницы
+          confirm: *confirm
+          new: *new
+        new:
+          title: *pages
+        edit:
+          title: *pages
+        form:
+          cancel: *cancel
+      news:
+        index:
+          confirm: *confirm
+          title: &news Новости
+          new: *new
+        edit:
+          title: *news
+        new:
+          title: *news
+        form:
+          cancel: *cancel
+      categories:
+        index:
+          confirm: *confirm
+          title: &categories Комплексы
+          new: *new
+        edit:
+          title: *categories
+        new:
+          title: *categories
+        form:
+          cancel: *cancel
+      groups:
+        index:
+          confirm: *confirm
+          title: &groups Группы
+          new: *new
+        edit:
+          title: *groups
+        new:
+          title: *groups
+        form:
+          cancel: *cancel
+      unions:
+        index:
+          confirm: *confirm
+          title: &unions Объединение
+          new: *new
+        edit:
+          title: *unions
+        new:
+          title: *unions
+        form:
+          cancel: *cancel
+      instructors:
+        index:
+          confirm: *confirm
+          title: &instructors Педагоги
+          new: *new
+        edit:
+          title: *instructors
+        new:
+          title: *instructors
+        form:
+          cancel: *cancel
+    welcome:
+      index:
+        news: *news
+    news:
+      index:
+        news: *news
+    schedules:
+      index:
+        schedules: &schedules Расписание
+        groups: *groups
+      show:
+        schedule: Расписание группы
+        date: Дата
+        start_at: Начало
+        finish_at: Окончание
+    instructors:
+      index:
+        instructors: *instructors
+      show:
+        instructor: Педагог
+  layouts:
+    web:
+      shared:
+        navbar:
+          categories: *categories
+          news: *news
+          schedules: *schedules
+          instructors: *instructors

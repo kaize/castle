@@ -1,0 +1,262 @@
+GIT
+  remote: https://github.com/kaize/usefull_scopes.git
+  revision: ea8539108351cae5516b547f2e86d539133d3df3
+  specs:
+    usefull_scopes (0.0.1)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    actionmailer (3.2.9)
+      actionpack (= 3.2.9)
+      mail (~> 2.4.4)
+    actionpack (3.2.9)
+      activemodel (= 3.2.9)
+      activesupport (= 3.2.9)
+      builder (~> 3.0.0)
+      erubis (~> 2.7.0)
+      journey (~> 1.0.4)
+      rack (~> 1.4.0)
+      rack-cache (~> 1.2)
+      rack-test (~> 0.6.1)
+      sprockets (~> 2.2.1)
+    activemodel (3.2.9)
+      activesupport (= 3.2.9)
+      builder (~> 3.0.0)
+    activerecord (3.2.9)
+      activemodel (= 3.2.9)
+      activesupport (= 3.2.9)
+      arel (~> 3.0.2)
+      tzinfo (~> 0.3.29)
+    activeresource (3.2.9)
+      activemodel (= 3.2.9)
+      activesupport (= 3.2.9)
+    activesupport (3.2.9)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    ansi (1.4.3)
+    arel (3.0.2)
+    bcrypt-ruby (3.0.1)
+    better_errors (0.3.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
+    builder (3.0.4)
+    capi (0.1.1)
+      capistrano
+    capistrano (2.13.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
+    capistrano_colors (0.5.5)
+    carrierwave (0.7.1)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+    ci_reporter (1.8.3)
+      builder (>= 2.1.2)
+    ckeditor (3.7.3)
+      mime-types
+      orm_adapter
+    cocoon (1.1.1)
+    coderay (1.0.8)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.4.0)
+    commonjs (0.2.6)
+    configus (0.0.4)
+      rake
+    erubis (2.7.0)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
+    factory_girl (4.1.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.1.0)
+      factory_girl (~> 4.1.0)
+      railties (>= 3.0.0)
+    factory_girl_sequences (0.1.1)
+      factory_girl (~> 4.1.0)
+    haml (3.1.7)
+    haml-rails (0.3.5)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (~> 3.1)
+      railties (>= 3.1, < 4.1)
+    highline (1.6.15)
+    hike (1.2.1)
+    i18n (0.6.1)
+    journey (1.0.4)
+    jquery-rails (2.1.4)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+    jquery-ui-rails (2.0.2)
+      jquery-rails
+      railties (>= 3.1.0)
+    json (1.7.5)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    kgio (2.7.4)
+    less (2.2.2)
+      commonjs (~> 0.2.6)
+    less-rails (2.2.6)
+      actionpack (>= 3.1)
+      less (~> 2.2.0)
+    libv8 (3.11.8.4)
+    mail (2.4.4)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.19)
+    mini_magick (3.4)
+      subexec (~> 0.2.1)
+    minitest (4.3.3)
+    multi_json (1.5.0)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.6.2)
+    net-ssh-gateway (1.1.0)
+      net-ssh (>= 1.99.1)
+    orm_adapter (0.4.0)
+    pg (0.14.1)
+    polyamorous (0.5.0)
+      activerecord (~> 3.0)
+    polyglot (0.3.3)
+    rack (1.4.1)
+    rack-cache (1.2)
+      rack (>= 0.4)
+    rack-ssl (1.3.2)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    rails (3.2.9)
+      actionmailer (= 3.2.9)
+      actionpack (= 3.2.9)
+      activerecord (= 3.2.9)
+      activeresource (= 3.2.9)
+      activesupport (= 3.2.9)
+      bundler (~> 1.0)
+      railties (= 3.2.9)
+    railties (3.2.9)
+      actionpack (= 3.2.9)
+      activesupport (= 3.2.9)
+      rack-ssl (~> 1.3.2)
+      rake (>= 0.8.7)
+      rdoc (~> 3.4)
+      thor (>= 0.14.6, < 2.0)
+    raindrops (0.10.0)
+    rake (10.0.3)
+    ransack (0.7.2)
+      actionpack (~> 3.0)
+      activerecord (~> 3.0)
+      polyamorous (~> 0.5.0)
+    rdoc (3.12)
+      json (~> 1.4)
+    ref (1.0.2)
+    russian (0.6.0)
+      i18n (>= 0.5.0)
+    rvm-capistrano (1.2.7)
+      capistrano (>= 2.0.0)
+    sass (3.2.3)
+    sass-rails (3.2.5)
+      railties (~> 3.2.0)
+      sass (>= 3.1.10)
+      tilt (~> 1.3)
+    select2-rails (3.2.1)
+      thor (~> 0.14)
+    simple_form (2.0.4)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
+    sprockets (2.2.2)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    state_machine (1.1.2)
+    subexec (0.2.2)
+    tconsole (1.2.7)
+      minitest (~> 4.3.0)
+      term-ansicolor (~> 1.0.7)
+    term-ansicolor (1.0.7)
+    therubyracer (0.11.0)
+      ref
+    thor (0.16.0)
+    tilt (1.3.3)
+    treetop (1.4.12)
+      polyglot
+      polyglot (>= 0.3.1)
+    turn (0.9.6)
+      ansi
+    twitter-bootstrap-rails (2.1.9)
+      actionpack (>= 3.1)
+      execjs
+      railties (>= 3.1)
+    tzinfo (0.3.35)
+    uglifier (1.3.0)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
+    unicorn (4.5.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    validates (0.0.8)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bcrypt-ruby
+  better_errors
+  capi
+  capistrano
+  capistrano-ext
+  capistrano_colors
+  carrierwave
+  ci_reporter
+  ckeditor
+  cocoon
+  coffee-rails (~> 3.2.1)
+  configus
+  execjs
+  factory_girl_rails
+  factory_girl_sequences
+  haml-rails
+  jquery-rails
+  jquery-ui-rails
+  kaminari
+  less-rails
+  libv8 (~> 3.11.8)
+  mini_magick
+  minitest
+  pg
+  rails (~> 3.2.9)
+  ransack
+  russian
+  rvm-capistrano
+  sass-rails (~> 3.2.3)
+  select2-rails
+  simple_form
+  simplecov
+  state_machine
+  tconsole
+  therubyracer
+  turn
+  twitter-bootstrap-rails
+  uglifier (>= 1.0.3)
+  unicorn
+  usefull_scopes!
+  validates

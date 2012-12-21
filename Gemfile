@@ -1,35 +1,68 @@
-source 'https://rubygems.org'
+source :rubygems
 
 gem 'rails', '~> 3.2.9'
 
 gem 'pg'
+gem 'ransack'
+gem 'unicorn'
+gem 'bcrypt-ruby'
 
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'configus'
 
-# Gems used only for assets and not required
-# in production environments by default.
+#gem 'draper'
+gem 'haml-rails'
+gem 'kaminari'
+gem 'cocoon'
+gem "select2-rails"
+gem 'russian'
+gem 'simple_form'
+gem 'state_machine'
+gem 'usefull_scopes', git: 'https://github.com/kaize/usefull_scopes.git'
+gem 'validates'
+#gem 'client_side_validations'
+gem 'twitter-bootstrap-rails'
+gem 'ckeditor'
+
+#gem 'airbrake'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'less-rails'
+  gem 'execjs'
+  gem 'jquery-rails'
+  gem 'jquery-ui-rails'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'libv8', '~> 3.11.8'
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano_colors'
+  gem 'rvm-capistrano'
+  gem 'capi'
+  gem "better_errors"
+  #gem 'whenever', :require => false
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :test do
+  gem 'minitest'
+  gem 'tconsole'
+  gem 'turn'
+  gem 'factory_girl_rails'
+  gem "factory_girl_sequences"
+  gem 'simplecov', require: false
+  gem 'ci_reporter'
+end
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
 
 # To use debugger
 # gem 'debugger'

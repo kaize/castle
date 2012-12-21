@@ -1,0 +1,9 @@
+%h1= t('.news')
+- @news.each do |n|
+  .well
+    %a{ href: news_path(n) }
+      %h4= n.title
+    - if n.published_at?
+      .help-block= l n.published_at, format: :short
+    != truncate_sanitize_rem_br n.body, 250
+.news_link= link_to "Все новости", news_index_path

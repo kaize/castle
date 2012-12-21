@@ -1,0 +1,9 @@
+= simple_form_for @instructor, :url => url, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :middle_name
+  = f.input :avatar, as: :image_preview
+  = f.input :description, as: :ckeditor
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel'), admin_instructors_path, :class => 'btn'

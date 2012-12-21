@@ -1,0 +1,50 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  flash:
+    controllers:
+      web:
+        admin:
+          news:
+            create:
+              success: Новость создана.
+              error: Возникли ошибки.
+            update:
+              success: Новость отредактирована.
+              error: Возникли ошибки.
+          pages:
+            create:
+              success: Страница создана.
+              error: Возникли ошибки.
+            update:
+              success: Страница отредактирована.
+              error: Возникли ошибки.
+          categories:
+            create:
+              success: Комплекс создан.
+              error: Возникли ошибки.
+            update:
+              success: Комплекс отредактирован.
+              error: Возникли ошибки.
+          groups:
+            create:
+              success: Группа создана.
+              error: Возникли ошибки.
+            update:
+              success: Группа отредактирована.
+              error: Возникли ошибки.
+          instructors:
+            create:
+              success: Педагог создан.
+              error: Возникли ошибки.
+            update:
+              success: Педагог отредактирован.
+              error: Возникли ошибки.
+          unions:
+            create:
+              success: Объединение создано.
+              error: Возникли ошибки.
+            update:
+              success: Объединение отредактировано.
+              error: Возникли ошибки.

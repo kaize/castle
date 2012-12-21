@@ -1,0 +1,5 @@
+%h2 #{t('.instructor')} #{@instructor}
+.row
+  .span5
+    != @instructor.description
+  .span3= image_tag @instructor.avatar.url

@@ -1,0 +1,3 @@
+%ul.nav.nav-tabs.nav-stacked
+  -@category.unions.each do |u|
+    = union_item :li, u, category_union_path(@category, u)

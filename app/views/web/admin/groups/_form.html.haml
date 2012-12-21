@@ -1,0 +1,14 @@
+= simple_form_for @group, :url => url, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :name
+  = f.association :union
+
+  %h4= t('.schedules')
+  = f.simple_fields_for :schedules do |p|
+    = render "schedule_fields", f: p
+  .links
+    = link_to_add_association f, :schedules, class: 'btn btn-success' do
+      %i.icon-plus
+      = t('.add')
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel'), admin_groups_path, :class => 'btn'

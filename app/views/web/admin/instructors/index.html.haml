@@ -1,0 +1,30 @@
+.page-header
+  %h1=t '.title'
+
+= link_to t('.new'), new_admin_instructor_path, :class => 'btn btn-primary'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link @q, :id
+      %th= sort_link @q, :first_name
+      %th= sort_link @q, :middle_name
+      %th= sort_link @q, :last_name
+      -#%th= sort_link @q, :description
+      %th
+  %tbody
+    - @instructors.each do |item|
+      %tr
+        %td= item.id
+        %td= item.first_name
+        %td= item.middle_name
+        %td= item.last_name
+        -#%td= item.description
+        %td
+          .pull-right.btn-group
+            = link_to edit_admin_instructor_path(item), :class => 'btn btn-mini' do
+              %i.icon-pencil
+            = link_to admin_instructor_path(item), :method => :delete, :data => { :confirm => t('.confirm') }, :class => 'btn btn-mini btn-danger' do
+              %i.icon-trash
+
+= paginate @instructors

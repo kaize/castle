@@ -1,0 +1,4 @@
+%h2= t('.instructors')
+%ul.nav.nav-tabs.nav-stacked
+  - @instructors.each do |i|
+    %li= link_to i, instructor_path(i)

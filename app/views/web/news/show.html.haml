@@ -1,0 +1,4 @@
+%h2= @news
+- if @news.published_at?
+  .help-block= l @news.published_at, :format => :long
+!= @news.body

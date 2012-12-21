@@ -1,0 +1,61 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  activerecord:
+    models:
+      union: Объединения
+      category: Комплексы
+      group: Группы
+      instructor: Предагоги
+      news: Новости
+      page: Страницы
+      "group/schedule": Расписание занятий
+    state_machines:
+      news:
+        events:
+          off: Скрыть
+          publish: Опубликовать
+        states:
+          off: Скрыто
+          published: Опубликованно
+    attributes:
+      news:
+        title: Название
+        body: Содержимое
+        published_at: Дата публикации
+        state: Текущее состояние
+        state_event: Действие
+      page:
+        title: Название
+        body: Содержимое
+        uri: URI
+      category:
+        name: Название
+        description: Описание
+      group:
+        name: Название
+        union: Объединение
+        schedules: Расписание
+      "group/schedule":
+        date: Дата
+        start_at: Начало в
+        finish_at: Конец в
+      instructor:
+        first_name: Имя
+        middle_name: Отчество
+        last_name: Фамилия
+        avatar: Аватар
+        description: Описание
+      union:
+        name: Название
+        description: Описание
+        category: Категория
+        leader: Лидер
+        instructors: Педагоги
+    errors:
+      models:
+        page:
+          attributes:
+            uri:
+              slug: 'имеет неверное значение'

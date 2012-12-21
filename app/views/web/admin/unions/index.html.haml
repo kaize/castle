@@ -1,0 +1,28 @@
+.page-header
+  %h1=t '.title'
+
+= link_to t('.new'), new_admin_union_path, :class => 'btn btn-primary'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link @q, :id
+      %th= sort_link @q, :name
+      -#%th= sort_link @q, :description
+      %th= sort_link @q, :category_id
+      %th
+  %tbody
+    - @unions.each do |item|
+      %tr
+        %td= item.id
+        %td= item.name
+        -#%td= item.description
+        %td= item.category
+        %td
+          .pull-right.btn-group
+            = link_to edit_admin_union_path(item), :class => 'btn btn-mini' do
+              %i.icon-pencil
+            = link_to admin_union_path(item), :method => :delete, :data => { :confirm => t('.confirm') }, :class => 'btn btn-mini btn-danger' do
+              %i.icon-trash
+
+= paginate @unions

@@ -1,0 +1,21 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand(href=root_path)= t("logo_title")
+      .container.nav-collapse
+        %ul.nav
+          %li.dropdown
+            %a.dropdown-toggle{ :"data-toggle" => "dropdown", :href => "#" }
+              = t('.categories')
+              %b.caret
+            %ul.dropdown-menu
+              - nav_categories.each do |c|
+                = item :li, c, category_path(c)
+          = item :li, t('.news'), news_index_path
+          = item :li, t('.schedules'), schedules_path
+          = item :li, t('.instructors'), instructors_path
+          = item_page :li, contacts_page

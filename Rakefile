@@ -4,4 +4,9 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+begin
+  require 'ci/reporter/rake/minitest'
+rescue LoadError
+end
+
 Castle::Application.load_tasks

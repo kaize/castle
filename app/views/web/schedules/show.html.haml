@@ -1,0 +1,14 @@
+%h2 #{t('.schedule')} #{@group}
+%table.table.table-striped
+  %thead
+    %tr
+      %th= t('.date')
+      %th= t('.start_at')
+      %th= t('.finish_at')
+  %tbody
+    - @group.schedules.each do |s|
+      %tr
+        %th= l s.date, format: :short
+        %th= l s.start_at, format: "%H:%M"
+        %th= l s.finish_at, format: "%H:%M"
+

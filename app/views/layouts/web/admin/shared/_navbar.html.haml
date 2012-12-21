@@ -1,0 +1,16 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand(href=admin_root_path) Castle
+      .container.nav-collapse
+        %ul.nav
+          = model_item :li, News, admin_news_index_path
+          = model_item :li, Page, admin_pages_path
+          = model_item :li, Category, admin_categories_path
+          = model_item :li, Union, admin_unions_path
+          = model_item :li, Group, admin_groups_path
+          = model_item :li, Instructor, admin_instructors_path

@@ -1,0 +1,13 @@
+ru:
+  simple_form:
+    "yes": 'Да'
+    "no": 'Нет'
+    required:
+      text: 'обязательно'
+      mark: '*'
+    error_notification:
+      default_message: "Были обнаружены следующие ошибки:"
+    labels:
+      member:
+        study_start: 'Начало обучения'
+        study_finish: 'Окончание обучения'
