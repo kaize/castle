@@ -15,3 +15,6 @@
 /tmp
 /public/system
 /config/database.yml
+
+#Ignore idea settings
+/.idea
