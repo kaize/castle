@@ -2,7 +2,9 @@
 %html(lang="ru")
   = render 'layouts/web/shared/head'
   %body
+
     = render 'layouts/web/shared/navbar'
+    = render_breadcrumbs
     .container
       .row
         .span9
@@ -16,8 +18,8 @@
               %li= link_to "Link 1", "/path1"
               %li= link_to "Link 2", "/path2"
               %li= link_to "Link 3", "/path3"
-
-      = render 'layouts/web/shared/footer'
+    %hr
+    = render 'layouts/web/shared/footer'
     /
       Javascripts
       \==================================================

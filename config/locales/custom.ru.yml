@@ -8,6 +8,11 @@ ru:
     confirm: &confirm Вы уверены?
     new: &new Добавить
     cancel: &cancel Отменить
+    unions:
+      show:
+        groups: "Группы"
+        instructors: "Педагоги"
+        description: "Описание"
     admin:
       pages:
         index:
@@ -103,3 +108,13 @@ ru:
           news: *news
           schedules: *schedules
           instructors: *instructors
+  breadcrumbs:
+    web:
+      application:
+        index: Дворец пионеров
+      news:
+        index: Новости
+      instructors:
+        index: Педагоги
+      schedules:
+        index: Расписание

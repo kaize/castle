@@ -1,6 +1,15 @@
-%h2= @category
+%h3= @category
 .row
   .span3
     = render "web/shared/category_unions_list"
   .span5
+    %h4= t(".description")
     != @union.description
+    %h4= t(".groups")
+    - @union.group.each do |g|
+      = g.name
+      %br
+    %h4= t(".instructors")
+    - @union.instructors.each do |i|
+      = i
+      %br
