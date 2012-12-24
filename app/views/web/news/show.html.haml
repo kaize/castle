@@ -1,4 +1,6 @@
-%h2= @news
+%h3= @news
 - if @news.published_at?
   .help-block= l @news.published_at, :format => :long
 != @news.body
+- @news.photos.each do |p|
+  = image_tag p.asset
