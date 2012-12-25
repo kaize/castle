@@ -6,7 +6,7 @@
     %h4= t(".description")
     != @union.description
     %h4= t(".groups")
-    - @union.group.each do |g|
+    - @union.groups.each do |g|
       = g.name
       %br
     %h4= t(".instructors")

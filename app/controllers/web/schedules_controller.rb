@@ -1,5 +1,5 @@
 class Web::SchedulesController < Web::ApplicationController
-  add_breadcrumb :index, :news_index_path
+  add_breadcrumb :index, :schedules_path
   def index
     @unions = Union.all
   end

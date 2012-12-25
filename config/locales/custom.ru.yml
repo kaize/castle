@@ -111,7 +111,7 @@ ru:
   breadcrumbs:
     web:
       application:
-        index: Дворец пионеров
+        index: Главная
       news:
         index: Новости
       instructors:
