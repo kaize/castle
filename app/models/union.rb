@@ -4,7 +4,7 @@ class Union < ActiveRecord::Base
   belongs_to :category, inverse_of: :unions
 
   has_many :photos, inverse_of: :unions
-  has_many :group, inverse_of: :union
+  has_many :groups, inverse_of: :union
 
   has_many :union_instuctor_relations, dependent: :destroy, class_name: ::UnionInstructorRelation
   has_many :instructors, through: :union_instuctor_relations
