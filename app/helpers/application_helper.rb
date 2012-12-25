@@ -32,4 +32,8 @@ module ApplicationHelper
   def contacts_page
     Page.find_by_uri!('contacts')
   end
+
+  def support_page
+    Page.find_by_uri!('support')
+  end
 end
