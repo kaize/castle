@@ -1,2 +1,5 @@
-[![Cover Status](https://coveralls.io/r/kaize/castle/)](https://coveralls.io/repos/kaize/castle/badge.png?branch=develop)
-[![Build Status](https://travis-ci.org/kaize/castle.png?branch=develop)](https://travis-ci.org/kaize/castle)
+[![Build Status](https://coveralls.io/r/kaize/castle/)](https://coveralls.io/repos/kaize/castle/badge.png?branch=master)
+[![Build Status](https://coveralls.io/r/kaize/castle/)](https://coveralls.io/repos/kaize/castle/badge.png?branch=develop)
+[![Build Status:master](https://travis-ci.org/kaize/castle.png?branch=master)](https://travis-ci.org/kaize/castle)
+[![Build Status:develop](https://travis-ci.org/kaize/castle.png?branch=develop)](https://travis-ci.org/kaize/castle)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/kaize/castle)
