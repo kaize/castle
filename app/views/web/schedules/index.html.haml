@@ -1,6 +1,7 @@
 %h3= t('.schedules')
 -@unions.each do |u|
-  %h4= u.name
-  %ul.nav.nav-tabs.nav-stacked
-    - u.groups.each do |g|
-      %li= link_to g, schedule_path(g)
+  -if u.groups.any?
+    %h4= u.name
+    %ul.nav.nav-tabs.nav-stacked
+      - u.groups.each do |g|
+        %li= link_to g, schedule_path(g)

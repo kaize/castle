@@ -30,5 +30,5 @@ before 'deploy:finalize_update', 'deploy:symlink_db'
 after "deploy:restart", "unicorn:stop"
 after "deploy:update", "deploy:cleanup"
 
-require 'capistrano_colors'
+
 #require 'airbrake/capistrano'
