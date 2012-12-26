@@ -21,3 +21,11 @@ production:
   pool: 5
   username: postgres
   password:
+
+staging:
+  adapter: postgresql
+  encoding: unicode
+  database: castle_staging
+  pool: 5
+  username: castle_staging
+  password: a3matn6vEGvdq2jpr39A

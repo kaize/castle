@@ -19,6 +19,11 @@ namespace :deploy do
   task :symlink_db, :roles => :app do
     run "ln -nfs #{release_path}/config/database.yml.sample #{release_path}/config/database.yml"
   end
+  desc "Seed database data"
+  task :seed_data do
+    run "cd #{current_path} && RAILS_ENV=#{rails_env} #{rake} db:seed"
+  end
+
 end
 
 before 'deploy:finalize_update', 'deploy:symlink_db'
@@ -26,4 +31,4 @@ after "deploy:restart", "unicorn:stop"
 after "deploy:update", "deploy:cleanup"
 
 require 'capistrano_colors'
-require 'airbrake/capistrano'
+#require 'airbrake/capistrano'

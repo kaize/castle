@@ -35,8 +35,7 @@ group :assets do
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
 
-  gem 'libv8', '~> 3.11.8'
-  gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer','0.10.2', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -59,6 +58,7 @@ group :test do
   gem "factory_girl_sequences"
   gem 'simplecov', require: false
   gem 'ci_reporter'
+  gem 'coveralls', require: false
 end
 
 # To use Jbuilder templates for JSON
