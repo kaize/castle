@@ -1,4 +1,7 @@
-%h2= @news
+%h3= @news
 - if @news.published_at?
   .help-block= l @news.published_at, :format => :long
 != @news.body
+
+%div{:id => "disqus_thread"}
+
