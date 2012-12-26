@@ -3,6 +3,7 @@ SimpleCov.start('rails') if ENV["COVERAGE"]
 require "test/unit"
 
 require 'coveralls'
+Coveralls.wear!('rails')
 
 ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
