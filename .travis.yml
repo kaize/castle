@@ -4,3 +4,4 @@ script:
   - RAILS_ENV=test bundle exec rake ci:test
 rvm:
   - 1.9.3
+
