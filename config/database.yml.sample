@@ -21,7 +21,7 @@ production:
   pool: 5
   username: postgres
   password:
-	
+
 staging:
   adapter: postgresql
   encoding: unicode
