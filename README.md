@@ -1,0 +1,2 @@
+[![Cover Status](https://coveralls.io/r/kaize/castle/)](https://coveralls.io/repos/kaize/castle/badge.png?branch=develop)
+[![Build Status](https://travis-ci.org/kaize/castle.png?branch=develop)](https://travis-ci.org/kaize/castle)
