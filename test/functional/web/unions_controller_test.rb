@@ -10,4 +10,9 @@ class Web::UnionsControllerTest < ActionController::TestCase
     get :show, @params
     assert_response :success
   end
+
+  test "should get index" do
+    get :index, @params
+    assert_response :success
+  end
 end
