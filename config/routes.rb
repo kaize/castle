@@ -19,7 +19,7 @@ Castle::Application.routes.draw do
     resources :news, only: [:index, :show]
     resources :page, only: [:show]
     resources :categories, only: [:show] do
-      resources :unions, only: [:show] do
+      resources :unions, only: [:index, :show] do
         resources :groups, only: [:index, :show]
       end
     end
