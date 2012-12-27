@@ -15,3 +15,9 @@
 /tmp
 /public/system
 /config/database.yml
+
+db/schema.rb
+
+.idea
+
+coverage/
