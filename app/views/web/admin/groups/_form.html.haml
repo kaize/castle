@@ -1,6 +1,7 @@
 = simple_form_for @group, :url => url, :html => { :class => 'form-horizontal' } do |f|
   = f.input :name
   = f.association :union
+  = f.association :instructors, as: :select2_multi, include_blank: false
 
   %h4= t('.schedules')
   = f.simple_fields_for :schedules do |p|

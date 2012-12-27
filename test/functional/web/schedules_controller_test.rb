@@ -15,5 +15,4 @@ class Web::SchedulesControllerTest < ActionController::TestCase
     get :show, @params
     assert_response :success
   end
-
 end
