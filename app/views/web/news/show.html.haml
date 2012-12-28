@@ -2,6 +2,8 @@
 - if @news.published_at?
   .help-block= l @news.published_at, :format => :long
 != @news.body
-
+- @news.photos.each do |p|
+  = image_tag p.asset
+%hr
 %div{:id => "disqus_thread"}
 
