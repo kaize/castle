@@ -35,7 +35,6 @@ ru:
         description: Описание
       group:
         name: Название
-        union: Объединение
         schedules: Расписание
       "group/schedule":
         date: Дата

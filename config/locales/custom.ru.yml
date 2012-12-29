@@ -52,17 +52,21 @@ ru:
           confirm: *confirm
           title: &groups Группы
           new: *new
+          union: Объединение
         edit:
           title: *groups
         new:
           title: *groups
         form:
           cancel: *cancel
+          schedules: Расписание
+          add: Добавить
       unions:
         index:
           confirm: *confirm
           title: &unions Объединение
           new: *new
+          category_id: Категория
         edit:
           title: *unions
         new:
