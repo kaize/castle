@@ -21,8 +21,6 @@ GEM
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
     activemodel (3.2.9)
-      activesupport (= 3.2.9)
-      builder (~> 3.0.0)
     activerecord (3.2.9)
       activemodel (= 3.2.9)
       activesupport (= 3.2.9)
@@ -78,6 +76,9 @@ GEM
       rest-client
       simplecov (>= 0.7)
       thor
+    draper (0.18.0)
+      actionpack (~> 3.2)
+      activesupport (~> 3.2)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -238,6 +239,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   configus
   coveralls
+  draper
   execjs
   factory_girl_rails
   factory_girl_sequences
