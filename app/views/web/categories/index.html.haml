@@ -1,0 +1,12 @@
+.row-fluid
+- @category.each do |c|
+  - if c.unions.any?
+    .span9
+      %h4= c.name
+      -c.unions.each do |u|
+        - if u.groups.any?
+          .span4.offset
+            %h5= u.name
+            %ul.nav.nav-tabs.nav-stacked
+              - u.groups.each do |g|
+                %li= link_to g, union_group_path(u, g)
