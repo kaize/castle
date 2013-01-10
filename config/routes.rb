@@ -18,9 +18,16 @@ Castle::Application.routes.draw do
 
     resources :news, only: [:index, :show]
     resources :page, only: [:show]
-    resources :categories, only: [:show] do
+    resources :categories, only: [:index, :show] do
+      scope module: :categories do
+        resources :unions, only: [:show]
+      end
+    end
+    scope module: :categories do
       resources :unions, only: [:show] do
-        resources :groups, only: [:index, :show]
+        scope module: :unions do
+          resources :groups, only: [:show]
+        end
       end
     end
     resources :schedules, only: [:index, :show]
