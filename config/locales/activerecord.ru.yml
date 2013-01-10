@@ -35,7 +35,7 @@ ru:
         description: Описание
       group:
         name: Название
-        union: Объединение
+        union_id: Объединение
         schedules: Расписание
       "group/schedule":
         date: Дата
@@ -51,6 +51,7 @@ ru:
         name: Название
         description: Описание
         category: Категория
+        category_id: Категория
         leader: Лидер
         instructors: Педагоги
     errors:
