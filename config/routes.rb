@@ -20,7 +20,7 @@ Castle::Application.routes.draw do
     resources :page, only: [:show]
     resources :categories, only: [:index, :show] do
       scope module: :categories do
-        resources :unions, only: [:show]
+        resources :unions, only: [:index, :show]
       end
     end
     scope module: :categories do
