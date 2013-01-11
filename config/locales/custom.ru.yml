@@ -98,6 +98,7 @@ ru:
         date: Дата
         start_at: Начало
         finish_at: Окончание
+        instructors: *instructors
     instructors:
       index:
         instructors: *instructors
