@@ -16,12 +16,4 @@ class Instructor < ActiveRecord::Base
 
   mount_uploader :avatar, InstructorAvatarUploader
 
-  def full_name
-    [first_name, middle_name, last_name].compact.join(" ")
-  end
-
-  def to_s
-    full_name
-  end
-
 end

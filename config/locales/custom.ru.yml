@@ -8,11 +8,18 @@ ru:
     confirm: &confirm Вы уверены?
     new: &new Добавить
     cancel: &cancel Отменить
-    unions:
-      show:
-        groups: "Группы"
-        instructors: "Педагоги"
-        description: "Описание"
+    categories:
+      unions:
+        show:
+          groups: "Группы"
+          instructors: "Педагоги"
+          description: "Описание"
+        groups:
+          show:
+            schedule: Расписание группы
+            date: Дата
+            start_at: Начало
+            finish_at: Окончание
     admin:
       pages:
         index:
@@ -84,22 +91,17 @@ ru:
           title: *instructors
         form:
           cancel: *cancel
+      schedules:
+        index:
+          schedules: &schedules Расписание
+          groups: *groups
+
     welcome:
       index:
         news: *news
     news:
       index:
         news: *news
-    schedules:
-      index:
-        schedules: &schedules Расписание
-        groups: *groups
-      show:
-        schedule: Расписание группы
-        date: Дата
-        start_at: Начало
-        finish_at: Окончание
-        instructors: *instructors
     instructors:
       index:
         instructors: *instructors
@@ -123,3 +125,8 @@ ru:
         index: Педагоги
       schedules:
         index: Расписание
+      categories:
+        index: Расписание
+        unions:
+          groups:
+            schedules: Расписание
