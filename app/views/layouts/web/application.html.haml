@@ -1,8 +1,7 @@
 !!! 5
 %html(lang="ru")
   = render 'layouts/web/shared/head'
-  %body
-
+  %body{"data-spy" => "scroll", "data-target" => ".spy"}
     = render 'layouts/web/shared/navbar'
     .container
       = render_breadcrumbs
