@@ -1,8 +1,8 @@
 class Web::Admin::NewsController < Web::Admin::ApplicationController
 
   def index
-    @q = News.ransack params[:q]
-    @news = @q.result.page(params[:page])
+    @q = News.search params[:q]
+    @news = @q.page(params[:page])
   end
 
   def new

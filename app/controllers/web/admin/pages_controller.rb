@@ -1,7 +1,7 @@
 class Web::Admin::PagesController < Web::Admin::ApplicationController
   def index
-    @q = Page.ransack params[:q]
-    @pages = @q.result.page(params[:page])
+    @q = Page.search(params[:q])
+    @pages = @q.page(params[:page])
   end
 
   def new

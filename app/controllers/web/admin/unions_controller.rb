@@ -1,7 +1,7 @@
 class Web::Admin::UnionsController < Web::Admin::ApplicationController
   def index
-    @q = Union.ransack(params[:q])
-    @unions = @q.result.page(params[:page])
+    @q = Union.search(params[:q])
+    @unions = @q.page(params[:page])
   end
 
   def new

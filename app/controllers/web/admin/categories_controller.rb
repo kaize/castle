@@ -1,7 +1,7 @@
 class Web::Admin::CategoriesController < Web::Admin::ApplicationController
   def index
-    @q = Category.ransack(params[:q])
-    @categories = @q.result.page(params[:page])
+    @q = Category.search(params[:q])
+    @categories = @q.page(params[:page])
   end
 
   def new
