@@ -12,6 +12,7 @@ gem 'carrierwave'
 gem 'configus'
 
 #gem 'draper'
+gem "carrierwave"
 gem 'haml-rails'
 gem 'kaminari'
 gem 'cocoon'
@@ -24,6 +25,7 @@ gem 'validates'
 #gem 'client_side_validations'
 gem 'twitter-bootstrap-rails'
 gem 'ckeditor'
+gem 'meta_search'
 
 #gem 'airbrake'
 
