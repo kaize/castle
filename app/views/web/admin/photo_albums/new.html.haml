@@ -1,0 +1,3 @@
+= simple_form_for @photo_album, :validate => true, :url => admin_photo_albums_path, :html => {:class => "form-horizontal"} do |f|
+  = f.error_notification
+  = render 'form', :f => f

@@ -1,0 +1,23 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link @search, :id
+      %th= sort_link @search, :name
+      %th= sort_link @search, :created_at
+      %th
+  %tbody
+    - @photo_albums.each do |p|
+      %tr
+        %td= p.id
+        %td= p.name
+        %td= l p.created_at, :format => :short
+        %td
+          %span
+            %a{:href => edit_admin_photo_album_path(p.id), :title => t(:edit)}
+              %i.icon-edit
+          %span
+            %a{:href => admin_photo_album_path(p.id), :data => {:method => :delete, :confirm => t(:sure)}, :title => t(:delete)}
+              %i.icon-remove
+  = link_to t('.new'), new_admin_photo_album_path, :class => 'btn'
+
+= paginate @photo_albums

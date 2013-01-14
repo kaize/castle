@@ -1,0 +1,12 @@
+= f.input :state_event, :as => :state_event
+= f.input :name
+= f.input :description
+= f.input :mass_photo_loader, :as => :file, :input_html => { :multiple => true }
+%hr
+= f.simple_fields_for :photos do |p|
+  = render 'photo_fields', :f => p
+.links.control-group
+  = link_to_add_association t('add'), f, :photos
+
+.form-actions
+  = f.button :submit
