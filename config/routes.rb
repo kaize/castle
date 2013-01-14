@@ -11,7 +11,7 @@ Castle::Application.routes.draw do
       resources :categories
       resources :groups
       resources :instructors
-
+      resources :photo_albums
       resources :news
       resources :pages
     end
