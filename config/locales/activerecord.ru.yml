@@ -23,10 +23,11 @@ ru:
       photo_album:
         state:
           events:
-            publish: "Опубликовать"
+            publish: Опубликовать
+            unpublish: Отменить публикацию
         states:
-          new: "Новый"
-          published: "Опубликованный"
+          published: Опубликованный
+          unpublished: Не опубликованный
     attributes:
       news:
         title: Название
@@ -69,6 +70,7 @@ ru:
         state_event: Действие
         mass_photo_loader: Массовая загрузка фото
         description: Описание
+        main: Отобразить на главной
       'photo_album/photo':
         name: Название фото
         image: Фото
