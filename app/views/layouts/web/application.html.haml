@@ -4,11 +4,10 @@
   %body{"data-spy" => "scroll", "data-target" => ".spy"}
     = render 'layouts/web/shared/navbar'
     .container
-      = render_breadcrumbs
-      .row
-        .span9
-          = bootstrap_flash
-          = yield
+      .content
+        = render_breadcrumbs
+        = bootstrap_flash
+        = yield
         -#.span3
           .well.sidebar-nav
             %h3 Sidebar

@@ -48,3 +48,8 @@ ru:
             update:
               success: Объединение отредактировано.
               error: Возникли ошибки.
+          photo_albums:
+            create:
+              success: 'Фотоальбом создан.'
+            update:
+              success: 'Фотоальбом отредактирован.'

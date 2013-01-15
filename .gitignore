@@ -16,8 +16,9 @@
 /public/system
 /config/database.yml
 
+
+#Ignore idea settings
+/.idea
+
 db/schema.rb
-
-.idea
-
 coverage/
