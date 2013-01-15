@@ -4,9 +4,11 @@
 ru:
   base_name: Ульяновский областной Дворец творчества детей и молодёжи
   logo_title: Дворец пионеров
+  add: Добавить
   web:
     confirm: &confirm Вы уверены?
     new: &new Добавить
+
     cancel: &cancel Отменить
     unions:
       show:
@@ -83,6 +85,9 @@ ru:
           title: *instructors
         form:
           cancel: *cancel
+      photo_albums:
+        index:
+          new: *new
     welcome:
       index:
         news: *news
