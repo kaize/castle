@@ -5,7 +5,7 @@ class CreatePhotoAlbumsPhotos < ActiveRecord::Migration
       t.string :image
       t.string :name
       t.string :string
-      t.string :main
+      t.boolean :main
 
       t.timestamps
     end

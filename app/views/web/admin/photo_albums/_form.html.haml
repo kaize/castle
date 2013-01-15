@@ -1,6 +1,7 @@
 = f.input :state_event, :as => :state_event
 = f.input :name
 = f.input :description
+= f.input :main
 = f.input :mass_photo_loader, :as => :file, :input_html => { :multiple => true }
 %hr
 = f.simple_fields_for :photos do |p|

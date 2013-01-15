@@ -1,9 +1,9 @@
 %table.table.table-striped
   %thead
     %tr
-      %th= sort_link @search, :id
-      %th= sort_link @search, :name
-      %th= sort_link @search, :created_at
+      %th= sort_link @q, :id
+      %th= sort_link @q, :name
+      %th= sort_link @q, :created_at
       %th
   %tbody
     - @photo_albums.each do |p|

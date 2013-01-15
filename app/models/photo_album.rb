@@ -1,22 +1,32 @@
 class PhotoAlbum < ActiveRecord::Base
   include UsefullScopes
 
-  attr_accessible :name, :state, :description
+  attr_accessible :name, :state, :description, :main
+
+  validates :name, :presence => true
 
   has_many :photos, :dependent => :destroy
 
-  state_machine :state, :initial => :new do
-    state :new
+  before_save do
+    if main?
+      PhotoAlbum.update_all main: true, main: false
+    end
+  end
+
+  state_machine :state, :initial => :unpublished do
     state :published
+    state :unpublished
 
     event :publish do
-      transition :new => :published
+      transition :unpublished => :published
+    end
+
+    event :unpublish do
+      transition :published => :unpublished
     end
   end
 
   scope :published, with_state(:published)
-
-  validates :name, :presence => true
 
   class << self
     def welcome_album
