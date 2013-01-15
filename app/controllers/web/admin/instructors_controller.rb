@@ -1,7 +1,7 @@
 class Web::Admin::InstructorsController < Web::Admin::ApplicationController
   def index
-    @q = Instructor.search(params[:q])
-    @instructors = @q.page(params[:page])
+    @q = Instructor.ransack(params[:q])
+    @instructors = @q.result.page(params[:page])
   end
 
   def new

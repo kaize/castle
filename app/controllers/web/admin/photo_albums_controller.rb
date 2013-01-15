@@ -1,7 +1,7 @@
 class Web::Admin::PhotoAlbumsController < Web::Admin::ApplicationController
   def index
-    @search = PhotoAlbum.search(params[:search])
-    @photo_albums = @search.page(params[:page])
+    @q = PhotoAlbum.ransack params[:q]
+    @photo_albums = @q.result.page(params[:page])
   end
 
   def new

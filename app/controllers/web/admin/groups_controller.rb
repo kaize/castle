@@ -1,7 +1,7 @@
 class Web::Admin::GroupsController < Web::Admin::ApplicationController
   def index
-    @q = Group.search params[:q]
-    @groups = @q.page(params[:page])
+    @q = Group.ransack params[:q]
+    @groups = @q.result.page(params[:page])
   end
 
   def new
