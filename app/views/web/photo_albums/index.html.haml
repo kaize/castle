@@ -1,0 +1,17 @@
+- @photo_albums.each_with_index do |album, i|
+  .row
+    .span4
+      %h4= album.name
+      %p= album.description
+    .span8
+      .carousel.slide{ :id => "carousel_#{album.id}" }
+        .carousel-inner
+          - album.sorted_photos.each_with_index do |photo, i|
+            .item{:class => i == 0 ? "active" : ''}
+              = image_tag photo.image_url(:carousel)
+              - if photo.name? || photo.description?
+                .carousel-caption
+                  %h4= photo.name
+                  %p= photo.description
+        %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel_#{album.id}"} ‹
+        %a.carousel-control.right{"data-slide" => "next", :href => "#carousel_#{album.id}"} ›

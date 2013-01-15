@@ -25,7 +25,7 @@ Castle::Application.routes.draw do
     end
     resources :schedules, only: [:index, :show]
     resources :instructors, only: [:index, :show]
-
+    resources :photo_albums, only: [:index]
   end
 
 end
