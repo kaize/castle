@@ -12,6 +12,7 @@
     .well
       %h5= t('.do_you_want')
       = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
+    %div{id: :vk_groups}
 
 .news_link= link_to "Все новости", news_index_path
 - if  @photo_album && @photo_album.model && @photo_album.photos.any?
