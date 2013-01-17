@@ -9,6 +9,8 @@ class Union < ActiveRecord::Base
   has_many :union_instuctor_relations, dependent: :destroy, class_name: ::UnionInstructorRelation
   has_many :instructors, through: :union_instuctor_relations
 
+  has_many :study_requests
+
   belongs_to :leader, class_name: Instructor
 
   validates :name, presence: true
