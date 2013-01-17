@@ -11,6 +11,7 @@ ru:
       news: Новости
       page: Страницы
       "group/schedule": Расписание занятий
+      study_request: Заявки на обучение
     state_machines:
       news:
         events:
@@ -54,6 +55,20 @@ ru:
         category_id: Категория
         leader: Лидер
         instructors: Педагоги
+      study_request:
+        address: Адрес проживания
+        birth_date: Дата рождения ребенка
+        children_first_name: Имя ребенка
+        children_last_name: Фамилия ребенка
+        children_middle_name: Отчество ребенка
+        note: Примечание
+        parent_first_name: Имя родителя
+        parent_last_name: Фамилия родителя
+        parent_middle_name: Отчество родителя
+        phone: Контактный телефон
+        school: Школа
+        created_at: Дата подачи
+        union_id: Объединение
     errors:
       models:
         page:

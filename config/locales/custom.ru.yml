@@ -8,6 +8,7 @@ ru:
     confirm: &confirm Вы уверены?
     new: &new Добавить
     cancel: &cancel Отменить
+
     unions:
       show:
         groups: "Группы"
@@ -83,9 +84,17 @@ ru:
           title: *instructors
         form:
           cancel: *cancel
+      study_requests:
+        show:
+          title: "Заявка №%{number}"
+        index:
+          title: Список заявок
+          confirm: *confirm
     welcome:
       index:
         news: *news
+        do_you_want: Хотите записать своего ребенка?
+        study_request: Оставить заявку
     news:
       index:
         news: *news
@@ -104,6 +113,10 @@ ru:
         instructors: *instructors
       show:
         instructor: Педагог
+    study_requests:
+      new:
+        title: Оставить заявку
+        save: Подать заявку
   layouts:
     web:
       shared:

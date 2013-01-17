@@ -22,3 +22,5 @@ ru:
       union:
         create: "Создать"
         update: "Сохранить"
+      study_request:
+        create: "Отправить"
