@@ -13,5 +13,8 @@
 //= require disqus
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.datepicker
+//= require jquery.ui.datepicker-ru
 //= require twitter/bootstrap
-//= require_self
+//= require select2
+//= require_tree
