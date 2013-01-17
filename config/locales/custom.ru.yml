@@ -23,6 +23,11 @@ ru:
             date: Дата
             start_at: Начало
             finish_at: Окончание
+    unions:
+      show:
+        groups: "Группы"
+        instructors: "Педагоги"
+        description: "Описание"
     admin:
       pages:
         index:
@@ -100,9 +105,17 @@ ru:
       photo_albums:
         index:
           new: *new
+      study_requests:
+        show:
+          title: "Заявка №%{number}"
+        index:
+          title: Список заявок
+          confirm: *confirm
     welcome:
       index:
         news: *news
+        do_you_want: Хотите записать своего ребенка?
+        study_request: Оставить заявку
     news:
       index:
         news: *news
@@ -111,6 +124,10 @@ ru:
         instructors: *instructors
       show:
         instructor: Педагог
+    study_requests:
+      new:
+        title: Оставить заявку
+        save: Подать заявку
   layouts:
     web:
       shared:
