@@ -1,4 +1,6 @@
 Castle::Application.routes.draw do
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   scope module: :web do
@@ -6,7 +8,7 @@ Castle::Application.routes.draw do
 
     namespace :admin do
       root to: "welcome#index"
-
+      resources :study_requests, only: [:index, :show, :destroy]
       resources :unions
       resources :categories
       resources :groups
@@ -25,7 +27,7 @@ Castle::Application.routes.draw do
     end
     resources :schedules, only: [:index, :show]
     resources :instructors, only: [:index, :show]
-
+    resources :study_requests
   end
 
 end

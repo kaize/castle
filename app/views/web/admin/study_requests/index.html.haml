@@ -1,0 +1,26 @@
+.page-header
+  %h1=t '.title'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link @q, :id
+      %th= sort_link @q, :parent_last_name
+      %th= sort_link @q, :birth_date
+      %th= sort_link @q, :phone
+      %th= sort_link @q, :created_at
+      %th
+  %tbody
+    - @study_requests.each do |item|
+      %tr
+        %td= item.id
+        %td= item.parent_last_name
+        %td= item.birth_date
+        %td= item.phone
+        %td= l item.created_at, format: :short
+        %td
+          .pull-right.btn-group
+            = link_to admin_study_request_path(item), :class => 'btn btn-mini' do
+              %i.icon-info-sign
+            = link_to admin_study_request_path(item), :method => :delete, :data => { :confirm => t('.confirm') }, :class => 'btn btn-mini btn-danger' do
+              %i.icon-trash

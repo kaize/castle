@@ -1,0 +1,41 @@
+%h3= t(".title", number: @study_requests.id)
+.row-fluid.company_task
+  .span6
+    %table.table.table-bordered
+      %tbody
+        %tr
+          %td= StudyRequest.human_attribute_name(:union_id)
+          %td= @study_requests.union
+        %tr
+          %td= StudyRequest.human_attribute_name(:parent_first_name)
+          %td= @study_requests.parent_first_name
+        %tr
+          %td= StudyRequest.human_attribute_name(:parent_last_name)
+          %td= @study_requests.parent_last_name
+        %tr
+          %td= StudyRequest.human_attribute_name(:parent_middle_name)
+          %td= @study_requests.parent_middle_name
+        %tr
+          %td= StudyRequest.human_attribute_name(:children_first_name)
+          %td= @study_requests.children_first_name
+        %tr
+          %td= StudyRequest.human_attribute_name(:children_last_name)
+          %td= @study_requests.children_last_name
+        %tr
+          %td= StudyRequest.human_attribute_name(:children_middle_name)
+          %td= @study_requests.children_middle_name
+        %tr
+          %td= StudyRequest.human_attribute_name(:birth_date)
+          %td= @study_requests.birth_date
+        %tr
+          %td= StudyRequest.human_attribute_name(:school)
+          %td= @study_requests.school
+        %tr
+          %td= StudyRequest.human_attribute_name(:address)
+          %td= @study_requests.address
+        %tr
+          %td= StudyRequest.human_attribute_name(:phone)
+          %td= @study_requests.phone
+        %tr
+          %td= StudyRequest.human_attribute_name(:note)
+          %td= @study_requests.note
