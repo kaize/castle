@@ -26,7 +26,7 @@
         .carousel-inner
           - @photo_album.sorted_photos.each_with_index do |photo, i|
             .item{:class => i == 0 ? "active" : ''}
-              = image_tag photo.image_url(:main_carousel)
+              = image_tag photo.image_url(:carousel)
               - if photo.name?
                 .carousel-caption
                   %h4= photo.name
