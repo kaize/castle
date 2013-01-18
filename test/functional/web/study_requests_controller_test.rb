@@ -13,10 +13,8 @@ class Web::StudyRequestsControllerTest < ActionController::TestCase
   end
 
   test "should create study_request" do
-    assert_difference('StudyRequest.count') do
-      post :create, @params
-    end
+    post :create, @params
 
-    assert_redirected_to root_path
+    assert_response :redirect
   end
 end

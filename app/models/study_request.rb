@@ -11,6 +11,6 @@ class StudyRequest < ActiveRecord::Base
   validates :parent_first_name, presence: true
   validates :parent_last_name, presence: true
   validates :phone, presence: true
-  validates :union_id, presence: true
+  validates :union, presence: true
 
 end
