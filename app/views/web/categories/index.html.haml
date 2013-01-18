@@ -1,7 +1,7 @@
 .row
   - @category.each do |c|
     - if c.unions.any?
-      .span9
+      .span6
         %h4= c.name
         -c.unions.each do |u|
           - if u.groups.any?
