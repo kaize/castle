@@ -33,7 +33,7 @@ class PhotoAlbum::PhotoUploader < CarrierWave::Uploader::Base
   #end
 
   version :main_carousel do
-    process :resize_to_fit => [560, 420]
+    process :resize_to_fill => [570, 420]
   end
 
   #version :galary do
