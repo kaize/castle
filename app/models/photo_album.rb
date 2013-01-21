@@ -35,6 +35,6 @@ class PhotoAlbum < ActiveRecord::Base
   end
 
   def can_view?
-    self.model && self.photos.any?
+    photos.any?
   end
 end
