@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Web::UnionsControllerTest < ActionController::TestCase
+class Web::Categories::UnionsControllerTest < ActionController::TestCase
   def setup
     @union = create :union
     @params = {id: @union.id, category_id: @union.category_id}

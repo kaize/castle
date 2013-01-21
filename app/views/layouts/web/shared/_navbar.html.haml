@@ -16,7 +16,7 @@
               - nav_categories.each do |c|
                 = item :li, c, category_unions_path(c)
           = item :li, t('.news'), news_index_path
-          = item :li, t('.schedules'), schedules_path
+          = item :li, t('.schedules'), categories_path
           = item :li, t('.instructors'), instructors_path
           = item_page :li, support_page
           = item_page :li, contacts_page

@@ -5,11 +5,11 @@ class Web::Admin::GroupsController < Web::Admin::ApplicationController
   end
 
   def new
-    @group = GroupType.new
+    @group = GroupType.new.decorate
   end
 
   def edit
-    @group = GroupType.find(params[:id])
+    @group = GroupType.find(params[:id]).decorate
   end
 
   def create
@@ -25,7 +25,7 @@ class Web::Admin::GroupsController < Web::Admin::ApplicationController
   end
 
   def update
-    @group = GroupType.find params[:id]
+    @group = GroupType.find(params[:id]).decorate
 
     if @group.update_attributes params[:group]
       flash_success

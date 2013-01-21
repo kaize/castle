@@ -11,7 +11,7 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'configus'
 
-#gem 'draper'
+gem 'draper'
 gem 'haml-rails'
 gem 'kaminari'
 gem 'cocoon'

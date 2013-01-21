@@ -1,10 +1,8 @@
 %h3 #{t('.schedule')} #{@group}
-
 %h4= t(".instructors")
 %ul.nav.nav-tabs.nav-stacked
   - @group.instructors.each do |i|
     %li= link_to i, instructor_path(i)
-
 %table.table.table-striped
   %thead
     %tr
