@@ -9,7 +9,7 @@
           - album.sorted_photos.each_with_index do |photo, i|
             .item{:class => i == 0 ? "active" : ''}
               = image_tag photo.image_url(:carousel)
-              - if photo.name? || photo.description?
+              - if photo.information?
                 .carousel-caption
                   %h4= photo.name
                   %p= photo.description
