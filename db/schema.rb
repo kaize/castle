@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121220162951) do
+ActiveRecord::Schema.define(:version => 20130115123633) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(:version => 20121220162951) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
+
+  create_table "group_instructor_relations", :force => true do |t|
+    t.integer  "group_id"
+    t.integer  "instructor_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "group_schedules", :force => true do |t|
     t.time     "start_at"
@@ -84,6 +91,26 @@ ActiveRecord::Schema.define(:version => 20121220162951) do
     t.string   "uri"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "photo_album_photos", :force => true do |t|
+    t.integer  "photo_album_id"
+    t.string   "image"
+    t.string   "name"
+    t.string   "string"
+    t.string   "main"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "description"
+  end
+
+  create_table "photo_albums", :force => true do |t|
+    t.string   "name"
+    t.string   "state"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.boolean  "main"
   end
 
   create_table "union_instructor_relations", :force => true do |t|

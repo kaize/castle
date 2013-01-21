@@ -22,3 +22,6 @@ ru:
       union:
         create: "Создать"
         update: "Сохранить"
+      photo_album:
+        create: "Создать"
+        update: "Сохранить"

@@ -12,6 +12,7 @@ gem 'carrierwave'
 gem 'configus'
 
 gem 'draper'
+gem "carrierwave"
 gem 'haml-rails'
 gem 'kaminari'
 gem 'cocoon'

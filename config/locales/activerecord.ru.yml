@@ -11,6 +11,7 @@ ru:
       news: Новости
       page: Страницы
       "group/schedule": Расписание занятий
+      photo_album: Фотоальбом
     state_machines:
       news:
         events:
@@ -19,6 +20,14 @@ ru:
         states:
           off: Скрыто
           published: Опубликованно
+      photo_album:
+        state:
+          events:
+            publish: Опубликовать
+            unpublish: Отменить публикацию
+        states:
+          published: Опубликованный
+          unpublished: Не опубликованный
     attributes:
       news:
         title: Название
@@ -54,6 +63,19 @@ ru:
         category_id: Категория
         leader: Лидер
         instructors: Педагоги
+      photo_album:
+        name: Название альбома
+        created_at: Дата создания
+        state: Текущее состояние
+        state_event: Действие
+        mass_photo_loader: Массовая загрузка фото
+        description: Описание
+        main: Отобразить на главной
+      'photo_album/photo':
+        name: Название фото
+        image: Фото
+        description: Описание
+        main: Главная
     errors:
       models:
         page:
