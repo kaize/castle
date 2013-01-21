@@ -33,4 +33,8 @@ class PhotoAlbum < ActiveRecord::Base
       published.random.first
     end
   end
+
+  def can_view?
+    self.model && self.photos.any?
+  end
 end

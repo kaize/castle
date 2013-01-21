@@ -7,7 +7,7 @@
       .help-block= l n.published_at, format: :short
     != truncate_sanitize_rem_br n.body, 250
 .news_link= link_to "Все новости", news_index_path
-- if  @photo_album && @photo_album.model && @photo_album.photos.any?
+- if @photo_album.try :can_view?
   .row
     .span12
       %hr
@@ -19,7 +19,7 @@
           - @photo_album.sorted_photos.each_with_index do |photo, i|
             .item{:class => i == 0 ? "active" : ''}
               = image_tag photo.image_url(:carousel)
-              - if photo.name?
+              - if photo.information?
                 .carousel-caption
                   %h4= photo.name
                   %p= photo.description
