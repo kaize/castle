@@ -2,7 +2,7 @@ class Web::CategoriesController < Web::ApplicationController
 
   def index
     add_breadcrumb :index, :categories_path
-    @category = Category.all
+    @category = Category.scoped.decorate
   end
 
   def show
