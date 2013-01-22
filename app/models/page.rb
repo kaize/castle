@@ -5,16 +5,17 @@ class Page < ActiveRecord::Base
   validates :body, presence: true
   validates :uri, presence: true, slug: true, uniqueness: true
 
-  state_machine :state, initial: :hided do
-    state :hided
+
+  state_machine :state, initial: :hidden do
+    state :hidden
     state :published
 
     event :publish do
-      transition :hided => :published
+      transition :hidden => :published
     end
 
     event :hide do
-      transition all => :hided
+      transition all => :hidden
     end
   end
   

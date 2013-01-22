@@ -12,6 +12,7 @@
 # It's strongly recommended to check this file into your version control system.
 
 
+
 ActiveRecord::Schema.define(:version => 20130117104034) do
   
   create_table "categories", :force => true do |t|
