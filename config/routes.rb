@@ -16,6 +16,7 @@ Castle::Application.routes.draw do
       resources :photo_albums
       resources :news
       resources :pages
+      resources :partners
     end
 
     resources :news, only: [:index, :show]

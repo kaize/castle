@@ -1,0 +1,6 @@
+%hr
+  %h3= t '.partners'
+  .row
+    - Partner.scoped.each do |partner|
+      .span2
+        = image_tag partner.image
