@@ -17,10 +17,17 @@ ru:
     state_machines:
       news:
         events:
-          off: Скрыть
+          hide: Скрыть
           publish: Опубликовать
         states:
-          off: Скрыто
+          hided: Скрыто
+          published: Опубликованно
+      page:
+        events:
+          hide: Скрыть
+          publish: Опубликовать
+        states:
+          hided: Скрыто
           published: Опубликованно
       photo_album:
         state:
@@ -41,6 +48,8 @@ ru:
         title: Название
         body: Содержимое
         uri: URI
+        state: Текущее состояние
+        state_event: Действие
       category:
         name: Название
         description: Описание

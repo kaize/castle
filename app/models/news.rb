@@ -8,16 +8,16 @@ class News < ActiveRecord::Base
   validates :title, presence: true
   validates :body, presence: true
 
-  state_machine :state, initial: :off do
-    state :off
+  state_machine :state, initial: :hided do
+    state :hided
     state :published
 
     event :publish do
-      transition :off => :published
+      transition :hided => :published
     end
 
-    event :off do
-      transition all => :off
+    event :hide do
+      transition all => :hided
     end
   end
 
