@@ -1,4 +1,5 @@
 = simple_form_for @page, :url => url, :html => { :class => 'default_class' } do |f|
+  = f.input :state_event, as: :state_event
   = f.input :title
   = f.input :uri
   = f.input :body, as: :ckeditor
