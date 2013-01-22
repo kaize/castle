@@ -1,0 +1,1 @@
+VK.Widgets.Group("vk_groups", {mode: 0, width: "373", height: "290"}, 19709157);

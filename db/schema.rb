@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130115123633) do
+ActiveRecord::Schema.define(:version => 20130117104034) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -113,6 +113,22 @@ ActiveRecord::Schema.define(:version => 20130115123633) do
     t.boolean  "main"
   end
 
+  create_table "study_requests", :force => true do |t|
+    t.string   "parent_first_name"
+    t.string   "parent_last_name"
+    t.string   "parent_middle_name"
+    t.string   "children_first_name"
+    t.string   "children_last_name"
+    t.string   "children_middle_name"
+    t.date     "birth_date"
+    t.string   "school"
+    t.string   "address"
+    t.string   "phone"
+    t.text     "note"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.integer  "union_id"
+  end
   create_table "union_instructor_relations", :force => true do |t|
     t.integer  "union_id"
     t.integer  "instructor_id"

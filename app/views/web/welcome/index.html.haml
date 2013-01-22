@@ -1,11 +1,19 @@
 %h3= t('.news')
-- @news.each do |n|
-  .well
-    %a{ href: news_path(n) }
-      %h4= n.title
-    - if n.published_at?
-      .help-block= l n.published_at, format: :short
-    != truncate_sanitize_rem_br n.body, 250
+.row
+  .span8
+    - @news.each do |n|
+      .well
+        %a{ href: news_path(n) }
+          %h4= n.title
+        - if n.published_at?
+          .help-block= l n.published_at, format: :short
+        != truncate_sanitize_rem_br n.body, 250
+  .span4
+    .well
+      %h5= t('.do_you_want')
+      = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
+    %div{id: :vk_groups}
+
 .news_link= link_to "Все новости", news_index_path
 - if @photo_album.try :can_view?
   .row
