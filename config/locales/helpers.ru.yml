@@ -25,3 +25,6 @@ ru:
       photo_album:
         create: "Создать"
         update: "Сохранить"
+      partner:
+        create: "Создать"
+        update: "Сохранить"

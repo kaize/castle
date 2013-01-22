@@ -100,6 +100,13 @@ ru:
       photo_albums:
         index:
           new: *new
+      partners:
+        index:
+          confirm: *confirm
+          title: Партнеры
+          new: *new
+        form:
+          cancel: *cancel
     welcome:
       index:
         news: *news
@@ -119,6 +126,8 @@ ru:
           news: *news
           schedules: *schedules
           instructors: *instructors
+        partners:
+          partners: Партнеры
   breadcrumbs:
     web:
       application:

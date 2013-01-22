@@ -53,3 +53,10 @@ ru:
               success: 'Фотоальбом создан.'
             update:
               success: 'Фотоальбом отредактирован.'
+          partners:
+            create:
+              success: Партнер сохранен.
+              error: Возникли ошибки.
+            update:
+              success: Партнер отредактирован.
+              error: Возникли ошибки.

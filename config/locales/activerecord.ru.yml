@@ -12,6 +12,7 @@ ru:
       page: Страницы
       "group/schedule": Расписание занятий
       photo_album: Фотоальбом
+      partner: Партнеры
     state_machines:
       news:
         events:
@@ -76,6 +77,9 @@ ru:
         image: Фото
         description: Описание
         main: Главная
+      partner:
+        name: Название
+        image: Фото
     errors:
       models:
         page:
