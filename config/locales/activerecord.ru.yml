@@ -18,14 +18,14 @@ ru:
           hide: Скрыть
           publish: Опубликовать
         states:
-          hided: Скрыто
+          hidden: Скрыто
           published: Опубликованно
       page:
         events:
           hide: Скрыть
           publish: Опубликовать
         states:
-          hided: Скрыто
+          hidden: Скрыто
           published: Опубликованно
       photo_album:
         state:
