@@ -30,7 +30,7 @@ ru:
           confirm: *confirm
           new: *new
         new:
-          title: *pages
+          title: Добавление страницы
         edit:
           title: *pages
         form:
@@ -43,7 +43,7 @@ ru:
         edit:
           title: *news
         new:
-          title: *news
+          title: Добавление новости
         form:
           cancel: *cancel
       categories:
@@ -54,7 +54,7 @@ ru:
         edit:
           title: *categories
         new:
-          title: *categories
+          title: Добавление комлекса
         form:
           cancel: *cancel
       groups:
@@ -66,7 +66,7 @@ ru:
         edit:
           title: *groups
         new:
-          title: *groups
+          title: Добавление группы
         form:
           cancel: *cancel
           schedules: Расписание
@@ -79,7 +79,7 @@ ru:
         edit:
           title: *unions
         new:
-          title: *unions
+          title: Добавление объединения
         form:
           cancel: *cancel
       instructors:
@@ -90,7 +90,7 @@ ru:
         edit:
           title: *instructors
         new:
-          title: *instructors
+          title: Добавление педагога
         form:
           cancel: *cancel
       schedules:
@@ -99,7 +99,10 @@ ru:
           groups: *groups
       photo_albums:
         index:
+          title: &photo_albums Фотоальбом
           new: *new
+        new:
+          title: Добавление фотоальбома
     welcome:
       index:
         news: *news
