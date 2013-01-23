@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  attr_accessible :body, :title, :uri
+  attr_accessible :body, :title, :uri, :state
 
   validates :title, presence: true
   validates :body, presence: true
