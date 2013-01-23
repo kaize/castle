@@ -124,9 +124,13 @@ ru:
       study_requests:
         show:
           title: "Заявка №%{number}"
+      events:
         index:
-          title: Список заявок
           confirm: *confirm
+          title: События
+          new: *new
+        form:
+          cancel: *cancel
     welcome:
       index:
         news: *news

@@ -32,3 +32,6 @@ ru:
         update: "Сохранить"
       study_request:
         create: "Отправить"
+      event:
+        create: "Создать"
+        update: "Сохранить"

@@ -1,0 +1,10 @@
+= simple_form_for @event, url: url do |f|
+  = f.input :name, input_html: { class: 'input-large' }
+  = f.input :image, as: :image_preview
+  = f.input :begin_date, as: :string
+  = f.input :end_date, as: :string
+  = f.input :content, :as => :description
+
+  .form-actions
+    = f.button :submit, class: 'btn-primary'
+    = link_to t('.cancel'), admin_events_path, class: 'btn'

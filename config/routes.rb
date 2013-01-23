@@ -17,6 +17,7 @@ Castle::Application.routes.draw do
       resources :news
       resources :pages
       resources :partners
+      resources :events
     end
 
     resources :news, only: [:index, :show]
