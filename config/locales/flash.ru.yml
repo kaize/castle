@@ -5,6 +5,10 @@ ru:
   flash:
     controllers:
       web:
+        study_requests:
+          create:
+            success: Ваша заявка успешно отправлена.
+            error: Возникли ошибки.
         admin:
           news:
             create:
@@ -48,6 +52,10 @@ ru:
             update:
               success: Объединение отредактировано.
               error: Возникли ошибки.
+          study_requests:
+            create:
+              success: Ваша заявка успешно отправлена.
+              error: Возникли ошибки.             
           photo_albums:
             create:
               success: 'Фотоальбом создан.'
