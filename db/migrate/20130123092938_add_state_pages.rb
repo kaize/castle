@@ -1,3 +1,3 @@
 class AddStatePages < ActiveRecord::Migration
-  add_column :state
+  add_column :pages, :state, :string
 end
