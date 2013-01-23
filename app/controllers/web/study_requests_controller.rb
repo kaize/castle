@@ -8,8 +8,10 @@ class Web::StudyRequestsController < Web::ApplicationController
     @study_request = StudyRequest.new(params[:study_request])
 
     if @study_request.save
-      redirect_to root_path
+      flash_success
+      redirect_to new_study_request_path
     else
+      flash_error
       render action: "new"
     end
   end

@@ -121,6 +121,12 @@ ru:
           new: *new
         form:
           cancel: *cancel
+      study_requests:
+        show:
+          title: "Заявка №%{number}"
+        index:
+          title: Список заявок
+          confirm: *confirm
     welcome:
       index:
         news: *news
