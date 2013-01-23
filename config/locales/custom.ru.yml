@@ -118,6 +118,13 @@ ru:
           new: *new
         form:
           cancel: *cancel
+      events:
+        index:
+          confirm: *confirm
+          title: События
+          new: *new
+        form:
+          cancel: *cancel
     welcome:
       index:
         news: *news

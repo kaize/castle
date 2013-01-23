@@ -30,3 +30,6 @@ ru:
       partner:
         create: "Создать"
         update: "Сохранить"
+      event:
+        create: "Создать"
+        update: "Сохранить"
