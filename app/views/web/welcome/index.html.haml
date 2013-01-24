@@ -10,8 +10,14 @@
         != truncate_sanitize_rem_br n.body, 250
   .span4
     .well
-      %h5= t('.do_you_want')
+      %h4= t('.do_you_want')
       = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
+
+    .well
+      %h4= t(".calendar")
+      = calendar @events do |event|
+        %div= link_to event.name, event
+
     %div{id: :vk_groups}
 
 .news_link= link_to "Все новости", news_index_path

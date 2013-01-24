@@ -38,6 +38,7 @@ Castle::Application.routes.draw do
     resources :instructors, only: [:index, :show]
     resources :photo_albums, only: [:index]
     resources :study_requests
+    resources :events
   end
 
 end

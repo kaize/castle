@@ -6,4 +6,8 @@ class Event < ActiveRecord::Base
   validates :content, presence: true
 
   mount_uploader :image, EventImageUploader
+
+  def start_time
+    begin_date
+  end
 end
