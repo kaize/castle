@@ -51,11 +51,7 @@ ru:
               error: Возникли ошибки.
             update:
               success: Объединение отредактировано.
-              error: Возникли ошибки.
-          study_requests:
-            create:
-              success: Ваша заявка успешно отправлена.
-              error: Возникли ошибки.             
+              error: Возникли ошибки.          
           photo_albums:
             create:
               success: 'Фотоальбом создан.'

@@ -112,13 +112,6 @@ ActiveRecord::Schema.define(:version => 20130124104226) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "partners", :force => true do |t|
-    t.string   "image"
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "photo_album_photos", :force => true do |t|
     t.integer  "photo_album_id"
     t.string   "image"

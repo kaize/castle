@@ -121,9 +121,6 @@ ru:
           new: *new
         form:
           cancel: *cancel
-      study_requests:
-        show:
-          title: "Заявка №%{number}"
       events:
         index:
           confirm: *confirm
