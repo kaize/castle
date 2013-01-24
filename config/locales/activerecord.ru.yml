@@ -111,6 +111,7 @@ ru:
         content: Содержание
         begin_date: Время начала
         end_date: Время конца
+        main: Опубликовать на главной
     errors:
       models:
         page:
