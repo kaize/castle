@@ -16,9 +16,12 @@
 //= require ckeditor/init
 //= require jquery.ui.datepicker
 //= require jquery.ui.datepicker-ru
+//= require jquery.ui.slider
+//= require jquery-ui-timepicker-addon
+//= require jquery-ui-timepicker-ru
 //= require cocoon
 //= require select2
-//= require_self
+//= require_tree
 
 (function($) { $(function() {
 

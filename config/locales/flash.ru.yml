@@ -63,3 +63,13 @@ ru:
             destroy:
               success: Партнер удален.
               error: Возникли ошибки.
+          events:
+            create:
+              success: Событие сохранено.
+              error: Возникли ошибки.
+            update:
+              success: Событие отредактировано.
+              error: Возникли ошибки.
+            destroy:
+              success: Событие удалено.
+              error: Возникли ошибки.
