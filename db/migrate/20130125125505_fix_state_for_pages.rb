@@ -1,7 +1,7 @@
 class FixStateForPages < ActiveRecord::Migration
   def up
-    Page.where(:state.empty?).find_each { |page| page.state_event = :published}
-     #Page.update_all(state: nil, state: :published)
+     Page.reset_column_information
+     Page.update_all(state: :published, state: nil)
   end
 
   def down
