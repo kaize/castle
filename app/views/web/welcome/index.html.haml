@@ -15,8 +15,7 @@
 
     .well
       %h4= t(".calendar")
-      = calendar @events do |event|
-        %div= link_to event.name, event
+      = render 'layouts/web/shared/calendar'
 
     %div{id: :vk_groups}
 

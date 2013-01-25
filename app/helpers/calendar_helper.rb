@@ -1,5 +1,5 @@
 module CalendarHelper
-  def calendar(events, &block)
+  def calendar_prepare(events, &block)
     raise 'SimpleCalendar requires a block to be passed in' unless block_given?
 
     options = {
@@ -60,7 +60,7 @@ module CalendarHelper
             week.collect do |date|
               td_class = ["day"]
               td_class << "today" if today == date
-              td_class << "not-current-month" if selected_month.month != date.month
+              selected_month.month != date.month
               td_class << "past" if today > date
               td_class << "future" if today < date
               td_class << "wday-#{date.wday.to_s}" # <- to enable different styles for weekend, etc
@@ -106,12 +106,13 @@ module CalendarHelper
     events.select { |e| e.start_time.to_date == date }
   end
 
-  def day_events?(date, events)
-    events.each { |e|
+  def date_events?(date)
+    Event.scoped.each do |e|
       if e.start_time.to_date == date
         return true
       end
-    }
+    end
+
     false
   end
 
