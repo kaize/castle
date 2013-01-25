@@ -1,6 +1,6 @@
 class FixStateForPages < ActiveRecord::Migration
   def up
-     Page.update_all(state: :published, state: nil)
+     Page.update_all(state: nil, state: :published)
   end
 
   def down
