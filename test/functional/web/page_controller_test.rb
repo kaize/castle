@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Web::PageControllerTest < ActionController::TestCase
   def setup
-    @page = create :published_page
+    @page = create :page
     @params = {id: @page}
   end
 
