@@ -130,6 +130,7 @@ ru:
         news: *news
         do_you_want: Хотите записать своего ребенка?
         study_request: Оставить заявку
+        main_event: Главное событие
     news:
       index:
         news: *news

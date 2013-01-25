@@ -3,5 +3,6 @@ class Web::WelcomeController < Web::ApplicationController
     @news = News.web.limit(3)
     photo_album = PhotoAlbum.find_by_main(true)
     @photo_album = photo_album.try :decorate
+    @event = Event.find_by_main true
   end
 end
