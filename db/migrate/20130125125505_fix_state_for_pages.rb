@@ -1,5 +1,6 @@
 class FixStateForPages < ActiveRecord::Migration
   def up
+     Page.reset_column_information
      Page.update_all(state: :published, state: nil)
   end
 
