@@ -1,10 +1,10 @@
 require 'test_helper'
 
-class Web::Admin::PagesControllerTest < ActionController::TestCase
+class Web::Admin::EventsControllerTest < ActionController::TestCase
   def setup
-    @page = create :published_page
-    @params = { id: @page.id }
-    @attrs = attributes_for(:published_page)
+    @partner = create :event
+    @params = {id: @partner.id}
+
   end
 
   test "should get index" do
@@ -12,7 +12,7 @@ class Web::Admin::PagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get show" do
+  test "should get new" do
     get :new
     assert_response :success
   end
@@ -22,17 +22,19 @@ class Web::Admin::PagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should post create" do
-    post :create, @params.merge(page: @attrs)
+  test "should get create" do
+    @params[:event] = attributes_for(:event)
+    post :create, @params
     assert_response :redirect
   end
 
-  test "should put update" do
-    put :update, @params.merge(page: @attrs)
+  test "should get update" do
+    @params[:event] = attributes_for(:event)
+    put :update, @params
     assert_response :redirect
   end
 
-  test "should delete destroy" do
+  test "should get destroy" do
     delete :destroy, @params
     assert_response :redirect
   end

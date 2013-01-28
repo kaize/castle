@@ -5,6 +5,10 @@ ru:
   flash:
     controllers:
       web:
+        study_requests:
+          create:
+            success: Ваша заявка успешно отправлена.
+            error: Возникли ошибки.
         admin:
           news:
             create:
@@ -47,9 +51,29 @@ ru:
               error: Возникли ошибки.
             update:
               success: Объединение отредактировано.
-              error: Возникли ошибки.
+              error: Возникли ошибки.          
           photo_albums:
             create:
               success: 'Фотоальбом создан.'
             update:
               success: 'Фотоальбом отредактирован.'
+          partners:
+            create:
+              success: Партнер сохранен.
+              error: Возникли ошибки.
+            update:
+              success: Партнер отредактирован.
+              error: Возникли ошибки.
+            destroy:
+              success: Партнер удален.
+              error: Возникли ошибки.
+          events:
+            create:
+              success: Событие сохранено.
+              error: Возникли ошибки.
+            update:
+              success: Событие отредактировано.
+              error: Возникли ошибки.
+            destroy:
+              success: Событие удалено.
+              error: Возникли ошибки.

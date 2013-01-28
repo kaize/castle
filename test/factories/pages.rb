@@ -5,5 +5,11 @@ FactoryGirl.define do
     title
     body
     uri { generate :slug }
-  end
+  
+    trait :published do
+      state 'published'
+    end
+    
+    factory :published_page, traits: [:published]
+  end  
 end

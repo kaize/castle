@@ -1,3 +1,6 @@
-%ul.nav.affix.nav-tabs.nav-stacked.spy
+
+%ul.nav.nav-list.bs-docs-sidenav.affix
   -@category.unions.each do |u|
-    = union_item :li, u, "#" + u.id.to_s
+    %li
+      %a{href: "#" + u.id.to_s}
+        = u

@@ -1,7 +1,7 @@
 !!! 5
 %html(lang="ru")
   = render 'layouts/web/shared/head'
-  %body{"data-spy" => "scroll", "data-target" => ".spy"}
+  %body{"data-spy" => "scroll", "data-target" => ".bs-docs-sidenav", id: :scroll_spy}
     = render 'layouts/web/shared/navbar'
     .container
       .content
@@ -16,6 +16,8 @@
               %li= link_to "Link 1", "/path1"
               %li= link_to "Link 2", "/path2"
               %li= link_to "Link 3", "/path3"
+
+      = render 'layouts/web/shared/partners'
       %hr
       = render 'layouts/web/shared/footer'
     /
