@@ -6,4 +6,12 @@ class Event < ActiveRecord::Base
   validates :content, presence: true
 
   mount_uploader :image, EventImageUploader
+
+  before_save do
+    if main?
+      Event.update_all main: true, main: false
+    end
+  end
+
+
 end
