@@ -6,9 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 page = Page.new :title => :contacts, :uri => :contacts, :body => "body"
-page.hide
 page.save
 
 page = Page.new :title => :support, :uri => :support, :body => "body"
-page.hide
 page.save
