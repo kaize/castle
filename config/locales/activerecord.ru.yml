@@ -77,7 +77,7 @@ ru:
         instructors: Педагоги
       photo_album:
         name: Название альбома
-        amount: Количество фотографий
+        photos_count: Количество фотографий
         created_at: Дата создания
         state: Текущее состояние
         state_event: Действие
