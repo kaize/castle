@@ -22,6 +22,7 @@
 //= require cocoon
 //= require select2
 //= require_tree
+//= require ckeditor/init
 
 (function($) { $(function() {
 

@@ -2,7 +2,7 @@
   = f.input :state_event, as: :state_event
   = f.input :title
   = f.input :published_at, as: :datepicker
-  = f.input :body, as: :ckeditor
+  = f.input :body, as: :ckeditor, :input_html => { :class => "ckeditor", :height => 400 }
 
   %h4= t('.photos')
   = f.simple_fields_for :photos do |p|
