@@ -1,0 +1,5 @@
+.nested-fields.well
+  = link_to_remove_association f, class: 'close' do
+    %i.icon-trash
+  = f.input :name
+  = f.input :body, as: :ckeditor, :input_html => {:class => "ckeditor", :height => 400} 

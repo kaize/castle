@@ -1,0 +1,13 @@
+= simple_form_for @activity, :url => url, :html => { :class => 'default_class' } do |f|
+  = f.input :name
+    
+  %h4= t('.page_activity')
+  = f.simple_fields_for :page_activities do |p|
+    = render "page_activity_fields", f: p
+  .links
+    = link_to_add_association f, :page_activities, class: 'btn btn-success' do
+      %i.icon-plus
+      = t('.add')
+  .form-actions
+    = f.button :submit, :class => 'btn btn-primary'
+    = link_to t('.cancel'), admin_instructors_path, :class => 'btn'
