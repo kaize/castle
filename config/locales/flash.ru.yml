@@ -38,6 +38,13 @@ ru:
             update:
               success: Группа отредактирована.
               error: Возникли ошибки.
+          activities:
+            create:
+              success: Деятельность создана.
+              error: Возникли ошибки.
+            update:
+              success: Деятельность отредактирована.
+              error: Возникли ошибки.
           instructors:
             create:
               success: Педагог создан.
