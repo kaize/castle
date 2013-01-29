@@ -3,7 +3,7 @@
   = f.input :name
   = f.association :leader
   = f.association :instructors, as: :select2_multi, include_blank: false
-  = f.input :description, as: :ckeditor
+  = f.input :description, :as => :ckeditor, :input_html => { :class => "ckeditor", :height => 400 }
   .form-actions
     = f.button :submit, :class => 'btn btn-primary'
     = link_to t('.cancel'), admin_unions_path, :class => 'btn'
