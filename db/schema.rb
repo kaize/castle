@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130124104226) do
+ActiveRecord::Schema.define(:version => 20130129113432) do
+
+  create_table "activities", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "activity_page_activities", :force => true do |t|
+    t.integer  "activity_id"
+    t.string   "name"
+    t.text     "body"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -100,9 +114,9 @@ ActiveRecord::Schema.define(:version => 20130124104226) do
     t.string   "title"
     t.text     "body"
     t.string   "uri"
-    t.string   "state"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "state"
   end
 
   create_table "partners", :force => true do |t|
@@ -127,9 +141,10 @@ ActiveRecord::Schema.define(:version => 20130124104226) do
     t.string   "name"
     t.string   "state"
     t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.boolean  "main"
+    t.integer  "photos_count"
   end
 
   create_table "study_requests", :force => true do |t|

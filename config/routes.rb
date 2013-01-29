@@ -1,6 +1,5 @@
 Castle::Application.routes.draw do
 
-
   mount Ckeditor::Engine => '/ckeditor'
 
   scope module: :web do
@@ -18,6 +17,7 @@ Castle::Application.routes.draw do
       resources :pages
       resources :partners
       resources :events
+      resources :activities
     end
 
     resources :news, only: [:index, :show]
