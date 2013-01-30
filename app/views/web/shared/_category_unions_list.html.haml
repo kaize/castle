@@ -2,5 +2,5 @@
 %ul.nav.nav-list.bs-docs-sidenav.affix
   -@category.unions.each do |u|
     %li
-      %a{href: "#" + u.id.to_s}
+      %a{href: "\##{u.id}"}
         = u
