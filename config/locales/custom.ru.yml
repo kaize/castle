@@ -163,6 +163,7 @@ ru:
     web:
       shared:
         navbar:
+          activities: *activities
           categories: *categories
           news: *news
           schedules: *schedules
