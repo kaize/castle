@@ -27,6 +27,11 @@ Castle::Application.routes.draw do
         resources :unions, only: [:index, :show]
       end
     end
+    resources :activities, only: [:index, :show] do
+      scope module: :activities do
+        resources :page_activities, only: [:index, :show]
+      end
+    end
     scope module: :categories do
       resources :unions, only: [:show] do
         scope module: :unions do
