@@ -1,13 +1,12 @@
-class Web::Activities::PageActivitiesController < Web::ApplicationController
+class Web::Activities::PageActivitiesController < Web::Activities::ApplicationController
   def show
-    @activity = Activity.find(params[:activity_id])
-    @page_activity = @activity.page_activities.find(params[:id])
-    add_breadcrumb @activity.name, activity_path(@activity)
-    add_breadcrumb @page_activity.name, activity_page_activity_path(@activity, @page_activity)
+    @page_activity = resource_activity.page_activities.find(params[:id])
+    
+    add_breadcrumb resource_activity.name, activity_path(resource_activity)
+    add_breadcrumb @page_activity.name, activity_page_activity_path(resource_activity, @page_activity)
   end
 
   def index
-    @activity = Activity.find(params[:activity_id])
-    @page_activities = @activity.page_activities
+    @page_activities = resource_activity.page_activities
   end
 end

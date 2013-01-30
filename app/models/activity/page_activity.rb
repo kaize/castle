@@ -5,5 +5,8 @@ class Activity::PageActivity < ActiveRecord::Base
   validates :name, presence: true
   
   belongs_to :activity, inverse_of: :page_activities
-
+  
+  def to_s
+    name
+  end
 end

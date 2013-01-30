@@ -26,11 +26,11 @@ module ApplicationHelper
   end
   
   def nav_activities
-    Activity.all
+    Activity.scoped
   end
   
   def nav_categories
-    Category.all
+    Category.scoped
   end
 
   def contacts_page
