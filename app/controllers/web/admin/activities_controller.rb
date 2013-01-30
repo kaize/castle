@@ -5,19 +5,6 @@ class Web::Admin::ActivitiesController < Web::Admin::ApplicationController
     @activities = @q.result.page(params[:page])
   end
 
-  # GET /activities/1
-  # GET /activities/1.json
-=begin
-  def show
-    @activity = Activity.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @activity }
-    end
-  end
-=end
-
   def new
     @activity = ActivityType.new
   end
