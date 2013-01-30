@@ -35,3 +35,8 @@ ru:
       event:
         create: "Создать"
         update: "Сохранить"
+      activity:
+        create: "Создать"
+        update: "Сохранить"
+      
+      

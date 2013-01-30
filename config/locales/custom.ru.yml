@@ -40,6 +40,19 @@ ru:
           title: *pages
         form:
           cancel: *cancel
+      activities:
+        index:
+          confirm: *confirm
+          title: &activities Деятельности
+          new: *new
+        edit:
+          title: *activities
+        new:
+          title: Добавление деятельности
+        form:
+          cancel: *cancel
+          page_activity: Страницы деятельности
+          add: Добавить
       news:
         index:
           confirm: *confirm
@@ -150,6 +163,7 @@ ru:
     web:
       shared:
         navbar:
+          activities: *activities
           categories: *categories
           news: *news
           schedules: *schedules
