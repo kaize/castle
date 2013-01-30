@@ -1,0 +1,6 @@
+
+%ul.nav.nav-list.bs-docs-sidenav.affix
+  -@activity.page_activities.each do |u|
+    %li
+      %a{href: "#" + u.id.to_s}
+        = u.name
