@@ -26,6 +26,8 @@ gem 'validates'
 gem 'twitter-bootstrap-rails'
 gem 'ckeditor'
 
+gem 'rails-backbone'
+
 #gem 'airbrake'
 
 group :assets do
@@ -36,9 +38,14 @@ group :assets do
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
 
+  gem 'momentjs-rails'
+
   gem 'therubyracer','0.10.2', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'haml_coffee_assets'
+  gem 'execjs'
 end
 
 group :development do
@@ -62,7 +69,7 @@ group :test do
 end
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'jbuilder'
 
 # To use debugger
 # gem 'debugger'

@@ -13,5 +13,7 @@ class Event < ActiveRecord::Base
     end
   end
 
-
+  def start_time
+    begin_date
+  end
 end

@@ -10,7 +10,10 @@
         != truncate_sanitize_rem_br n.body, 250
   .span4
     .well
-      %h5= t('.do_you_want')
+      #calendars
+
+    .well
+      %h4= t('.do_you_want')
       = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
     -if @event
       .well
@@ -42,3 +45,9 @@
         %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"} ‹
         %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"} ›
       %p= link_to "Все фотоальбомы", photo_albums_path
+
+:javascript
+  $(function() {
+    window.router = new Castle.Routers.CalendarsRouter();
+    Backbone.history.start();
+  });

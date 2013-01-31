@@ -3,6 +3,7 @@
   = render 'layouts/web/shared/head'
   %body{"data-spy" => "scroll", "data-target" => ".bs-docs-sidenav", id: :scroll_spy}
     = render 'layouts/web/shared/navbar'
+    = javascript_include_tag "application"
     .container
       .content
         = render_breadcrumbs
@@ -24,4 +25,4 @@
       Javascripts
       \==================================================
     / Placed at the end of the document so the pages load faster
-    = javascript_include_tag "application"
+

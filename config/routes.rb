@@ -2,6 +2,10 @@ Castle::Application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
 
+  namespace :api do
+    resources :events, only: [:index]
+  end
+
   scope module: :web do
     root to: "welcome#index"
 
@@ -43,6 +47,7 @@ Castle::Application.routes.draw do
     resources :instructors, only: [:index, :show]
     resources :photo_albums, only: [:index]
     resources :study_requests
+    resources :events
   end
 
 end

@@ -1,0 +1,22 @@
+
+%a{href: "#", class: "month-dec"} = '<<'
+= @options.month
+%a{href: "#", class: "month-inc"} = '>>'
+
+%a{href: "#", class: "year-dec"} = '<<'
+= @options.year
+%a{href: "#", class: "year-inc"} = '>>'
+%table.table.table-bordered.table-striped
+  %thead
+    %th= "Пн"
+    %th= "Вт"
+    %th= "Ср"
+    %th= "Чт"
+    %th= "Пт"
+    %th= "Сб"
+    %th= "Вс"
+  %tbody
+    - for week of @options.days
+      %tr
+        - for day of @options.days[week]
+          %td = @options.days[week][day]
