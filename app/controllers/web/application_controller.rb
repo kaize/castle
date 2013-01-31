@@ -3,8 +3,8 @@ class Web::ApplicationController < ApplicationController
   include FlashHelper
   helper_method :title
 
-  add_breadcrumb :index, :root_path
-
+  add_breadcrumb :index, :root_path, only: :show
+  
   before_filter do
     title t('base_name')
   end
