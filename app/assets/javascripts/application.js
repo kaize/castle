@@ -18,4 +18,12 @@
 //= require jquery.ui.datepicker-ru
 //= require twitter/bootstrap
 //= require select2
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/castle
+//= require hamlcoffee
+//= require moment
+//= require moment/ru.js
 //= require_tree
