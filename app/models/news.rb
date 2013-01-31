@@ -1,7 +1,7 @@
 class News < ActiveRecord::Base
   include NewsRepository
 
-  attr_accessible :body, :published_at, :state, :title, :state_event
+  attr_accessible :body, :published_at, :title, :state_event
 
   has_many :photos
 

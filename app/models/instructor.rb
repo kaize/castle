@@ -15,5 +15,9 @@ class Instructor < ActiveRecord::Base
   validates :description, presence: true
 
   mount_uploader :avatar, InstructorAvatarUploader
+  
+  def to_s
+    [first_name, middle_name, last_name].compact.join(" ")
+  end
 
 end

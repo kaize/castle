@@ -2,9 +2,9 @@ require 'test_helper'
 
 class Web::Admin::PagesControllerTest < ActionController::TestCase
   def setup
-    @page = create :published_page
+    @page = create :page
     @params = { id: @page.id }
-    @attrs = attributes_for(:published_page)
+    @attrs = attributes_for(:page)
   end
 
   test "should get index" do

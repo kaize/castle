@@ -73,10 +73,11 @@ ru:
         description: Описание
         category: Категория
         category_id: Категория
-        leader: Лидер
+        leader: Руководитель
         instructors: Педагоги
       photo_album:
         name: Название альбома
+        amount: Количество фотографий
         created_at: Дата создания
         state: Текущее состояние
         state_event: Действие

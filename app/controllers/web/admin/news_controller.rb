@@ -15,7 +15,6 @@ class Web::Admin::NewsController < Web::Admin::ApplicationController
 
   def create
     @news = NewsType.new params[:news]
-
     if @news.save
       flash_success
       redirect_to admin_news_index_path
