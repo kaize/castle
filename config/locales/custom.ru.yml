@@ -174,25 +174,25 @@ ru:
           partners: Партнеры
   breadcrumbs:
     web:
-      activities:
-        application:
-          home: Главная
       application:
-        index: Главная
+        index: &home Главная
       news:
-        home: Главная
+        home: *home
         index: Новости
       instructors:
-        home: Главная
+        home: *home
         index: Педагоги
       schedules:
-        home: Главная
+        home: *home
         index: Расписание
+      activities:
+        application:
+          home: *home
       categories:
-        home: Главная
+        home: *home
         index: Расписание
         unions:
-          home: Главная
+          home: *home
           groups:
             schedules: Расписание
       photo_albums:
