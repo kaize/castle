@@ -132,6 +132,8 @@ ru:
           confirm: *confirm
           title: Партнеры
           new: *new
+        new:
+          title: Добавление партнера
         form:
           cancel: *cancel
       events:
@@ -139,6 +141,8 @@ ru:
           confirm: *confirm
           title: События
           new: *new
+        new:
+          title: Добавление события
         form:
           cancel: *cancel
     welcome:
