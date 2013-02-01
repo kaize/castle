@@ -44,7 +44,7 @@ ru:
       activities:
         index:
           confirm: *confirm
-          title: &activities Деятельности
+          title: &activities Деятельность
           new: *new
         edit:
           title: *activities
