@@ -55,12 +55,12 @@ ru:
       categories:
         index:
           confirm: *confirm
-          title: &categories Комплексы
+          title: &categories Детские и молодёжные объединения
           new: *new
         edit:
           title: *categories
         new:
-          title: Добавление комлекса
+          title: Добавление детских и молодежных объединений
         form:
           cancel: *cancel
       groups:
