@@ -1,10 +1,9 @@
 require 'test_helper'
 
-class Web::Admin::PagesControllerTest < ActionController::TestCase
+class Web::Admin::ActivitiesControllerTest < ActionController::TestCase
   def setup
-    @page = create :page
-    @params = { id: @page.id }
-    @attrs = attributes_for(:page)
+    @activity = create :activity
+    @params = {id: @activity.id}
   end
 
   test "should get index" do
@@ -23,12 +22,14 @@ class Web::Admin::PagesControllerTest < ActionController::TestCase
   end
 
   test "should post create" do
-    post :create, @params.merge(page: @attrs)
+    @params[:activity] = attributes_for(:activity)
+    post :create, @params
     assert_response :redirect
   end
 
   test "should put update" do
-    put :update, @params.merge(page: @attrs)
+    @params[:activity] = attributes_for(:activity)
+    put :update, @params
     assert_response :redirect
   end
 
@@ -37,3 +38,4 @@ class Web::Admin::PagesControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 end
+  

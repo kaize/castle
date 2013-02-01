@@ -32,3 +32,6 @@ after "deploy:update", "deploy:cleanup"
 
 
 #require 'airbrake/capistrano'
+
+        require './config/boot'
+        require 'airbrake/capistrano'

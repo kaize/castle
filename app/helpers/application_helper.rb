@@ -24,9 +24,13 @@ module ApplicationHelper
     return '' if text.blank?
     truncate( sanitize(text, :tags => []), :length => length ).gsub(/\r/, "").gsub(/\n/, "").gsub(/&[a-z]{0-5}\.\.\.$/, "...")
   end
-
+  
+  def nav_activities
+    Activity.scoped
+  end
+  
   def nav_categories
-    Category.all
+    Category.scoped
   end
 
   def contacts_page

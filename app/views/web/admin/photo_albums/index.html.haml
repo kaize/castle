@@ -6,6 +6,7 @@
     %tr
       %th= sort_link @q, :id
       %th= sort_link @q, :name
+      %th= sort_link @q, :photos_count
       %th= sort_link @q, :created_at
       %th
   %tbody
@@ -13,6 +14,7 @@
       %tr
         %td= p.id
         %td= p.name
+        %td= p.photos.size
         %td= l p.created_at, :format => :short
         %td
           %span

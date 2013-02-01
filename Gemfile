@@ -26,7 +26,7 @@ gem 'validates'
 gem 'twitter-bootstrap-rails'
 gem 'ckeditor'
 
-#gem 'airbrake'
+gem 'airbrake'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
