@@ -9,7 +9,7 @@ class Castle.Models.Calendar extends Backbone.Model
       @attributes.year = parseInt(@attributes.year) - 1
     else
       @attributes.digit_month = month
-    @attributes.month = moment(@attributes.digit_month + "", ["MM"]).format('MMMM')
+    @attributes.month = _.str.capitalize(moment(@attributes.digit_month + "", ["MM"]).format('MMMM'))
     return @
 
   month_increment: =>
@@ -20,7 +20,7 @@ class Castle.Models.Calendar extends Backbone.Model
       @attributes.year = parseInt(@attributes.year) + 1
     else
       @attributes.digit_month = month
-    @attributes.month = moment(@attributes.digit_month + "", ["MM"]).format('MMMM')
+    @attributes.month = _.str.capitalize(moment(@attributes.digit_month + "", ["MM"]).format('MMMM'))
     return @
 
   year_decrement: =>
@@ -95,7 +95,7 @@ class Castle.Models.Calendar extends Backbone.Model
       now = moment()
 
     @attributes.digit_month = now.format('MM')
-    @attributes.month = now.format('MMMM')
+    @attributes.month = _.str.capitalize(now.format('MMMM'))
     @attributes.year = now.format('YYYY')
     @attributes.current_day = now.format('DD')
 

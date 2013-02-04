@@ -40,6 +40,8 @@ group :assets do
 
   gem 'momentjs-rails'
 
+  gem 'underscore-string-rails'
+
   gem 'therubyracer','0.10.2', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
