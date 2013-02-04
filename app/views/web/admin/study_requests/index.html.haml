@@ -8,6 +8,7 @@
       %th= sort_link @q, :parent_last_name
       %th= sort_link @q, :birth_date
       %th= sort_link @q, :phone
+      %th= sort_link @q, :email  
       %th= sort_link @q, :created_at
       %th
   %tbody
@@ -17,6 +18,7 @@
         %td= item.parent_last_name
         %td= item.birth_date
         %td= item.phone
+        %td= iten.email
         %td= l item.created_at, format: :short
         %td
           .pull-right.btn-group

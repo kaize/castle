@@ -1,6 +1,7 @@
 class StudyRequest < ActiveRecord::Base
   attr_accessible :address, :birth_date, :children_first_name, :children_last_name, :children_middle_name,
-                  :note, :parent_first_name, :parent_last_name, :parent_middle_name, :phone, :school, :union_id
+                  :note, :parent_first_name, :parent_last_name, :parent_middle_name, :phone, :school, :union_id,
+                  :email
 
   belongs_to :union
 
