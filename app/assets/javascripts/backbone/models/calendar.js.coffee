@@ -47,6 +47,7 @@ class Castle.Models.Calendar extends Backbone.Model
     first_day_week_num = 7 if first_day_week_num is 0
 
     days_num = (first_day_week_num - 1) + last_day_num + (7 - last_day_week_num)
+    @attributes.days_to_display_count = days_num
     week_num = 0
     days[week_num] = {}
     while i <= days_num
@@ -61,11 +62,38 @@ class Castle.Models.Calendar extends Backbone.Model
       i++
     return days
 
+  events_days: (data) =>
+    @attributes.events = {}
+    for event of data.events.items
+
+      event_begin_date = moment(data.events.items[event].begin_date)
+      event_end_date = moment(data.events.items[event].end_date)
+      if event_begin_date < moment(@attributes.digit_month + "-" + @attributes.year, "MM-YYYY")
+        event_begin_date = moment(@attributes.digit_month + "-" + @attributes.year, "MM-YYYY").format("D")
+      else
+        event_begin_date = event_begin_date.format("D")
+
+
+
+      if event_end_date > moment(@attributes.digit_month + "-" + @attributes.year, "MM-YYYY").endOf("month")
+        event_end_date = moment(@attributes.digit_month + "-" + @attributes.year, "DD-MM-YYYY").endOf("month").format("D")
+      else
+        event_end_date = event_end_date.format("D")
+
+      while event_begin_date <= event_end_date
+        @attributes.events[event_begin_date] = {} if @attributes.events[event_begin_date] is undefined
+        @attributes.events[event_begin_date][data.events.items[event].id] = data.events.items[event]
+        event_begin_date++
+
   set_days: () =>
     @set("days",  @prepare_days(@attributes.digit_month, @attributes.year))
 
-  initialize: ->
-    now = moment()
+  initialize: (options) ->
+    if options && options.date
+      now = moment(options.date, ["YYYY-MM-DD"])
+    else
+      now = moment()
+
     @attributes.digit_month = now.format('MM')
     @attributes.month = now.format('MMMM')
     @attributes.year = now.format('YYYY')

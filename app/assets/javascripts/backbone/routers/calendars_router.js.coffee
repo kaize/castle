@@ -1,8 +1,7 @@
 class Castle.Routers.CalendarsRouter extends Backbone.Router
   initialize: (options) ->
     @calendars = new Castle.Collections.CalendarsCollection([Castle.Models.Calendar])
-
-  #alert JSON.stringify(@calendars)
+    @calendars.reset options
 
   routes:
     "index"    : "index"

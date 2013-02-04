@@ -19,4 +19,8 @@
     - for week of @options.days
       %tr
         - for day of @options.days[week]
-          %td = @options.days[week][day]
+          %td
+            - if @options.events[@options.days[week][day]]
+              %a{href: "/events?date='#{@options.year}-#{@options.digit_month}-#{@options.days[week][day]}'"} = @options.days[week][day]
+            - else
+              = @options.days[week][day]
