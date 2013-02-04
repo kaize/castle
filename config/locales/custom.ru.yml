@@ -2,7 +2,6 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 ru:
-  home: Главная
   base_name: Ульяновский областной Дворец творчества детей и молодёжи
   logo_title: Дворец пионеров
   add: Добавить
@@ -183,16 +182,24 @@ ru:
   breadcrumbs:
     web:
       application:
-        index: Главная
+        index: &home Главная
       news:
+        home: *home
         index: Новости
       instructors:
+        home: *home
         index: Педагоги
       schedules:
+        home: *home
         index: Расписание
+      activities:
+        application:
+          home: *home
       categories:
+        home: *home
         index: Расписание
         unions:
+          home: *home
           groups:
             schedules: Расписание
       photo_albums:

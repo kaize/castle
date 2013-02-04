@@ -1,6 +1,5 @@
 class Web::Categories::UnionsController < Web::ApplicationController
-  
-  add_breadcrumb I18n.t('.home'), :root_path
+  add_breadcrumb :home, :root_path
   
   def show
     @category = Category.find(params[:category_id])

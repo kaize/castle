@@ -2,7 +2,7 @@ class Web::InstructorsController < Web::ApplicationController
   add_breadcrumb :index, :instructors_path
   
   def index
-    add_breadcrumb I18n.t('.home'), :root_path
+    add_breadcrumb :home, :root_path
     add_breadcrumb :index, :instructors_path
     @instructors = Instructor.page(params[:page]).decorate
   end

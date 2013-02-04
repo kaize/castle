@@ -1,8 +1,9 @@
 class Web::CategoriesController < Web::ApplicationController
   
   def index
+    add_breadcrumb :home, :root_path
     add_breadcrumb :index, :categories_path
-    @category = Category.all
+    @category = Category.scoped
   end
 
   def show
