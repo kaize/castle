@@ -64,16 +64,14 @@ class Castle.Models.Calendar extends Backbone.Model
 
   events_days: (data) =>
     @attributes.events = {}
-    for event of data.events.items
+    for event of data.events
 
-      event_begin_date = moment(data.events.items[event].begin_date)
-      event_end_date = moment(data.events.items[event].end_date)
+      event_begin_date = moment(data.events[event].begin_date)
+      event_end_date = moment(data.events[event].end_date)
       if event_begin_date < moment(@attributes.digit_month + "-" + @attributes.year, "MM-YYYY")
         event_begin_date = moment(@attributes.digit_month + "-" + @attributes.year, "MM-YYYY").format("D")
       else
         event_begin_date = event_begin_date.format("D")
-
-
 
       if event_end_date > moment(@attributes.digit_month + "-" + @attributes.year, "MM-YYYY").endOf("month")
         event_end_date = moment(@attributes.digit_month + "-" + @attributes.year, "DD-MM-YYYY").endOf("month").format("D")
@@ -82,7 +80,7 @@ class Castle.Models.Calendar extends Backbone.Model
 
       while event_begin_date <= event_end_date
         @attributes.events[event_begin_date] = {} if @attributes.events[event_begin_date] is undefined
-        @attributes.events[event_begin_date][data.events.items[event].id] = data.events.items[event]
+        @attributes.events[event_begin_date][data.events[event].id] = data.events[event]
         event_begin_date++
 
   set_days: () =>

@@ -27,4 +27,5 @@
 //= require hamlcoffee
 //= require moment
 //= require moment/ru.js
+//= require js-routes
 //= require_tree
