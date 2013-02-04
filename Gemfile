@@ -42,6 +42,8 @@ group :assets do
 
   gem 'underscore-string-rails'
 
+  gem "js-routes"
+
   gem 'therubyracer','0.10.2', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
