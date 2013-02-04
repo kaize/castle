@@ -1,6 +1,5 @@
-class Web::InstructorsController < Web::ApplicationController
- # add_breadcrumb I18n.t('.home'), :root_path
-#  add_breadcrumb :index, :instructors_path
+class Web::InstructorsController < Web::ApplicationController 
+  add_breadcrumb :index, :instructors_path
   
   def index
     add_breadcrumb I18n.t('.home'), :root_path
