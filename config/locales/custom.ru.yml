@@ -146,6 +146,9 @@ ru:
           title: Добавление события
         form:
           cancel: *cancel
+      welcome:
+        index:
+          title: " "
     welcome:
       index:
         news: *news
