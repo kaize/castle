@@ -12,7 +12,7 @@
 # It's strongly recommended to check this file into your version control system.
 
 
-ActiveRecord::Schema.define(:version => 20130129113432) do
+ActiveRecord::Schema.define(:version => 20130204114745) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -125,6 +125,7 @@ ActiveRecord::Schema.define(:version => 20130129113432) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "url"
   end
 
   create_table "photo_album_photos", :force => true do |t|
