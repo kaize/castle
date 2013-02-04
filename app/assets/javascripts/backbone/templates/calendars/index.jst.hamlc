@@ -1,11 +1,15 @@
-
-%a{href: "#", class: "month-dec"} = '<<'
+%a{href: "#", class: "month-dec"}
+  %i.icon-chevron-left
 = @options.month
-%a{href: "#", class: "month-inc"} = '>>'
+%a{href: "#", class: "month-inc"}
+  %i.icon-chevron-right
 
-%a{href: "#", class: "year-dec"} = '<<'
+%a{href: "#", class: "year-dec"}
+  %i.icon-chevron-left
 = @options.year
-%a{href: "#", class: "year-inc"} = '>>'
+%a{href: "#", class: "year-inc"}
+  %i.icon-chevron-right
+
 %table.table.table-bordered.table-striped
   %thead
     %th= "Пн"
@@ -19,4 +23,8 @@
     - for week of @options.days
       %tr
         - for day of @options.days[week]
-          %td = @options.days[week][day]
+          %td
+            - if @options.events[@options.days[week][day]]
+              %a{href: "/events?date='#{@options.year}-#{@options.digit_month}-#{@options.days[week][day]}'"} = @options.days[week][day]
+            - else
+              = @options.days[week][day]

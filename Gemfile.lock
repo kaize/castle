@@ -241,6 +241,7 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    underscore-string-rails (0.0.1)
     unicorn (4.5.0)
       kgio (~> 2.6)
       rack
@@ -296,6 +297,7 @@ DEPENDENCIES
   turn
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
+  underscore-string-rails
   unicorn
   usefull_scopes!
   validates
