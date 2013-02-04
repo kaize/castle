@@ -4,13 +4,12 @@ class Web::Admin::ApplicationController < Web::ApplicationController
   before_filter do
     title_head
   end
-
-  private
-
+  
+private
   def title_head
     scope = []
     scope << params[:controller].split('/')
-    scope << params[:action] << [:title]
-    t(:scope => scope)  
+    scope << params[:action]
+    t :title, scope: scope
   end
 end
