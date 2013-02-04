@@ -1,5 +1,7 @@
 class Web::InstructorsController < Web::ApplicationController
+  
   add_breadcrumb :index, :instructors_path
+  
   def index
     @instructors = Instructor.page(params[:page])
   end

@@ -1,4 +1,9 @@
 %h2= t('.instructors')
-%ul.nav.nav-tabs.nav-stacked
-  - @instructors.each do |i|
-    %li= link_to i, instructor_path(i)
+- @instructors.each do |i|
+  .media.nav.nav-tabs.nav-stacked
+    %a.pull-left
+      .img-rounded.media-object= image_tag i.avatar.url
+    .media-body
+      .media-heading
+        %h4= link_to i, instructor_path(i)
+    -#%li= link_to i.avatar.url, instructor_path(i)
