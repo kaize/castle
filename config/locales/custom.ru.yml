@@ -114,12 +114,15 @@ ru:
           cancel: *cancel
       group_schedule_classrooms:
         index:
+          title: &classroom Аудитория
           delete_confirm: *confirm
-          name: &classroom Аудитория
+          name: Аудитория
+        new:
+          title: &add_classroom Добавить аудиторию
         sidebar:
-          new: Добавить аудиторию
+          new: *add_classroom
         edit:
-          name: &classroom
+          title: Редактировать аудиторию
         form:
           delete: Удалить
           delete_confirm: *confirm
