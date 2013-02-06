@@ -13,6 +13,7 @@ Castle::Application.routes.draw do
       root to: "welcome#index"
       resources :study_requests, only: [:index, :show, :destroy]
       resources :unions
+      resources :group_schedule_classrooms
       resources :categories
       resources :groups
       resources :instructors

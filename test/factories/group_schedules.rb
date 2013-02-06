@@ -6,5 +6,6 @@ FactoryGirl.define do
     start_at { generate :datetime }
     finish_at { generate :datetime }
     group
+    
   end
 end
