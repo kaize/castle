@@ -84,3 +84,13 @@ ru:
             destroy:
               success: Событие удалено.
               error: Возникли ошибки.
+          group_schedule_classrooms:
+            create:
+              success: Аудитория сохранена.
+              error: Возникли ошибки.
+            update:
+              success: Аудитория отредактирована.
+              error: Возникли ошибки.
+            destroy:
+              success: Аудитория удалена.
+              error: Возникли ошибки.

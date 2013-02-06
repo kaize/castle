@@ -1,0 +1,6 @@
+-content_for :sidebar do
+  %ul.nav.nav-tabs.nav-stacked
+    %li
+      = link_to new_admin_group_schedule_classroom_path, class: 'close' do
+        %i.icon-plus
+      = link_to t('.classroom'), admin_group_schedule_classrooms_path

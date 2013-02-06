@@ -1,6 +1,6 @@
 class Web::Admin::GroupScheduleClassroomsController < Web::Admin::ApplicationController
   def index
-    @classroom = Group::Schedule::Classroom.page(params[:page])
+    @classrooms = Group::Schedule::Classroom.page(params[:page])
   end
 
   def new
@@ -8,7 +8,7 @@ class Web::Admin::GroupScheduleClassroomsController < Web::Admin::ApplicationCon
   end
 
   def create
-    @classroom = Group::Schedule::Classroom.new params[:schedule_classroom]
+    @classroom = Group::Schedule::Classroom.new params[:group_schedule_classroom]
     if @classroom.save
       flash_success
       redirect_to action: :index
@@ -25,7 +25,7 @@ class Web::Admin::GroupScheduleClassroomsController < Web::Admin::ApplicationCon
 
   def update
     @classroom = Group::Schedule::Classroom.find params[:id]
-    if @classroom.update_attributes params[:schedule_classroom]
+    if @classroom.update_attributes params[:group_schedule_classroom]
       flash_success
       redirect_to action: :index
     else
