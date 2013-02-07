@@ -10,6 +10,9 @@ class Castle.Models.Calendar extends Backbone.Model
     else
       @attributes.digit_month = month
     @attributes.month = _.str.capitalize(moment(@attributes.digit_month + "", ["MM"]).format('MMMM'))
+
+    @set_days()
+    @load_events()
     return @
 
   month_increment: =>
@@ -21,14 +24,23 @@ class Castle.Models.Calendar extends Backbone.Model
     else
       @attributes.digit_month = month
     @attributes.month = _.str.capitalize(moment(@attributes.digit_month + "", ["MM"]).format('MMMM'))
+
+    @set_days()
+    @load_events()
     return @
 
   year_decrement: =>
     @attributes.year = parseInt(@attributes.year) - 1
+
+    @set_days()
+    @load_events()
     return @
 
   year_increment: =>
     @attributes.year = parseInt(@attributes.year) + 1
+
+    @set_days()
+    @load_events()
     return @
 
 
@@ -86,6 +98,19 @@ class Castle.Models.Calendar extends Backbone.Model
   set_days: () =>
     @set("days",  @prepare_days(@attributes.digit_month, @attributes.year))
 
+  load_events: () =>
+    work_date = moment(@attributes.year + "-" + @attributes.digit_month + "-01", "YYYY-MM-DD")
+    $.ajax({
+      url: "/api/events"
+      async: false
+      context: @
+      data:
+        ran:
+          begin_date_lteq: work_date.endOf("month").format("YYYY-MM-DD")
+          end_date_gteq: work_date.startOf("month").format("YYYY-MM-DD")
+    }).done (data) ->
+      @events_days (data)
+
   initialize: (options) ->
     if options && options.date
       now = moment(options.date, ["YYYY-MM-DD"])
@@ -98,6 +123,7 @@ class Castle.Models.Calendar extends Backbone.Model
     @attributes.current_day = now.format('DD')
 
     @set_days()
+    @load_events()
 
     return @
 
