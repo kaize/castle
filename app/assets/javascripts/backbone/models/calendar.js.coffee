@@ -44,7 +44,7 @@ class Castle.Models.Calendar extends Backbone.Model
     return @
 
 
-  prepare_days: (month, year) =>
+  days_on_weeks: (month, year) =>
     days = {}
     i = 1
     work_date = moment(month + "-" + year, ["MM-YYYY"])
@@ -96,7 +96,7 @@ class Castle.Models.Calendar extends Backbone.Model
         event_begin_date++
 
   set_days: () =>
-    @set("days",  @prepare_days(@attributes.digit_month, @attributes.year))
+    @set("days",  @days_on_weeks(@attributes.digit_month, @attributes.year))
 
   load_events: () =>
     work_date = moment(@attributes.year + "-" + @attributes.digit_month + "-01", "YYYY-MM-DD")
