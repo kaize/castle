@@ -1,6 +1,8 @@
 class Castle.Models.Calendar extends Backbone.Model
   paramRoot: 'calendar'
 
+#  TODO Повесить событие на изменение месяца и года и вызывать у них @set_days() и @load_events()
+
   month_decrement: =>
     month = parseInt(@attributes.digit_month) - 1
 
