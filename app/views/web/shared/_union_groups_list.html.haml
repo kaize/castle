@@ -1,8 +1,7 @@
 
 %ul.nav.nav-list.bs-docs-sidenav.affix
   -@category.each do |c|
-    - c.unions.each do |u| 
-      - if u.groups.any?
-        %li
-          %a{href: "\##{c.id}"}
-            = c
+    - if c.unions.any?
+      %li
+        %a{href: "\##{c.id}"}
+          = c
