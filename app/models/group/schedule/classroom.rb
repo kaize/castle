@@ -11,4 +11,9 @@ class Group::Schedule::Classroom < ActiveRecord::Base
   def can_destroy?
       persisted?
   end
+  
+  def to_s
+    name
+  end
+  
 end

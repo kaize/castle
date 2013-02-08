@@ -20,8 +20,10 @@ ru:
           description: "Описание"
         groups:
           show:
+            instructors: Руководители
             schedule: Расписание группы
-            date: Дата
+            classroom: Аудитория
+            week: День недели
             start_at: Начало
             finish_at: Окончание
     unions:

@@ -62,7 +62,7 @@ ru:
         union_id: Объединение
         schedules: Расписание
       "group/schedule":
-        date: Дата
+        week: Дни недели
         classroom: Аудитория
         start_at: Начало в
         finish_at: Конец в
