@@ -1,0 +1,7 @@
+
+%ul.nav.nav-list.bs-docs-sidenav.affix
+  -@category.each do |c|
+    - unless c.unions.empty?
+      %li
+        %a{href: "\##{c.id}"}
+          = c
