@@ -1,7 +1,7 @@
 .nested-fields.well
   = link_to_remove_association f, class: 'close' do
     %i.icon-trash
-  = f.input :date, collection: t("date.standalone_day_names")
+  = f.input :week, collection: t("date.standalone_day_names")
   = f.association :classroom, collection: Group::Schedule::Classroom.asc_by_name
   = f.input :start_at
   = f.input :finish_at

@@ -23,7 +23,7 @@ ru:
             instructors: Руководители
             schedule: Расписание группы
             classroom: Аудитория
-            date: День недели
+            week: День недели
             start_at: Начало
             finish_at: Окончание
     unions:
