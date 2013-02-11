@@ -1,0 +1,16 @@
+.row
+  .span3
+    #calendars
+  .span8
+    - @events.each do |event|
+      %h4= event.name
+      - if event.image.present?
+        = image_tag event.image
+      != event.content
+
+
+:javascript
+  $(function() {
+    window.router = new Castle.Routers.CalendarsRouter({date:#{@date}});
+    Backbone.history.start();
+  });

@@ -1,0 +1,13 @@
+%table.table.table-bordered.table-striped.calendar
+  = month_header(Date.civil(Time.zone.now.year.to_i, Time.zone.now.month.to_i), {:prev_text  => raw("&laquo;"),:next_text  => raw("&raquo;")})
+  %thead= abbr_day_names.join.html_safe
+
+  %tbody
+    - build_month(build_range(Date.civil(Time.zone.now.year.to_i, Time.zone.now.month.to_i))).collect do |week|
+      %tr
+        - week.collect do |date|
+          %td
+            - if date_events? date
+              = link_to date.day, "#"
+            - else
+              = date.day
