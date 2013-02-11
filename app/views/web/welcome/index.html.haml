@@ -16,6 +16,7 @@
     .news_link= link_to "Все новости", news_index_path
   .span4
     .well
+      #calendars
       %center
         %h5= t('.do_you_want')
       = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
@@ -28,6 +29,9 @@
             = @event.name
 
     %div{id: :vk_groups}
+
+    #vk_groups
+
 - if @photo_album.try :can_view?
   .row
     .span12
@@ -47,3 +51,9 @@
         %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"} ‹
         %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"} ›
       %p= link_to "Все фотоальбомы", photo_albums_path
+
+:javascript
+  $(function() {
+    window.router = new Castle.Routers.CalendarsRouter();
+    Backbone.history.start();
+  });

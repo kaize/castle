@@ -7,11 +7,15 @@ class Event < ActiveRecord::Base
 
   mount_uploader :image, EventImageUploader
 
+
   before_save do
     if main?
       Event.update_all main: true, main: false
     end
   end
 
+  def start_time
+    begin_date
+  end
 
 end
