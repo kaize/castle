@@ -1,8 +1,14 @@
 %h3= @news
 - if @news.published_at?
   .help-block= l @news.published_at, :format => :long
+.span7.offset3
+  #carousel.carousel.slide
+    .carousel-inner
+      - @news.photos.each_with_index do |p,i|
+        .item{:class => i == 0 ? "active" : ''}
+          = image_tag(p.asset_url)
+      %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"} ‹
+      %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"} ›
 != @news.body
-- @news.photos.each do |p|
-  = image_tag p.asset
 %hr
 %div{:id => "disqus_thread"}
