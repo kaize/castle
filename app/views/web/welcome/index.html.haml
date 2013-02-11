@@ -1,8 +1,7 @@
 .well
   .lead
     %h2= t('.base_name')
-    .lead
-      %i= t('.me_open')
+    %i= t('.me_open')
 %h3= t('.news')
 .row
   .span8
@@ -15,18 +14,20 @@
         != truncate_sanitize_rem_br n.body, 250
     .news_link= link_to "Все новости", news_index_path
   .span4
-    .well
-      #calendars
-      %center
-        %h5= t('.do_you_want')
-      = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
-    -if @event
-      .well
+    - if @event
+      .well.well-small
         %h5= t('.main_event')
         = image_tag @event.image
         .pagination-centered
+          %br
           %strong
             = @event.name
+    .well
+      #calendars
+    .well.well-small
+      %center
+        %h5= t('.do_you_want')
+      = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
 
     %div{id: :vk_groups}
 
