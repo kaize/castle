@@ -59,7 +59,8 @@ ru:
         name: Аудитория
       group:
         name: Название
-        union_id: Объединение
+        union: Объединение
+        instructors: Педагоги 
         schedules: Расписание
       "group/schedule":
         week: Дни недели
