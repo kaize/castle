@@ -14,6 +14,9 @@ ru:
     cancel: &cancel Отменить
     categories:
       unions:
+        index:
+          schedules: "Расписание:"
+          instructors: "Педагоги:"
         show:
           groups: "Группы"
           instructors: "Педагоги"

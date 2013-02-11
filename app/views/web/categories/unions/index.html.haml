@@ -1,11 +1,19 @@
 .row
   .span3
     = render "web/shared/category_unions_list"
-  .span6
+  .span7
     %h3= @category
     - @unions.each do |u|
       %hr
       %div{:id =>  u.id}
-        %h4
-          = u.name
+        %h4= u.name
       != u.description
+      %h4= t(".schedules")
+      %ul.nav.nav-tabs.nav-stacked
+        - u.groups.each do |g|
+          %li= link_to g, union_group_path(u, g)
+      -if u.instructors.any?
+        %h4= t(".instructors")
+        %ul.nav.nav-tabs.nav-stacked
+          - u.instructors.each do |i|
+            %li= link_to i, instructor_path(i)
