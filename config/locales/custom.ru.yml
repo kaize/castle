@@ -36,6 +36,10 @@ ru:
         description: "Описание"
     admin:
       pages:
+        create:
+          title: &title " "
+        update:
+          title: *title
         index:
           title: &pages Страницы
           confirm: *confirm
@@ -47,6 +51,10 @@ ru:
         form:
           cancel: *cancel
       activities:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           confirm: *confirm
           title: &activities Деятельность
@@ -60,6 +68,10 @@ ru:
           page_activity: Страницы деятельности
           add: Добавить
       news:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           confirm: *confirm
           title: &news Новости
@@ -71,6 +83,10 @@ ru:
         form:
           cancel: *cancel
       categories:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           confirm: *confirm
           title: &categories Детские и молодёжные объединения
@@ -82,6 +98,10 @@ ru:
         form:
           cancel: *cancel
       groups:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           confirm: *confirm
           title: &groups Группы
@@ -98,6 +118,10 @@ ru:
           schedules: Расписание
           add: Добавить
       unions:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           confirm: *confirm
           title: &unions Объединение
@@ -109,6 +133,10 @@ ru:
         form:
           cancel: *cancel
       instructors:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           confirm: *confirm
           title: &instructors Педагоги
@@ -120,6 +148,10 @@ ru:
         form:
           cancel: *cancel
       group_schedule_classrooms:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           title: &classroom Аудитория
           delete_confirm: *confirm
@@ -135,10 +167,18 @@ ru:
           delete_confirm: *confirm
           cancel: *cancel
       schedules:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           schedules: &schedules Расписание
           groups: *groups
       photo_albums:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           title: &photo_albums Фотоальбом
           new: *new
@@ -147,12 +187,20 @@ ru:
         edit:
           title: Фотоальбом
       study_requests:
+        create:
+          title: *title
+        update:
+          title: *title
         show:
           title: "Заявки"
         index:
           title: Список заявок
           confirm: *confirm
       partners:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           confirm: *confirm
           title: Партнеры
@@ -164,6 +212,10 @@ ru:
         form:
           cancel: *cancel
       events:
+        create:
+          title: *title
+        update:
+          title: *title
         index:
           confirm: *confirm
           title: События
