@@ -12,7 +12,7 @@
 # It's strongly recommended to check this file into your version control system.
 
 
-ActiveRecord::Schema.define(:version => 20130204122231) do
+ActiveRecord::Schema.define(:version => 20130208132535) do
 
 
   create_table "activities", :force => true do |t|
@@ -70,13 +70,20 @@ ActiveRecord::Schema.define(:version => 20130204122231) do
     t.datetime "updated_at",    :null => false
   end
 
+  create_table "group_schedule_classrooms", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "group_schedules", :force => true do |t|
     t.time     "start_at"
     t.time     "finish_at"
     t.integer  "group_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.date     "date"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "week"
+    t.integer  "classroom_id"
   end
 
   create_table "groups", :force => true do |t|

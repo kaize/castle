@@ -1,5 +1,15 @@
 %h3= @category
 .row
   .span3
-    = render "web/shared/category_unions_list"
-
+    = render "web/shared/union_groups_list"
+  .span5
+    %h4= t(".description")
+    != @union.description
+    %h4= t(".groups")
+    %ul.nav.nav-tabs.nav-stacked
+      - @union.groups.each do |g|
+        %li= link_to g, schedule_path(g)
+    %h4= t(".instructors")
+    %ul.nav.nav-tabs.nav-stacked
+      - @union.instructors.each do |i|
+        %li= link_to i, instructor_path(i)

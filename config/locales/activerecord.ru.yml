@@ -55,14 +55,19 @@ ru:
       category:
         name: Название
         description: Описание
+      group_schedule_classroom:
+        name: Аудитория
       group:
         name: Название
         union_id: Объединение
         schedules: Расписание
       "group/schedule":
-        date: Дата
+        week: Дни недели
+        classroom: Аудитория
         start_at: Начало в
         finish_at: Конец в
+      "group/schedule/classroom":
+        name: Аудитория
       activity:
         name: Название
       "activity/page_activity":
