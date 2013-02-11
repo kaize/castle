@@ -1,6 +1,8 @@
 class Castle.Models.Calendar extends Backbone.Model
   paramRoot: 'calendar'
 
+#  TODO Повесить событие на изменение месяца и года и вызывать у них @set_days() и @load_events()
+
   month_decrement: =>
     month = parseInt(@attributes.digit_month) - 1
 
@@ -10,6 +12,9 @@ class Castle.Models.Calendar extends Backbone.Model
     else
       @attributes.digit_month = month
     @attributes.month = _.str.capitalize(moment(@attributes.digit_month + "", ["MM"]).format('MMMM'))
+
+    @set_days()
+    @load_events()
     return @
 
   month_increment: =>
@@ -21,18 +26,27 @@ class Castle.Models.Calendar extends Backbone.Model
     else
       @attributes.digit_month = month
     @attributes.month = _.str.capitalize(moment(@attributes.digit_month + "", ["MM"]).format('MMMM'))
+
+    @set_days()
+    @load_events()
     return @
 
   year_decrement: =>
     @attributes.year = parseInt(@attributes.year) - 1
+
+    @set_days()
+    @load_events()
     return @
 
   year_increment: =>
     @attributes.year = parseInt(@attributes.year) + 1
+
+    @set_days()
+    @load_events()
     return @
 
 
-  prepare_days: (month, year) =>
+  days_on_weeks: (month, year) =>
     days = {}
     i = 1
     work_date = moment(month + "-" + year, ["MM-YYYY"])
@@ -84,7 +98,20 @@ class Castle.Models.Calendar extends Backbone.Model
         event_begin_date++
 
   set_days: () =>
-    @set("days",  @prepare_days(@attributes.digit_month, @attributes.year))
+    @set("days",  @days_on_weeks(@attributes.digit_month, @attributes.year))
+
+  load_events: () =>
+    work_date = moment(@attributes.year + "-" + @attributes.digit_month + "-01", "YYYY-MM-DD")
+    $.ajax({
+      url: "/api/events"
+      async: false
+      context: @
+      data:
+        ran:
+          begin_date_lteq: work_date.endOf("month").format("YYYY-MM-DD")
+          end_date_gteq: work_date.startOf("month").format("YYYY-MM-DD")
+    }).done (data) ->
+      @events_days (data)
 
   initialize: (options) ->
     if options && options.date
@@ -98,6 +125,7 @@ class Castle.Models.Calendar extends Backbone.Model
     @attributes.current_day = now.format('DD')
 
     @set_days()
+    @load_events()
 
     return @
 
