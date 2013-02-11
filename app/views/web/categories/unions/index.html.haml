@@ -8,11 +8,12 @@
       %div{:id =>  u.id}
         %h4= u.name
       != u.description
-      %h4= t(".schedules")
-      %ul.nav.nav-tabs.nav-stacked
-        - u.groups.each do |g|
-          %li= link_to g, union_group_path(u, g)
-      -if u.instructors.any?
+      - if u.groups.any?
+        %h4= t(".schedules")
+        %ul.nav.nav-tabs.nav-stacked
+          - u.groups.each do |g|
+            %li= link_to g, union_group_path(u, g)
+      - if u.instructors.any?
         %h4= t(".instructors")
         %ul.nav.nav-tabs.nav-stacked
           - u.instructors.each do |i|
