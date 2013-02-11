@@ -14,8 +14,13 @@
  *= require bootstrap_bs_docs_sidenav
  *= require_self
  */
+ 
 .partner-image {
   margin: 10px;
+}  
+.img-rounded {
+  height: 140px;
+  width: 140px;
 }
 body {
   padding-top: 60px;
