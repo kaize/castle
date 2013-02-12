@@ -28,6 +28,7 @@ gem 'ckeditor'
 gem 'colorbox-rails'
 
 gem 'airbrake'
+gem 'rails-backbone'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -37,9 +38,18 @@ group :assets do
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
 
+  gem 'momentjs-rails'
+
+  gem 'underscore-string-rails'
+
+  gem "js-routes"
+
   gem 'therubyracer','0.10.2', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'haml_coffee_assets'
+  gem 'execjs'
 end
 
 group :development do
@@ -63,7 +73,7 @@ group :test do
 end
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'jbuilder'
 
 # To use debugger
 # gem 'debugger'
