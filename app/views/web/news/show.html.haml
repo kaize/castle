@@ -1,9 +1,11 @@
 %h3= @news
 - if @news.published_at?
   .help-block= l @news.published_at, :format => :long
-.span7
-  = link_to image_tag(@news.photos.first.asset_url), @news.photos.first.asset_url , data: {colorbox: true}
-!= @news.body
+.span5
+  -if @news.photos.first!= nil
+    = link_to image_tag(@news.photos.first.asset_url), @news.photos.first.asset_url , data: {colorbox: true}
+.span6
+  != @news.body
 - @news.photos.each_with_index do |p,i|
   - if i != 0
     .span5
