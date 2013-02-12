@@ -25,6 +25,7 @@ gem 'validates'
 #gem 'client_side_validations'
 gem 'twitter-bootstrap-rails'
 gem 'ckeditor'
+gem 'colorbox-rails'
 
 gem 'airbrake'
 gem 'rails-backbone'

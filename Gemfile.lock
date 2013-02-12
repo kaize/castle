@@ -71,6 +71,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    colorbox-rails (0.0.10)
+      jquery-rails
+      rails (>= 3.1.1)
     colorize (0.5.8)
     commonjs (0.2.6)
     configus (0.0.4)
@@ -267,6 +270,7 @@ DEPENDENCIES
   ckeditor
   cocoon
   coffee-rails (~> 3.2.1)
+  colorbox-rails
   configus
   coveralls
   draper
