@@ -15,6 +15,10 @@
  *= require_self
  *= require colorbox-rails
  */
+.leftimg {
+  float:left; 
+  margin: 7px 7px 7px 0px;
+}
  
 .partner-image {
   margin: 10px;
