@@ -1,11 +1,12 @@
 .row
-  .span3
+  .span3.bs-docs-sidebar{id: "scrollnav"}
     = render "web/shared/activity_page_activities_list"
-  .span6
-    %h3= resource_activity
-    -@page_activities.each do |u|
-      %hr
-      %div{:id =>  u.id}
-        %h4
-          = u
-      != u.body
+  .span7
+    %div{ data: { spy: "scroll", target: "#scrollnav"}}
+      %h3= resource_activity
+      -@page_activities.each do |u|
+        %hr
+        %section{ id: u.id}
+          %h4
+            = u
+          != u.body
