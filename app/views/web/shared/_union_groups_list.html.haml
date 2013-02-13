@@ -1,7 +1,6 @@
-
 %ul.nav.nav-list.bs-docs-sidenav.affix
   -@category.each do |c|
     - if c.unions.any?
       %li
-        %a{href: "\##{c.id}"}
+        %a{href: "##{c.id}"}
           = c
