@@ -9,10 +9,10 @@ ru:
   sure: Подтвердите удаление фотоальбома
   views:
       pagination:
-        first: "&laquo; Первый"
-        last: "Последний &raquo;"
-        previous: "&lsaquo; Предыдущий"
-        next: "Следующий &rsaquo;"
+        first: "&laquo; Первая"
+        last: "Последняя &raquo;"
+        previous: "&lsaquo; Предыдущая"
+        next: "Следующая &rsaquo;"
         truncate: "..."
   web:
     confirm: &confirm Вы уверены?
