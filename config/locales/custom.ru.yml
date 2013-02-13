@@ -7,6 +7,13 @@ ru:
   add: Добавить
   edit: ""
   sure: Подтвердите удаление фотоальбома
+  views:
+      pagination:
+        first: "&laquo; Первый"
+        last: "Последний &raquo;"
+        previous: "&lsaquo; Предыдущий"
+        next: "Следующий &rsaquo;"
+        truncate: "..."
   web:
     confirm: &confirm Вы уверены?
     new: &new Добавить
