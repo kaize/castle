@@ -5,6 +5,7 @@ ru:
   base_name: Ульяновский областной Дворец творчества детей и молодёжи
   logo_title: Дворец пионеров
   add: Добавить
+  edit: ""
   sure: Подтвердите удаление фотоальбома
   web:
     confirm: &confirm Вы уверены?
@@ -19,8 +20,10 @@ ru:
           description: "Описание"
         groups:
           show:
+            instructors: Руководители
             schedule: Расписание группы
-            date: Дата
+            classroom: Аудитория
+            week: День недели
             start_at: Начало
             finish_at: Окончание
     unions:
@@ -43,7 +46,7 @@ ru:
       activities:
         index:
           confirm: *confirm
-          title: &activities Деятельности
+          title: &activities Деятельность
           new: *new
         edit:
           title: *activities
@@ -67,12 +70,12 @@ ru:
       categories:
         index:
           confirm: *confirm
-          title: &categories Комплексы
+          title: &categories Детские и молодёжные объединения
           new: *new
         edit:
           title: *categories
         new:
-          title: Добавление комлекса
+          title: Добавление детских и молодежных объединений
         form:
           cancel: *cancel
       groups:
@@ -85,6 +88,8 @@ ru:
           title: *groups
         new:
           title: Добавление группы
+        sidebar:
+          classroom: Аудитории
         form:
           cancel: *cancel
           schedules: Расписание
@@ -110,6 +115,21 @@ ru:
         new:
           title: Добавление педагога
         form:
+          cancel: *cancel
+      group_schedule_classrooms:
+        index:
+          title: &classroom Аудитория
+          delete_confirm: *confirm
+          name: Аудитория
+        new:
+          title: &add_classroom Добавить аудиторию
+        sidebar:
+          new: *add_classroom
+        edit:
+          title: Редактировать аудиторию
+        form:
+          delete: Удалить
+          delete_confirm: *confirm
           cancel: *cancel
       schedules:
         index:
@@ -144,6 +164,8 @@ ru:
     welcome:
       index:
         news: *news
+        base_name: Ульяновский областной Дворец творчества детей и молодёжи
+        me_open: Мы открыты для открытий!
         do_you_want: Хотите записать своего ребенка?
         study_request: Оставить заявку
         main_event: Главное событие
@@ -173,16 +195,24 @@ ru:
   breadcrumbs:
     web:
       application:
-        index: Главная
+        index: &home Главная
       news:
+        home: *home
         index: Новости
       instructors:
+        home: *home
         index: Педагоги
       schedules:
+        home: *home
         index: Расписание
+      activities:
+        application:
+          home: *home
       categories:
+        home: *home
         index: Расписание
         unions:
+          home: *home
           groups:
             schedules: Расписание
       photo_albums:

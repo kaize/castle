@@ -16,7 +16,7 @@
       %tr
         %td= item.id
         %td= item.title
-        %td= l item.published_at, format: :short
+        %td= l(item.published_at, format: :short) if item.published_at?
         %td= item.human_state_name
         %td
           .pull-right.btn-group

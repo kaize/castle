@@ -13,6 +13,7 @@ FactoryGirl.define do
     address "MyString"
     phone "MyString"
     note "MyText"
+    email
     union
   end
 end

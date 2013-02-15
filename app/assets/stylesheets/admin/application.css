@@ -13,7 +13,6 @@
  *= require select2
  *= require_self
  */
-
 .navbar-fixed-top, .navbar-fixed-bottom {
   position: static;
   margin-bottom: 20px;

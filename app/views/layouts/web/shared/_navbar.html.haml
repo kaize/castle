@@ -22,7 +22,6 @@
             %ul.dropdown-menu
               - nav_activities.each do |c|
                 = item :li, c, activity_page_activities_path(c)
-          = item :li, t('.news'), news_index_path
           = item :li, t('.schedules'), categories_path
           = item :li, t('.instructors'), instructors_path
           = item_page :li, support_page
