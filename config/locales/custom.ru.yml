@@ -43,14 +43,14 @@ ru:
         description: "Описание"
     admin:
       pages:
-        title: &pages Страницы
+        index:
+          title: &pages Страницы
           confirm: *confirm
           new: *new
         create:
           title: *pages
         update:
           title: *pages
-        index:
         new:
           title: Добавление страницы
         edit:
