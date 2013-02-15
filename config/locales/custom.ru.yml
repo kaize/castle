@@ -43,14 +43,14 @@ ru:
         description: "Описание"
     admin:
       pages:
-        create:
-          title: &title " "
-        update:
-          title: *title
-        index:
           title: &pages Страницы
           confirm: *confirm
           new: *new
+        create:
+          title: *pages
+        update:
+          title: *pages
+        index:
         new:
           title: Добавление страницы
         edit:
@@ -58,10 +58,6 @@ ru:
         form:
           cancel: *cancel
       activities:
-        create:
-          title: *title
-        update:
-          title: *title
         index:
           confirm: *confirm
           title: &activities Деятельность
@@ -74,11 +70,11 @@ ru:
           cancel: *cancel
           page_activity: Страницы деятельности
           add: Добавить
-      news:
         create:
-          title: *title
+          title: *activities
         update:
-          title: *title
+          title: *activities
+      news: 
         index:
           confirm: *confirm
           title: &news Новости
@@ -89,11 +85,11 @@ ru:
           title: Добавление новости
         form:
           cancel: *cancel
-      categories:
         create:
-          title: *title
+          title: *news
         update:
-          title: *title
+          title: *news
+      categories: 
         index:
           confirm: *confirm
           title: &categories Детские и молодёжные объединения
@@ -104,11 +100,11 @@ ru:
           title: Добавление детских и молодежных объединений
         form:
           cancel: *cancel
-      groups:
         create:
-          title: *title
+          title: *categories
         update:
-          title: *title
+          title: *categories
+      groups:
         index:
           confirm: *confirm
           title: &groups Группы
@@ -124,11 +120,11 @@ ru:
           cancel: *cancel
           schedules: Расписание
           add: Добавить
-      unions:
         create:
-          title: *title
+          title: *groups
         update:
-          title: *title
+          title: *groups
+      unions:
         index:
           confirm: *confirm
           title: &unions Объединение
@@ -139,11 +135,11 @@ ru:
           title: Добавление объединения
         form:
           cancel: *cancel
-      instructors:
         create:
-          title: *title
+          title: *unions
         update:
-          title: *title
+          title: *unions
+      instructors:
         index:
           confirm: *confirm
           title: &instructors Педагоги
@@ -154,11 +150,11 @@ ru:
           title: Добавление педагога
         form:
           cancel: *cancel
-      group_schedule_classrooms:
         create:
-          title: *title
+          title: *instructors
         update:
-          title: *title
+          title: *instructors
+      group_schedule_classrooms:
         index:
           title: &classroom Аудитория
           delete_confirm: *confirm
@@ -173,56 +169,60 @@ ru:
           delete: Удалить
           delete_confirm: *confirm
           cancel: *cancel
-      schedules:
         create:
-          title: *title
+          title: *classroom
         update:
-          title: *title
+          title: *classroom
+      schedules:
         index:
           schedules: &schedules Расписание
           groups: *groups
-      photo_albums:
         create:
-          title: *title
+          title: *schedules
         update:
-          title: *title
+          title: *schedules
+      photo_albums:
         index:
           title: &photo_albums Фотоальбом
           new: *new
         new:
           title: Добавление фотоальбома
-      study_requests:
         create:
-          title: *title
+          title: *photo_albums
         update:
-          title: *title
+          title: *photo_albums
+      study_requests:    
         show:
           title: "Заявка №%{number}"
         index:
           title: Список заявок
           confirm: *confirm
+        create:
+          title: Заявка
+        update:
+          title: Заявка
       partners:
-        create:
-          title: *title
-        update:
-          title: *title
         index:
           confirm: *confirm
-          title: Партнеры
+          title: &partners Партнеры
           new: *new
         form:
           cancel: *cancel
+        create:
+          title: *partners
+        update:
+          title: *partners
       events:
-        create:
-          title: *title
-        update:
-          title: *title
         index:
           confirm: *confirm
-          title: События
+          title: &events События
           new: *new
         form:
           cancel: *cancel
+        create:
+          title: *events
+        update:
+          title: *events
     welcome:
       index:
         news: Главные новости
