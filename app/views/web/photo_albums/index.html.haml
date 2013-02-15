@@ -1,7 +1,7 @@
 - @photo_albums.each_with_index do |album, i|
   .row
     .span4
-      %h4= album.name
+      %h4= link_to album.name, photo_album_path(album) 
       %p= album.description
     .span8
       .carousel.slide{ :id => "carousel_#{album.id}" }
