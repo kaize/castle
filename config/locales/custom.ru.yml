@@ -44,7 +44,7 @@ ru:
         description: "Описание"
     admin:
       pages:
-          title: &pages Страницы
+        title: &pages Страницы
           confirm: *confirm
           new: *new
         create:
