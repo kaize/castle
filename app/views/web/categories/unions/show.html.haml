@@ -1,15 +1,18 @@
-%h3= @category
 .row
   .span3
     = render "web/shared/category_unions_list"
-  .span5
-    %h4= t(".description")
+  .span7
+    %h3= @category
+    %h4= @union.name
     != @union.description
-    %h4= t(".groups")
-    %ul.nav.nav-tabs.nav-stacked
-      - @union.groups.each do |g|
-        %li= link_to g, schedule_path(g)
-    %h4= t(".instructors")
-    %ul.nav.nav-tabs.nav-stacked
-      - @union.instructors.each do |i|
-        %li= link_to i, instructor_path(i)
+    - if @union.groups.any?
+      %h4= t(".schedules")
+      %ul.nav.nav-tabs.nav-stacked
+        - @union.groups.each do |g|
+          %li= link_to g, union_group_path(@union, g)
+    - if @union.instructors.any?
+      %h4= t(".instructors")
+      %ul.nav.nav-tabs.nav-stacked
+        - @union.instructors.each do |i|
+          %li= link_to i, instructor_path(i)
+  
