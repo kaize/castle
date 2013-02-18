@@ -29,21 +29,20 @@ Castle::Application.routes.draw do
     resources :page, only: [:show]
     resources :categories, only: [:index, :show] do
       scope module: :categories do
-        resources :unions, only: [:index, :show]
+        resources :unions, only: [:index, :show] do
+          scope module: :unions do
+            resources :groups, only: [:show]
+          end
+        end
       end
     end
+    
     resources :activities, only: [:index, :show] do
       scope module: :activities do
         resources :page_activities, only: [:index, :show]
       end
     end
-    scope module: :categories do
-      resources :unions, only: [:show] do
-        scope module: :unions do
-          resources :groups, only: [:show]
-        end
-      end
-    end
+    
     resources :schedules, only: [:index, :show]
     resources :instructors, only: [:index, :show]
     resources :photo_albums, only: [:index]
