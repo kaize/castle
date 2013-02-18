@@ -3,7 +3,12 @@ class Web::InstructorsController < Web::ApplicationController
   def index
     add_breadcrumb :home, :root_path
     add_breadcrumb :index, :instructors_path
-    @instructors = Instructor.page(params[:page]).decorate
+    @q = Instructor.ransack(params[:q])
+    if params[:q].nil? 
+      @instructors = @q.result.page(params[:page]).decorate.order('created_at DESC')
+    else
+      @instructors = @q.result.page(params[:page]).decorate
+    end
   end
 
   def show
