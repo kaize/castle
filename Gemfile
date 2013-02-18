@@ -28,6 +28,8 @@ gem 'ckeditor'
 
 gem 'airbrake'
 gem 'rails-backbone'
+gem 'mysql2',          '0.3.12b4'
+gem 'thinking-sphinx', '3.0.0'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
