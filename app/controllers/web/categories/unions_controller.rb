@@ -1,5 +1,4 @@
 class Web::Categories::UnionsController < Web::ApplicationController
-  add_breadcrumb :home, :root_path
   
   def show
     @category = Category.find(params[:category_id])
@@ -9,6 +8,7 @@ class Web::Categories::UnionsController < Web::ApplicationController
   end
 
   def index
+    add_breadcrumb :home, :root_path
     @category = Category.find(params[:category_id])
     @unions = @category.unions
   end

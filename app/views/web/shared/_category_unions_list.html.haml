@@ -1,6 +1,3 @@
-
-%ul.nav.nav-list.bs-docs-sidenav.affix
-  -@category.unions.each do |u|
-    %li
-      %a{href: "##{u.id}"}
-        = u
+%ul.nav.nav-list
+  - @category.unions.each do |u|
+    %li= link_to u, category_union_path(@category, u)
