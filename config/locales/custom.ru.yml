@@ -217,4 +217,5 @@ ru:
           groups:
             schedules: Расписание
       photo_albums:
+        home: *home
         photo_albums: Фотоальбомы
