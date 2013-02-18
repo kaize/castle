@@ -6,7 +6,7 @@ class Web::InstructorsController < Web::ApplicationController
     add_breadcrumb :index, :instructors_path
     @q = Instructor.ransack(params[:q])
     if params[:q].nil? 
-      @instructors = @q.result.page(params[:page]).decorate.order('created_at DESC')
+      @instructors = @q.result.page(params[:page]).decorate.order('last_name ASC')
     else
       @instructors = @q.result.page(params[:page]).decorate
     end
