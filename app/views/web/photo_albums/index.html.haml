@@ -15,4 +15,5 @@
                   %p= photo.description
         %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel_#{album.id}"} ‹
         %a.carousel-control.right{"data-slide" => "next", :href => "#carousel_#{album.id}"} ›
-      = link_to t("comments"), photo_album_path(album) 
+      = link_to t("comments"), photo_album_path(album)
+      %hr 
