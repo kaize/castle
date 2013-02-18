@@ -9,7 +9,7 @@
       %h4= t(".schedules")
       %ul.nav.nav-tabs.nav-stacked
         - @union.groups.each do |g|
-          %li= link_to g, union_group_path(@union, g)
+          %li= link_to g, category_union_group_path(@union, g)
     - if @union.instructors.any?
       %h4= t(".instructors")
       %ul.nav.nav-tabs.nav-stacked
