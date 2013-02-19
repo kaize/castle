@@ -26,7 +26,8 @@ ru:
           instructors: "Педагоги:"
         show:
           groups: "Группы"
-          instructors: "Педагоги"
+          schedules: "Расписание:"
+          instructors: "Педагоги:"
           description: "Описание"
         groups:
           show:
