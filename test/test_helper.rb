@@ -13,6 +13,9 @@ class ActiveSupport::TestCase
   #include AuthHelper
   #include TestSupport
   include FactoryGirl::Syntax::Methods
+  
+  require 'thinking_sphinx/test'
+  ThinkingSphinx::Test.init
 end
 
 def fixture_file_upload(path, mime_type = nil, binary = false)
