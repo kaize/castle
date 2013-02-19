@@ -6,4 +6,5 @@
     .media-body
       .media-heading
         %h4= link_to i, instructor_path(i)
-    -#%li= link_to i.avatar.url, instructor_path(i)
+
+= paginate @instructors
