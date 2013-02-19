@@ -1,3 +1,3 @@
-%ul.nav.nav-tabs.nav-stacked
+%ul.nav.nav-pills.nav-stacked
   - @category.unions.each do |u|
-    %li= link_to u, category_union_path(@category, u)
+    %li{class: "#{"active" if u == @union}"}= link_to u, category_union_path(@category, u)
