@@ -1,10 +1,10 @@
 class Union < ActiveRecord::Base
   include UnionRepository
   
-  #define_index do
-  #  indexes :name
-  #  indexes :description
-  #end
+  define_index do
+    indexes :name
+    indexes :description
+  end
   
   
   attr_accessible :category_id, :description, :name, :leader_id
