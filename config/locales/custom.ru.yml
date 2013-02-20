@@ -7,6 +7,13 @@ ru:
   add: Добавить
   edit: ""
   sure: Подтвердите удаление фотоальбома
+  views:
+      pagination:
+        first: "&laquo; Первая"
+        last: "Последняя &raquo;"
+        previous: "&lsaquo; Предыдущая"
+        next: "Следующая &rsaquo;"
+        truncate: "..."
   web:
     confirm: &confirm Вы уверены?
     new: &new Добавить
@@ -14,9 +21,13 @@ ru:
     cancel: &cancel Отменить
     categories:
       unions:
+        index:
+          schedules: "Расписание:"
+          instructors: "Педагоги:"
         show:
           groups: "Группы"
-          instructors: "Педагоги"
+          schedules: "Расписание:"
+          instructors: "Педагоги:"
           description: "Описание"
         groups:
           show:
@@ -37,6 +48,10 @@ ru:
           title: &pages Страницы
           confirm: *confirm
           new: *new
+        create:
+          title: *pages
+        update:
+          title: *pages
         new:
           title: Добавление страницы
         edit:
@@ -56,7 +71,11 @@ ru:
           cancel: *cancel
           page_activity: Страницы деятельности
           add: Добавить
-      news:
+        create:
+          title: *activities
+        update:
+          title: *activities
+      news: 
         index:
           confirm: *confirm
           title: &news Новости
@@ -67,7 +86,11 @@ ru:
           title: Добавление новости
         form:
           cancel: *cancel
-      categories:
+        create:
+          title: *news
+        update:
+          title: *news
+      categories: 
         index:
           confirm: *confirm
           title: &categories Детские и молодёжные объединения
@@ -78,6 +101,10 @@ ru:
           title: Добавление детских и молодежных объединений
         form:
           cancel: *cancel
+        create:
+          title: *categories
+        update:
+          title: *categories
       groups:
         index:
           confirm: *confirm
@@ -94,6 +121,10 @@ ru:
           cancel: *cancel
           schedules: Расписание
           add: Добавить
+        create:
+          title: *groups
+        update:
+          title: *groups
       unions:
         index:
           confirm: *confirm
@@ -105,6 +136,10 @@ ru:
           title: Добавление объединения
         form:
           cancel: *cancel
+        create:
+          title: *unions
+        update:
+          title: *unions
       instructors:
         index:
           confirm: *confirm
@@ -116,6 +151,10 @@ ru:
           title: Добавление педагога
         form:
           cancel: *cancel
+        create:
+          title: *instructors
+        update:
+          title: *instructors
       group_schedule_classrooms:
         index:
           title: &classroom Аудитория
@@ -131,41 +170,65 @@ ru:
           delete: Удалить
           delete_confirm: *confirm
           cancel: *cancel
+        create:
+          title: *classroom
+        update:
+          title: *classroom
       schedules:
         index:
           schedules: &schedules Расписание
           groups: *groups
+        create:
+          title: *schedules
+        update:
+          title: *schedules
       photo_albums:
         index:
           title: &photo_albums Фотоальбом
           new: *new
         new:
           title: Добавление фотоальбома
-      study_requests:
+        create:
+          title: *photo_albums
+        update:
+          title: *photo_albums
+      study_requests:    
         show:
           title: "Заявка №%{number}"
         index:
           title: Список заявок
           confirm: *confirm
+        create:
+          title: Заявка
+        update:
+          title: Заявка
       partners:
         index:
           confirm: *confirm
-          title: Партнеры
+          title: &partners Партнеры
           new: *new
         form:
           cancel: *cancel
+        create:
+          title: *partners
+        update:
+          title: *partners
       events:
         index:
           confirm: *confirm
-          title: События
+          title: &events События
           new: *new
         form:
           cancel: *cancel
+        create:
+          title: *events
+        update:
+          title: *events
     welcome:
       index:
-        news: *news
+        news: Главные новости
         base_name: Ульяновский областной Дворец творчества детей и молодёжи
-        me_open: Мы открыты для открытий!
+        me_open: " - Мы открыты для открытий!"
         do_you_want: Хотите записать своего ребенка?
         study_request: Оставить заявку
         main_event: Главное событие
