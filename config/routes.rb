@@ -38,6 +38,7 @@ Castle::Application.routes.draw do
         resources :page_activities, only: [:index, :show]
       end
     end
+    
     scope module: :categories do
       resources :unions, only: [:show] do
         scope module: :unions do
@@ -45,6 +46,7 @@ Castle::Application.routes.draw do
         end
       end
     end
+    
     resources :schedules, only: [:index, :show]
     resources :instructors, only: [:index, :show]
     resources :photo_albums, only: [:index]

@@ -1,6 +1,4 @@
-
-%ul.nav.nav-list.bs-docs-sidenav.affix
-  -@category.unions.each do |u|
-    %li
-      %a{href: "\##{u.id}"}
-        = u
+.well.well-small
+  %ul.nav.nav-pills.nav-stacked
+    - @category.unions.each do |u|
+      %li{class: "#{"active" if u == @union}"}= link_to u, category_union_path(@category, u)

@@ -1,11 +1,9 @@
 .row
   .span3
     = render "web/shared/category_unions_list"
-  .span6
-    %h3= @category
+  .span7
     - @unions.each do |u|
-      %hr
-      %div{:id =>  u.id}
-        %h4
-          = u.name
+      %div{id: u.id}
+        %h4= u
       != u.description
+      %br

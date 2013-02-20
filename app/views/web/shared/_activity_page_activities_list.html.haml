@@ -1,6 +1,5 @@
-
 %ul.nav.nav-list.bs-docs-sidenav.affix
   -resource_activity.page_activities.each do |u|
     %li
-      %a{href: "\##{u.id}"}
+      %a{href: "##{u.id}"}
         = u
