@@ -2,6 +2,6 @@
   %h3= t(".search_title", :query => @query)
   %ul 
     - @results.each do |r|
-      %li= link_to r.name, union_path(r)
+      %li= link_to r.name, category_union_path(r.category_id, r)
 - else 
   %h3= t(".nothing_result", :query => @query)

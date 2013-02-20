@@ -1,4 +1,5 @@
 class Activity::PageActivity < ActiveRecord::Base
+  
   attr_accessible :body, :name
   
   validates :body, presence: true
