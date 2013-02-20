@@ -21,5 +21,8 @@
 #Ignore idea settings
 /.idea
 
+# Ignore schema
+schema.rb
 db/schema.rb
+
 coverage/
