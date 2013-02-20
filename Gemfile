@@ -11,7 +11,7 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'configus'
 
-gem 'draper'
+gem 'draper', '= 0.18.0'
 gem "carrierwave"
 gem 'haml-rails'
 gem 'kaminari'
@@ -28,8 +28,7 @@ gem 'ckeditor'
 
 gem 'airbrake'
 gem 'rails-backbone'
-gem 'mysql2',          '0.3.12b4'
-gem 'thinking-sphinx', '3.0.0'
+gem 'thinking-sphinx', '2.0.10'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

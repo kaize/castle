@@ -26,3 +26,5 @@
           = item :li, t('.instructors'), instructors_path
           = item_page :li, support_page
           = item_page :li, contacts_page
+          = form_tag search_index_path, :method => :get, :id => 'search', :class => 'navbar-search pull-left' do
+            = search_field_tag 'term', ''

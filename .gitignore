@@ -20,6 +20,9 @@
 
 #Ignore idea settings
 /.idea
-
 db/schema.rb
 coverage/
+
+#Ignore sphinx developers
+config/development.sphinx.conf
+db/sphinx/*

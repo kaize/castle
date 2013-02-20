@@ -161,6 +161,10 @@ ru:
           new: *new
         form:
           cancel: *cancel
+    search:
+      index:
+        search_title: "Результат поиска по запросу '%{query}'"
+        nothing_result: "По запросу '%{query}' ничего не найдено"
     welcome:
       index:
         news: *news

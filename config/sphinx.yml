@@ -1,0 +1,8 @@
+production:
+  pid_file: /u/apps/castle/shared/pids/searchd.pid
+  searchd_file_path: /u/apps/castle/shared/db/sphinx
+  morphology: stem_ru
+development:
+  port: 9315
+test:
+  port: 9313

@@ -1,7 +1,7 @@
-if !@results.empty?
+- if @results.any?
   %h3= t(".search_title", :query => @query)
   %ul 
     - @results.each do |r|
       %li= link_to r.name, union_path(r)
-  else 
-    %h3= t(".nothing_result", :query => @query)
+- else 
+  %h3= t(".nothing_result", :query => @query)

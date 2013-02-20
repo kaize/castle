@@ -1,4 +1,12 @@
 class Union < ActiveRecord::Base
+  include UnionRepository
+  
+  #define_index do
+  #  indexes :name
+  #  indexes :description
+  #end
+  
+  
   attr_accessible :category_id, :description, :name, :leader_id
   
   belongs_to :category, inverse_of: :unions
@@ -12,13 +20,6 @@ class Union < ActiveRecord::Base
   has_many :study_requests
 
   belongs_to :leader, class_name: Instructor
-  
-  define_index do
-    indexes :name
-    indexes :desctiption
-    
-    has created_at
-  end
   
   validates :name, presence: true
   validates :description, presence: true
