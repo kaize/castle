@@ -13,6 +13,7 @@
 //= require vk-open-api.js
 //= require disqus
 //= require jquery
+//= require colorbox-rails
 //= require jquery_ujs
 //= require jquery.ui.datepicker
 //= require jquery.ui.datepicker-ru
