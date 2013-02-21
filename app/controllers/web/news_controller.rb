@@ -8,5 +8,6 @@ class Web::NewsController < Web::ApplicationController
   def show
     @news = News.find(params[:id])
     add_breadcrumb @news.title, :news_index_path
+    title @news
   end
 end
