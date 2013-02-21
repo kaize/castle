@@ -1,0 +1,17 @@
+%nav.social-share-links
+  %ul.social-share-links
+    %li.twitter
+      %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "https://platform.twitter.com/widgets/tweet_button.html?url=http://castle.kaize.ru&via=Castle&text=Посетите сайт дворца творчества детей и молодежи&lang=ru&hashtags=castle", :style => "width:110px; height:20px;"}
+    %li.facebook
+      %iframe{:allowTransparency => "true", :frameborder => "0", :scrolling => "no", :src => "//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcastle.kaize.ru&send=false&layout=button_count&width=450&show_faces=false&font=arial&colorscheme=light&action=like&height=21&appId=212778828868367", :style => "border:none; overflow:hidden; width:110px; height:21px;"}
+    %li.vk
+      %script{src: "//vk.com/js/api/openapi.js?79", type: "text/javascript"}
+      :javascript
+        VK.init({apiId: 3443966, onlyWidgets: true});
+      #vk_like
+      :javascript
+        VK.Widgets.Like("vk_like", {type: "button", height: 20, pageTitle: "Ульяновский областной дворец творчества детей и молодежи"});
+    %li.gplus
+      .g-plusone{"data-href" => "http://castle.kaize.ru", "data-size" => "medium"}
+      :javascript
+        window.___gcfg = {lang: 'ru'};(function() {var po = document.createElement('script');po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();
