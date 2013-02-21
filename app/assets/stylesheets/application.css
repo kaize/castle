@@ -24,10 +24,15 @@
   margin: 10px;
 }  
 
+.partner.span2:nth-child(6n+1) {
+  clear: left;
+}
+ 
 .img-rounded {
   height: 140px;
   width: 140px;
 }
+
 body {
   padding-top: 60px;
 }

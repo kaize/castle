@@ -2,5 +2,5 @@
   %h3= t '.partners'
   .row
     - Partner.scoped.each do |partner|
-      = link_to partner.url do
-        = image_tag partner.image.url, class: 'partner-image'
+      .partner.span2
+        = link_to image_tag(partner.image), partner.url
