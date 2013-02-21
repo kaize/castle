@@ -1,0 +1,16 @@
+.row
+  .span8
+    %h4= @photo_album.name
+    .carousel.slide{ :id => "carousel_#{@photo_album.id}" }
+      .carousel-inner
+        - @photo_album.sorted_photos.each_with_index do |photo, i|
+          .item{:class => i == 0 ? "active" : ''}
+            = image_tag photo.image_url(:carousel)
+            - if photo.information?
+              .carousel-caption
+                %h4= photo.name
+                %p= photo.description
+      %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel_#{@photo_album.id}"} ‹
+      %a.carousel-control.right{"data-slide" => "next", :href => "#carousel_#{@photo_album.id}"} ›    
+%hr
+%div{id: "disqus_thread"}
