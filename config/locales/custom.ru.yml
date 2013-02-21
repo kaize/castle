@@ -192,9 +192,11 @@ ru:
           title: *photo_albums
         update:
           title: *photo_albums
-      study_requests:    
+        edit:
+          title: *photo_albums
+      study_requests:
         show:
-          title: "Заявка №%{number}"
+          title: "Заявки"
         index:
           title: Список заявок
           confirm: *confirm
@@ -207,6 +209,10 @@ ru:
           confirm: *confirm
           title: &partners Партнеры
           new: *new
+        new:
+          title: Добавление партнера
+        edit:
+          title: Партнеры
         form:
           cancel: *cancel
         create:
@@ -218,12 +224,19 @@ ru:
           confirm: *confirm
           title: &events События
           new: *new
+        new:
+          title: Добавление события
+        edit:
+          title: События
         form:
           cancel: *cancel
         create:
           title: *events
         update:
           title: *events
+      welcome:
+        index:
+          title: " "
     welcome:
       index:
         news: Главные новости

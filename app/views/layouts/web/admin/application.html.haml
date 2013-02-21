@@ -6,6 +6,8 @@
     .container
       .row
         %div{class: "span#{content_for?(:sidebar) ? 9 : 12}"}
+        .span9
+          = render 'layouts/web/admin/shared/title'
           = bootstrap_flash
           = yield
         - if content_for? :sidebar
