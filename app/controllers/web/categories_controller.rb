@@ -1,7 +1,8 @@
 class Web::CategoriesController < Web::ApplicationController
   
   def index
-    title "Расписание"
+    title t(:categories)
+
     add_breadcrumb :home, :root_path
     add_breadcrumb :index, :categories_path
     @category = Category.scoped
