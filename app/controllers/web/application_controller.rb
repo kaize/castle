@@ -11,6 +11,10 @@ class Web::ApplicationController < ApplicationController
 
   private
 
+  def base_title
+    title t("title.base")
+  end
+
   def title(part = nil)
     @parts ||= []
     unless part

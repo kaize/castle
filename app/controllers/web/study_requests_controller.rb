@@ -1,6 +1,7 @@
 class Web::StudyRequestsController < Web::ApplicationController
 
   def new
+    title t (:study_request)
     @study_request = StudyRequest.new
   end
 
