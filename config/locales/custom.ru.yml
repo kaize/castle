@@ -195,7 +195,9 @@ ru:
           title: *photo_albums
         update:
           title: *photo_albums
-      study_requests:    
+        edit:
+          title: *photo_albums
+      study_requests:
         show:
           title: "Заявки"
         index:

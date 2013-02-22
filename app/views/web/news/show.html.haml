@@ -1,7 +1,7 @@
 %h3= @news
 - if @news.published_at?
   .help-block= l @news.published_at, :format => :long
-  - if @news.photos.first!= nil
+  - if @news.photos.any?
     .span4.leftimg
       = link_to image_tag(@news.photos.first.asset_url), @news.photos.first.asset_url , data: {colorbox: true}
   != @news.body

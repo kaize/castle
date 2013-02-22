@@ -15,11 +15,14 @@
  *= require_self
  *= require colorbox-rails
  */
-
 .leftimg {
   float:left; 
   margin: 7px 7px 7px 0px;
 }
+
+.partner-image {
+  margin: 10px;
+}  
 
 .partner.span2:nth-child(6n+1) {
   clear: left;
@@ -32,4 +35,23 @@
 
 body {
   padding-top: 60px;
+}
+.right{
+    width: 220px;
+    float: right;
+    margin-top: 5px;
+}
+.footer{
+    height: 100px;
+}
+
+ul.social-share-links {
+    position: absolute;
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 0px;
+    text-align: left;
+}
+ul.social-share-links li {
+    float: left;
 }
