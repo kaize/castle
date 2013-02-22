@@ -1,6 +1,7 @@
 class Web::InstructorsController < Web::ApplicationController
   
   def index
+    title t (:instructors)
     add_breadcrumb :home, :root_path
     add_breadcrumb :index, :instructors_path
     @instructors = Instructor.page(params[:page]).decorate
