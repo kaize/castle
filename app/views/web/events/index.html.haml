@@ -2,15 +2,20 @@
   .span3
     #calendars
   .span8
-    - @events.each do |event|
-      %h4= event.name
-      - if event.image.present?
-        = image_tag event.image
-      != event.content
-
+    %h2= t '.current_events'
+    %h3= Time.now.year
+    - 1.upto(12) do |month|
+      %h3= t("date.standalone_month_names")[month]
+      - @events.each do |event|
+        - if month == event.begin_date.month and event.end_date >= Time.now.to_date
+          %h4= event.name
+          %h5= event.begin_date
+          - if event.image.present?
+            = image_tag event.image
+          != event.content
 
 :javascript
   $(function() {
-    window.router = new Castle.Routers.CalendarsRouter({date:#{@date}});
+    window.router = new Castle.Routers.CalendarsRouter();
     Backbone.history.start();
   });
