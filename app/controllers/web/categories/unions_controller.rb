@@ -1,6 +1,7 @@
 class Web::Categories::UnionsController < Web::ApplicationController
   
   def show
+    title t(:unions)
     @category = Category.find(params[:category_id])
     @union = @category.unions.find(params[:id])
     add_breadcrumb @category.name, category_unions_path(@category)
@@ -13,5 +14,6 @@ class Web::Categories::UnionsController < Web::ApplicationController
     
     add_breadcrumb :home, :root_path
     add_breadcrumb @category.name, category_path(@category)
+    title @unions
   end
 end
