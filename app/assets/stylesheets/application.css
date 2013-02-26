@@ -30,6 +30,9 @@ body {
     float: right;
     margin-top: 5px;
 }
+ul.right li{
+    list-style: none;
+}
 .footer{
     height: 100px;
 }
