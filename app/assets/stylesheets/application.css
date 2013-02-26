@@ -36,13 +36,15 @@ ul.right li{
 .footer{
     height: 100px;
 }
-
+nav.social-share-links{
+    text-align: center;
+}
 ul.social-share-links {
     position: absolute;
     list-style: none;
     margin-top: 10px;
-    margin-left: 0px;
-    text-align: left;
+    margin-left: 350px;
+    text-align: center;
 }
 ul.social-share-links li {
     float: left;
