@@ -10,6 +10,7 @@ class Web::Activities::PageActivitiesController < Web::Activities::ApplicationCo
   end
 
   def index
+    title t(:activities)
     @page_activities = resource_activity.page_activities
 
   end
