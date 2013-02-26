@@ -1,4 +1,6 @@
 class Instructor < ActiveRecord::Base
+  include InstructorRepository
+
   attr_accessible :description, :first_name, :last_name, :middle_name, :avatar
 
   has_many :union_instuctor_relations, dependent: :destroy, class_name: ::UnionInstructorRelation
