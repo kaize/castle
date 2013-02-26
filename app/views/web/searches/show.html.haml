@@ -3,4 +3,4 @@
   = submit_tag t('.search')
 
 - @results.each do |result|
-  = result.content
+  = render partial: result.searchable_type.underscore, object: result.searchable
