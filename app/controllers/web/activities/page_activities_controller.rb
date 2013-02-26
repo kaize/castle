@@ -1,6 +1,5 @@
 class Web::Activities::PageActivitiesController < Web::Activities::ApplicationController
   def show
-    title t(:activities)
     @page_activity = resource_activity.page_activities.find(params[:id])
     
     add_breadcrumb resource_activity.name, activity_path(resource_activity)
@@ -10,8 +9,8 @@ class Web::Activities::PageActivitiesController < Web::Activities::ApplicationCo
   end
 
   def index
-    title t(:activities)
     @page_activities = resource_activity.page_activities
-
+    @activity = Activity.find(params[:activity_id])
+    title @activity
   end
 end
