@@ -8,6 +8,7 @@ ru:
   add: Добавить
   edit: ""
   sure: Подтвердите удаление фотоальбома
+  search: 'Искать'
   views:
       pagination:
         first: "&laquo; Первая"
