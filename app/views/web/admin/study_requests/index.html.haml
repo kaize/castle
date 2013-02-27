@@ -1,6 +1,6 @@
 = simple_form_for @q, url: admin_study_requests_path, method: :get do |f|
-  = f.input :union_name_cont
-  = f.submit "Search"
+  = f.input :union_id_eq, collection: unions, as: :select, label: 'Показывать только выбранное объединение',required: false
+  = f.submit "Сортировать"
 %table.table.table-striped
   %thead
     %tr
