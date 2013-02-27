@@ -2,5 +2,7 @@
   = search_field_tag :q
   = submit_tag t('.search')
 
-- @results.each do |result|
-  = render partial: result.searchable_type.underscore, object: result.searchable
+%ul
+  - @results.each do |result|
+    %li
+      = render partial: result.searchable_type.underscore, object: result.searchable
