@@ -6,10 +6,11 @@
       %h4= event.name
       %h5= event.begin_date
       - if event.image.present?
-        = link_to image_tag(event.image), event.image.url, data: {colorbox: true, colorbox_height:'100%', colorbox_width: '100%'}
+        .span4.leftimg
+          = link_to image_tag(event.image), event.image.url, data: {colorbox: true}
       != event.content
-    %hr
-    %div{:id => "disqus_thread"}
+      %hr
+      %div{:id => "disqus_thread"}
   
 :javascript
   $(function() {
