@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Web::Admin::EventsControllerTest < ActionController::TestCase
   def setup
-    http_login
+
     @partner = create :event
     @params = {id: @partner.id}
   end
