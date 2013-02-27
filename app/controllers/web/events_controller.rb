@@ -7,8 +7,13 @@ class Web::EventsController < Web::ApplicationController
         m: "AND"
     ]
     @q = Event.ransack(@ran.first)
-    @events = @q.result
+    @events = @q.result.asc_by_begin_date
 
+    @date = params[:date]
+  end
+  
+  def show
+    @events = Event.page(params[:page])
     @date = params[:date]
   end
 
