@@ -1,5 +1,7 @@
-%h3= resource_activity
 .row
   .span3
     = render "web/shared/activity_page_activities_list"
-
+  .span7
+    %h3= resource_activity
+    %h4= @page_activity.name
+    != @page_activity.body
