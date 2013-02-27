@@ -4,9 +4,13 @@ class Web::Activities::PageActivitiesController < Web::Activities::ApplicationCo
     
     add_breadcrumb resource_activity.name, activity_path(resource_activity)
     add_breadcrumb @page_activity.name, activity_page_activity_path(resource_activity, @page_activity)
+
+    title @page_activity
   end
 
   def index
     @page_activities = resource_activity.page_activities
+    @activity = Activity.find(params[:activity_id])
+    title @activity
   end
 end
