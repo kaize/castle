@@ -301,6 +301,8 @@ ru:
       activities:
         application:
           home: *home
+        page_activities: 
+          home: *home
       categories:
         home: *home
         index: Расписание
