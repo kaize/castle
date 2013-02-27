@@ -40,4 +40,8 @@ module ApplicationHelper
   def support_page
     Page.find_by_uri!('support')
   end
+
+  def unions
+    Union.all
+  end
 end
