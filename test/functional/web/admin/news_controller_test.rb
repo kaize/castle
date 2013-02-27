@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Web::Admin::NewsControllerTest < ActionController::TestCase
   def setup
+    http_login
     @news = create :news
     @params = {id: @news.id}
   end

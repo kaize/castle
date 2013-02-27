@@ -2,9 +2,9 @@ require 'test_helper'
 
 class Web::Admin::InstructorsControllerTest < ActionController::TestCase
   def setup
+    http_login
     @instructor = create :instructor
     @params = {id: @instructor.id}
-
   end
 
   test "should get index" do

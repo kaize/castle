@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Web::Admin::StudyRequestsControllerTest < ActionController::TestCase
   setup do
+    http_login
     @study_request = create :study_request
   end
 

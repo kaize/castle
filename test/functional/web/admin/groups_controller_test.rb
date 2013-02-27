@@ -2,9 +2,9 @@ require 'test_helper'
 
 class Web::Admin::GroupsControllerTest < ActionController::TestCase
   def setup
+    http_login
     @group = create :group
     @params = {id: @group.id}
-
   end
 
   test "should get index" do
