@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Web::Admin::PagesControllerTest < ActionController::TestCase
   def setup
+    http_login
     @page = create :page
     @params = { id: @page.id }
     @attrs = attributes_for(:page)
