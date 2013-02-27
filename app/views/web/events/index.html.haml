@@ -2,18 +2,15 @@
   .span3
     #calendars
   .span8
-    %h2= t '.current_events'
-    %h3= Time.now.year
-    - 1.upto(12) do |month|
-      %h3= t("date.standalone_month_names")[month]
-      - @events.each do |event|
-        - if month == event.begin_date.month and event.end_date >= Time.now.to_date
-          %h4= event.name
-          %h5= event.begin_date
-          - if event.image.present?
-            = image_tag event.image
-          != event.content
-
+    - @events.each do |event|
+      %h4= event.name
+      %h5= event.begin_date
+      - if event.image.present?
+        = link_to image_tag(event.image), event.image.url, data: {colorbox: true, colorbox_height:'100%', colorbox_width: '100%'}
+      != event.content
+    %hr
+    %div{:id => "disqus_thread"}
+  
 :javascript
   $(function() {
     window.router = new Castle.Routers.CalendarsRouter();
