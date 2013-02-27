@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  include EventRepository
+  
   attr_accessible :begin_date, :content, :end_date, :image, :name, :main
   validates :name, presence: true
   validates :begin_date, presence: true

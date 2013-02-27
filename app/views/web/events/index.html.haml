@@ -5,12 +5,17 @@
     - @events.each do |event|
       %h4= event.name
       %h5= event.begin_date
-      - if event.image.present?
-        .span4.leftimg
-          = link_to image_tag(event.image), event.image.url, data: {colorbox: true}
-      != event.content
-      %hr
-      %div{:id => "disqus_thread"}
+      .media.nav.nav-tabs.nav-stacked
+        - if event.image.present?
+          %a.pull-left
+            .img-rounded.media-object
+              = link_to image_tag(event.image.url), event.image.url, data: {colorbox: true}
+        .media-body
+          .media
+            != event.content
+            %hr
+    %hr
+    %div{:id => "disqus_thread"}
   
 :javascript
   $(function() {
