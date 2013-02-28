@@ -300,3 +300,5 @@ ru:
       photo_albums:
         home: *home
         photo_albums: Фотоальбомы
+      searches:
+        search: Поиск
