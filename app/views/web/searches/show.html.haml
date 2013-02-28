@@ -3,4 +3,4 @@
 %ul
   - @results.each do |result|
     %li
-      = render partial: result.searchable_type.underscore, object: result.searchable
+      = render partial: "web/searches/#{result.searchable_type.underscore}", object: result.searchable

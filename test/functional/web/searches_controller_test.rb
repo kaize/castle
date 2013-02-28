@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Web::SearchesControllerTest < ActionController::TestCase
   def setup
-    create :activity
+    create 'activity/page_activity'
     create :instructor
     create :news
     create :union
