@@ -6,6 +6,7 @@ class Web::SearchesControllerTest < ActionController::TestCase
     create :instructor
     create :news
     create :union
+    create :event
   end
 
   test "should get show" do

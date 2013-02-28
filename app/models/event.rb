@@ -20,4 +20,7 @@ class Event < ActiveRecord::Base
     begin_date
   end
 
+  def to_s
+    name
+  end
 end
