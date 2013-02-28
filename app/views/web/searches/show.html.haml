@@ -4,3 +4,5 @@
   - @results.each do |result|
     %li
       = render partial: "web/searches/#{result.searchable_type.underscore}", object: result.searchable
+
+= paginate @results
