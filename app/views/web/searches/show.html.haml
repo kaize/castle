@@ -1,8 +1,12 @@
 = render 'web/shared/search_form'
 
-%ul
-  - @results.each do |result|
-    %li
-      = render partial: "web/searches/#{result.searchable_type.underscore}", object: result.searchable
+- if @results.any?
+  = t '.results_html', term: @term if @term.present?
 
-= paginate @results
+  %ul
+    - @results.each do |result|
+      %li
+        = render partial: "web/searches/#{result.searchable_type.underscore}", object: result.searchable
+  = paginate @results
+- else
+  = t '.not_found_html', term: @term

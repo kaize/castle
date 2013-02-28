@@ -259,6 +259,10 @@ ru:
       new:
         title: Оставить заявку
         save: Подать заявку
+    searches:
+      show:
+        not_found_html: По запросу <strong>%{term}</strong> ничего не найдено
+        results_html: Результаты поиска по запросу <strong>%{term}</strong>
   layouts:
     web:
       shared:
