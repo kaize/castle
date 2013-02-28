@@ -29,7 +29,8 @@
         %h5= t('.do_you_want')
       = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
 
-    %div{id: :vk_groups}
+
+    = render partial: 'web/shared/block', collection: @blocks
 
     #vk_groups
 
