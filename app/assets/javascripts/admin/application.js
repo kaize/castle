@@ -17,10 +17,12 @@
 //= require jquery.ui.datepicker
 //= require jquery.ui.datepicker-ru
 //= require jquery.ui.slider
+//= require jquery.ui.sortable
 //= require jquery-ui-timepicker-addon
 //= require jquery-ui-timepicker-ru
 //= require cocoon
 //= require select2
+//= require sortable
 //= require_tree
 
 (function($) { $(function() {

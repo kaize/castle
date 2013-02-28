@@ -7,9 +7,9 @@
       %th= Block.human_attribute_name :title
       %th= Block.human_attribute_name :state
       %th
-  %tbody
+  %tbody.sortable{ data: { 'update-url' => mass_update_order_api_admin_blocks_path } }
     - @blocks.each do |item|
-      %tr
+      %tr{ data: { id: item.id } }
         %td= item.id
         %td= item.title
         %td= item.human_state_name
