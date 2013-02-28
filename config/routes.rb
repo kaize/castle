@@ -23,6 +23,7 @@ Castle::Application.routes.draw do
       resources :partners
       resources :events
       resources :activities
+      resources :blocks
     end
 
     resource :search, only: [:show]

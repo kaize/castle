@@ -1,0 +1,21 @@
+= link_to t('.new'), new_admin_block_path, class: 'btn btn-primary'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= Block.human_attribute_name :id
+      %th= Block.human_attribute_name :title
+      %th= Block.human_attribute_name :state
+      %th
+  %tbody
+    - @blocks.each do |item|
+      %tr
+        %td= item.id
+        %td= item.title
+        %td= item.human_state_name
+        %td
+          .pull-right.btn-group
+            = link_to edit_admin_block_path(item), class: 'btn btn-mini' do
+              %i.icon-pencil
+            = link_to admin_block_path(item), method: :delete, confirm: t('.confirm'), class: 'btn btn-mini btn-danger' do
+              %i.icon-trash
