@@ -16,26 +16,16 @@ ru:
       partner: Партнеры
       event: События
       activity: Деятельность
+      block: Блок
     state_machines:
-      news:
-        events:
-          hide: Скрыть
-          publish: Опубликовать
-        states:
-          hidden: Скрыто
-          published: Опубликованно
-      page:
-        events:
-          hide: Скрыть
-          publish: Опубликовать
-        states:
-          hidden: Скрыто
-          published: Опубликованно
+      events:
+        hide: Скрыть
+        publish: Опубликовать
+        unpublish: Отменить публикацию
+      states:
+        hidden: Скрыто
+        published: Опубликованно
       photo_album:
-        state:
-          events:
-            publish: Опубликовать
-            unpublish: Отменить публикацию
         states:
           published: Опубликованный
           unpublished: Не опубликованный
@@ -60,7 +50,7 @@ ru:
       group:
         name: Название
         union: Объединение
-        instructors: Педагоги 
+        instructors: Педагоги
         schedules: Расписание
       "group/schedule":
         week: Дни недели
@@ -125,6 +115,12 @@ ru:
         begin_date: Время начала
         end_date: Время конца
         main: Опубликовать на главной
+      block:
+        title: Заголовок
+        body: Содержание
+        state: Текущее состояние
+        state_event: Действие
+
     errors:
       models:
         page:

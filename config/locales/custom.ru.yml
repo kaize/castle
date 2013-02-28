@@ -251,7 +251,7 @@ ru:
         new:
           title: Добавление блока
         edit:
-          title: События
+          title: Редактирование блока
         form:
           cancel: *cancel
         create:
