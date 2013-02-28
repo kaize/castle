@@ -3,6 +3,7 @@ require 'test_helper'
 class Web::Admin::PhotoAlbumsControllerTest < ActionController::TestCase
 
   setup do
+
     @photo_album = create :photo_album, :with_photo
 
     @params = {:id => @photo_album.id}

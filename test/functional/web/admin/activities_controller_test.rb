@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Web::Admin::ActivitiesControllerTest < ActionController::TestCase
   def setup
+
     @activity = create :activity
     @params = {id: @activity.id}
   end

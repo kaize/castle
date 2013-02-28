@@ -2,9 +2,9 @@ require 'test_helper'
 
 class Web::Admin::PartnersControllerTest < ActionController::TestCase
   def setup
+
     @partner = create :partner
     @params = {id: @partner.id}
-
   end
 
   test "should get index" do

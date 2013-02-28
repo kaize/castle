@@ -2,9 +2,9 @@ require 'test_helper'
 
 class Web::Admin::EventsControllerTest < ActionController::TestCase
   def setup
+
     @partner = create :event
     @params = {id: @partner.id}
-
   end
 
   test "should get index" do
