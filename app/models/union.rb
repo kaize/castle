@@ -1,4 +1,6 @@
 class Union < ActiveRecord::Base
+  include UnionRepository
+
   attr_accessible :category_id, :description, :name, :leader_id
 
   belongs_to :category, inverse_of: :unions

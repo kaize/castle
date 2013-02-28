@@ -25,6 +25,7 @@ Castle::Application.routes.draw do
       resources :activities
     end
 
+    resource :search, only: [:show]
     resources :news, only: [:index, :show]
     resources :page, only: [:show]
     resources :categories, only: [:index, :show] do

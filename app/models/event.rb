@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  include EventRepository
+
   attr_accessible :begin_date, :content, :end_date, :image, :name, :main
   validates :name, presence: true
   validates :begin_date, presence: true
@@ -18,4 +20,7 @@ class Event < ActiveRecord::Base
     begin_date
   end
 
+  def to_s
+    name
+  end
 end
