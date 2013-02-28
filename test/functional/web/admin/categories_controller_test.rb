@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Web::Admin::CategoriesControllerTest < ActionController::TestCase
   def setup
-    http_login
+
     @category = create :category
     @params = {id: @category.id}
   end

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Web::Admin::ActivitiesControllerTest < ActionController::TestCase
   def setup
-    http_login
+
     @activity = create :activity
     @params = {id: @activity.id}
   end

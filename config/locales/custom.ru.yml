@@ -245,6 +245,21 @@ ru:
           title: *events
         update:
           title: *events
+      blocks:
+        index:
+          confirm: *confirm
+          title: &blocks Блоки
+          new: *new
+        new:
+          title: Добавление блока
+        edit:
+          title: Редактирование блока
+        form:
+          cancel: *cancel
+        create:
+          title: *blocks
+        update:
+          title: *blocks
       welcome:
         index:
           title: " "

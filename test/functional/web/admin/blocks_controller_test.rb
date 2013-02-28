@@ -1,10 +1,9 @@
 require 'test_helper'
 
-class Web::Admin::InstructorsControllerTest < ActionController::TestCase
+class Web::Admin::BlocksControllerTest < ActionController::TestCase
   def setup
-
-    @instructor = create :instructor
-    @params = {id: @instructor.id}
+    @block = create :block
+    @params = {id: @block.id}
   end
 
   test "should get index" do
@@ -23,19 +22,23 @@ class Web::Admin::InstructorsControllerTest < ActionController::TestCase
   end
 
   test "should get create" do
-    @params[:instructor] = attributes_for(:instructor)
-    post :create, @params
+    @params[:block] = attributes_for(:block)
+    get :create, @params
     assert_response :redirect
   end
 
   test "should get update" do
-    @params[:instructor] = attributes_for(:instructor)
-    put :update, @params
+    @attrs = attributes_for(:block)
+    get :update, @params.merge(block: @attrs)
     assert_response :redirect
+
+    @block.reload
+    assert_equal @attrs[:title], @block.title
   end
 
   test "should get destroy" do
-    delete :destroy, @params
+    get :destroy, @params
     assert_response :redirect
+    refute Block.find_by_id(@block.id)
   end
 end
