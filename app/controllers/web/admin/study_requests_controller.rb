@@ -2,6 +2,10 @@ class Web::Admin::StudyRequestsController < Web::Admin::ApplicationController
   def index
     @q = StudyRequest.ransack(params[:q])
     @study_requests = @q.result.page(params[:page])
+    respond_to do |format|
+      format.html
+      format.csv { render text: @study_requests.to_csv}
+    end
   end
 
   def show
