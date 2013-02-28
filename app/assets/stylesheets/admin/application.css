@@ -21,3 +21,7 @@
 .select2 {
   width: 220px;
 }
+
+.sortable tr{
+    cursor: move;
+}

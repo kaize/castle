@@ -4,6 +4,14 @@ Castle::Application.routes.draw do
 
   namespace :api do
     resources :events, only: [:index]
+
+    namespace :admin do
+      resources :blocks, only: [] do
+        collection do
+          put :mass_update_order
+        end
+      end
+    end
   end
 
   scope module: :web do

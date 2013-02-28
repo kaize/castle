@@ -20,6 +20,9 @@ end
 module AuthHelper
   def authenticate_admin
   end
+
+  def api_authenticate_admin
+  end
 end
 
 def fixture_file_upload(path, mime_type = nil, binary = false)

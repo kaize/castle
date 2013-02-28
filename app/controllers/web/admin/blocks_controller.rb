@@ -1,6 +1,6 @@
 class Web::Admin::BlocksController < Web::Admin::ApplicationController
   def index
-    @blocks = Block.by_order_at
+    @blocks = Block.asc_by_order_at
   end
   
   def new
