@@ -14,7 +14,7 @@
         != truncate_sanitize_rem_br n.body, 250
     .news_link= link_to "Все новости", news_index_path
   .span4
-    = render 'web/shared/search_form'
+    = render 'search_form'
     - if @event
       .well.well-small
         = image_tag @event.image

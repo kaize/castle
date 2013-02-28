@@ -1,5 +1,7 @@
 class Web::SearchesController < Web::ApplicationController
   def show
-    @results = PgSearcher.search params[:term]
+    add_breadcrumb :search
+    @term = params[:term]
+    @results = PgSearcher.search(@term).page(params[:page]).per(20)
   end
 end

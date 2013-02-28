@@ -4,5 +4,7 @@ FactoryGirl.define do
   factory "activity/page_activity" do
     name
     body
+
+    activity
   end
 end
