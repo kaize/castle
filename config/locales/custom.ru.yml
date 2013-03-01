@@ -303,8 +303,6 @@ ru:
           news: *news
           schedules: *schedules
           instructors: *instructors
-        partners:
-          partners: Партнеры
   breadcrumbs:
     web:
       application:
@@ -335,3 +333,7 @@ ru:
         photo_albums: Фотоальбомы
       searches:
         search: Поиск
+
+  partners:
+    index:
+      title: Партнеры
