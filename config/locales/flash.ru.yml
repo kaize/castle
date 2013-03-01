@@ -94,3 +94,16 @@ ru:
             destroy:
               success: Аудитория удалена.
               error: Возникли ошибки.
+          blocks:
+            create:
+              success: Блок сохранен.
+              error: Возникли ошибки.
+            update:
+              success: Блок отредактирован.
+              error: Возникли ошибки.
+            destroy:
+              success: Блок удален.
+              error: Возникли ошибки.
+
+
+
