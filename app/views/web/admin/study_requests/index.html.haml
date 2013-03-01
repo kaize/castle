@@ -1,6 +1,7 @@
 = simple_form_for @q, url: admin_study_requests_path, method: :get do |f|
   = f.input :union_id_eq, collection: unions, as: :select, label: 'Показывать только выбранное объединение',required: false
   = f.submit "Сортировать"
+= link_to "CSV", admin_study_requests_path(format: "csv")
 %table.table.table-striped
   %thead
     %tr
