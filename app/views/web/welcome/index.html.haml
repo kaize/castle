@@ -13,6 +13,23 @@
           .help-block= l n.published_at, format: :short
         != truncate_sanitize_rem_br n.body, 250
     .news_link= link_to "Все новости", news_index_path
+    %hr
+    - if @photo_album.try :can_view?
+      .span6
+        %h4= @photo_album.name
+        %p= @photo_album.description
+        #carousel.carousel.slide
+          .carousel-inner
+            - @photo_album.sorted_photos.each_with_index do |photo, i|
+              .item{:class => i == 0 ? "active" : ''}
+                = image_tag photo.image_url(:carousel)
+                - if photo.information?
+                  .carousel-caption
+                    %h4= photo.name
+                    %p= photo.description
+          %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"} ‹
+          %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"} ›
+        %p= link_to "Все фотоальбомы", photo_albums_path
   .span4
     = render 'search_form'
     - if @event
@@ -32,26 +49,6 @@
     %div{id: :vk_groups}
 
     #vk_groups
-
-- if @photo_album.try :can_view?
-  .row
-    .span12
-      %hr
-    .span6.offset3
-      %h4= @photo_album.name
-      %p= @photo_album.description
-      #carousel.carousel.slide
-        .carousel-inner
-          - @photo_album.sorted_photos.each_with_index do |photo, i|
-            .item{:class => i == 0 ? "active" : ''}
-              = image_tag photo.image_url(:carousel)
-              - if photo.information?
-                .carousel-caption
-                  %h4= photo.name
-                  %p= photo.description
-        %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"} ‹
-        %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"} ›
-      %p= link_to "Все фотоальбомы", photo_albums_path
 
 :javascript
   $(function() {
