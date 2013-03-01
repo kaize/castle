@@ -15,6 +15,7 @@ class Instructor < ActiveRecord::Base
   validates :last_name, presence: true
   validates :middle_name, presence: true
   validates :description, presence: true
+  validates :avatar, presence: true
 
   mount_uploader :avatar, InstructorAvatarUploader
   
