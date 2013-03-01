@@ -4,7 +4,7 @@ class Web::InstructorsController < Web::ApplicationController
     title t (:instructors)
     add_breadcrumb :home, :root_path
     add_breadcrumb :index, :instructors_path
-    @instructors = Instructor.asc_by_last_name.page(params[:page]).decorate
+    @instructors = Instructor.asc_by_last_name.page(params[:page]).per(24).decorate
   end
 
   def show
