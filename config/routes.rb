@@ -11,6 +11,11 @@ Castle::Application.routes.draw do
           put :mass_update_order
         end
       end
+      resources :partners, only: [] do
+        collection do
+          put :mass_update_order
+        end
+      end
     end
   end
 
