@@ -11,6 +11,7 @@ ru:
   study_request: Заявка
   unions: Объединения
   activities: Деятельность
+  blocks: &blocks Блоки
   logo_title: Дворец пионеров
   add: Добавить
   edit: ""
@@ -246,7 +247,7 @@ ru:
       blocks:
         index:
           confirm: *confirm
-          title: &blocks Блоки
+          title: *blocks
           new: *new
         new:
           title: Добавление блока

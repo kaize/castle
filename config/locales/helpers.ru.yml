@@ -41,5 +41,8 @@ ru:
       group_schedule_classroom:
         create: "Создать"
         update: "Сохранить"
+      block:
+        create: "Создать"
+        update: "Сохранить"
       
       
