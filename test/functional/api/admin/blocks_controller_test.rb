@@ -13,7 +13,7 @@ class Api::Admin::BlocksControllerTest < ActionController::TestCase
     @block0.reload
     @block1.reload
 
-    assert_equal @block0.order_at, 1
-    assert_equal @block1.order_at, 0
+    assert_equal 1, @block0.order_at
+    assert_equal 0, @block1.order_at
   end
 end
