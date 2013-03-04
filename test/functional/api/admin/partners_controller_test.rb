@@ -13,7 +13,7 @@ class Api::Admin::PartnersControllerTest < ActionController::TestCase
     @partner0.reload
     @partner1.reload
 
-    assert_equal @partner0.order_at, 1
-    assert_equal @partner1.order_at, 0
+    assert_equal 1, @partner0.order_at
+    assert_equal 0, @partner1.order_at
   end
 end
