@@ -13,6 +13,7 @@ class Web::CategoriesController < Web::ApplicationController
   def show
     @categories = Category.scoped
     @category = Category.find(params[:id])
+    add_breadcrumb :index, :categories_path
     add_breadcrumb @category.name, :category_path
     title @category
   end
