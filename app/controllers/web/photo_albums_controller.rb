@@ -10,6 +10,8 @@ class Web::PhotoAlbumsController < Web::ApplicationController
     @photo_album = PhotoAlbumDecorator.decorate PhotoAlbum.find(params[:id])
     add_breadcrumb :photo_albums, photo_albums_path
     add_breadcrumb @photo_album.name, photo_album_path
+    title t (:photo_albums)
+    title @photo_album.name
   end
   
 end

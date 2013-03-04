@@ -12,6 +12,8 @@ class Web::InstructorsController < Web::ApplicationController
     add_breadcrumb :index, :instructors_path
     @instructor = Instructor.find(params[:id]).decorate
     add_breadcrumb @instructor, :instructor_path
+    title t (:instructors)
     title @instructor
+
   end
 end
