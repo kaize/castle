@@ -1,8 +1,11 @@
 class Page < ActiveRecord::Base
   attr_accessible :body, :title, :state_event
 
+  belongs_to :menu_item
+
   validates :title, presence: true
   validates :body, presence: true
+  validates :menu_item, presence: true
 
   state_machine :state, initial: :hidden do
     state :hidden

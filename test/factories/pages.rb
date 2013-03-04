@@ -4,6 +4,7 @@ FactoryGirl.define do
   factory :page do
     title
     body
+    menu_item
 
     after(:create) do |p|
       p.publish

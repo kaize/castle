@@ -3,5 +3,7 @@ class MenuItem < ActiveRecord::Base
 
   attr_accessible :title, :parent_id
 
+  has_many :pages
+
   has_ancestry
 end

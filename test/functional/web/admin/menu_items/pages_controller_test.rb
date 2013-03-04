@@ -1,40 +1,39 @@
 require 'test_helper'
 
-class Web::Admin::PagesControllerTest < ActionController::TestCase
+class Web::Admin::MenuItems::PagesControllerTest < ActionController::TestCase
   def setup
-
     @page = create :page
-    @params = { id: @page.id }
+    @params = { menu_item_id: @page.menu_item.id }
     @attrs = attributes_for(:page)
   end
 
   test "should get index" do
-    get :index
+    get :index, @params
     assert_response :success
   end
 
-  test "should get show" do
-    get :new
+  test "should get new" do
+    get :new, @params
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, @params
+    get :edit, @params.merge(id: @page.id)
     assert_response :success
   end
 
   test "should post create" do
-    post :create, @params.merge(page: @attrs)
+    post :create, @params.merge(page: @attrs, id: @page.id)
     assert_response :redirect
   end
 
   test "should put update" do
-    put :update, @params.merge(page: @attrs)
+    put :update, @params.merge(page: @attrs, id: @page.id)
     assert_response :redirect
   end
 
   test "should delete destroy" do
-    delete :destroy, @params
+    delete :destroy, @params.merge(id: @page.id)
     assert_response :redirect
   end
 end

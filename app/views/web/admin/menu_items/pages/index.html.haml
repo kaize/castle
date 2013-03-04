@@ -1,0 +1,25 @@
+= link_to t('.new'), new_admin_menu_item_page_path(resource_menu_item), class: 'btn btn-primary'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= sort_link @q, :id
+      %th= sort_link @q, :title
+      %th= sort_link @q, :state
+      %th
+  %tbody
+    - @pages.each do |item|
+      %tr
+        %td= item.id
+        %td= item.title
+        %td= item.human_state_name
+        %td
+          .pull-right.btn-group
+            = link_to edit_admin_menu_item_page_path(resource_menu_item, item.id), class: 'btn btn-mini' do
+              %i.icon-pencil
+            = link_to admin_menu_item_page_path(resource_menu_item, item.id), method: :delete,
+                                                                              class: 'btn btn-mini btn-danger',
+                                                                              data: { confirm: t('.confirm') } do
+              %i.icon-trash
+
+= paginate @pages

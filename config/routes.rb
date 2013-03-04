@@ -32,12 +32,15 @@ Castle::Application.routes.draw do
       resources :instructors
       resources :photo_albums
       resources :news
-      resources :pages
       resources :partners
       resources :events
       resources :activities
       resources :blocks
-      resources :menu_items
+      resources :menu_items do
+        scope module: :menu_items do
+          resources :pages
+        end
+      end
     end
 
     resource :search, only: [:show]
