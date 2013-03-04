@@ -124,6 +124,7 @@ ru:
         content: Содержание
         begin_date: Время начала
         end_date: Время конца
+        photo_album: Фотоальбом
         main: Опубликовать на главной
     errors:
       models:

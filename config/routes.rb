@@ -50,7 +50,7 @@ Castle::Application.routes.draw do
     resources :instructors, only: [:index, :show]
     resources :photo_albums, only: [:index, :show]
     resources :study_requests
-    resources :events
+    resources :events, only: [:index, :show]
   end
 
 end

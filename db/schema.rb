@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130208132535) do
+ActiveRecord::Schema.define(:version => 20130304082700) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "page_activity"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "activity_page_activities", :force => true do |t|
@@ -25,6 +26,23 @@ ActiveRecord::Schema.define(:version => 20130208132535) do
     t.text     "body"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "admin_users", :force => true do |t|
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "blocks", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "order_at"
+    t.boolean  "on_main"
+    t.string   "state"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "categories", :force => true do |t|
@@ -56,9 +74,10 @@ ActiveRecord::Schema.define(:version => 20130208132535) do
     t.date     "begin_date"
     t.date     "end_date"
     t.string   "image"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.boolean  "main"
+    t.integer  "photo_album_id"
   end
 
   create_table "group_instructor_relations", :force => true do |t|
@@ -132,6 +151,15 @@ ActiveRecord::Schema.define(:version => 20130208132535) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "url"
+    t.integer  "order_at"
+  end
+
+  create_table "pg_search_documents", :force => true do |t|
+    t.text     "content"
+    t.integer  "searchable_id"
+    t.string   "searchable_type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "photo_album_photos", :force => true do |t|
