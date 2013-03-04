@@ -33,6 +33,10 @@ module ApplicationHelper
     Category.scoped
   end
 
+  def partners
+    Partner.asc_by_order_at
+  end
+
   def contacts_page
     Page.find_by_uri!('contacts')
   end

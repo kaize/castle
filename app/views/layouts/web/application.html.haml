@@ -18,7 +18,7 @@
               %li= link_to "Link 2", "/path2"
               %li= link_to "Link 3", "/path3"
 
-      = render_cell :partners, :index
+      = render 'layouts/web/shared/partners', partners: partners
       %hr
       = render 'layouts/web/shared/footer'
     /
