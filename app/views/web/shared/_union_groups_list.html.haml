@@ -1,6 +1,5 @@
-%ul.nav.nav-list.bs-docs-sidenav.affix
-  -@category.each do |c|
-    - if c.unions.any?
-      %li
-        %a{href: "##{c.id}"}
-          = c
+.well.well-small
+  %ul.nav.nav-pills.nav-stacked
+    - @categories.each do |c|
+      - if c.unions.any?
+        %li{class: "#{"active" if c == @category}"}= link_to c, category_path(c)
