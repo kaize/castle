@@ -6,11 +6,6 @@ module ApplicationHelper
     content_tag(:li, link, options)
   end
 
-  def item_page(tag, page, link_options = {})
-    path = page_path(page)
-    item(tag, page, path, link_options)
-  end
-
   def model_item(tag, model, path, options = {})
     item(tag, model.model_name.human, path, options)
   end

@@ -5,7 +5,6 @@
     %tr
       %th= sort_link @q, :id
       %th= sort_link @q, :title
-      %th= sort_link @q, :uri
       %th= sort_link @q, :state
       %th
   %tbody
@@ -13,7 +12,6 @@
       %tr
         %td= item.id
         %td= item.title
-        %td= item.uri
         %td= item.human_state_name
         %td
           .pull-right.btn-group

@@ -4,7 +4,6 @@ FactoryGirl.define do
   factory :page do
     title
     body
-    uri { generate :slug }
 
     after(:create) do |p|
       p.publish
