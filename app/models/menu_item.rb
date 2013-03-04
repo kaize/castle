@@ -1,5 +1,7 @@
 class MenuItem < ActiveRecord::Base
-  attr_accessible :title
+  include MenuItemRepository
+
+  attr_accessible :title, :parent_id
 
   has_ancestry
 end
