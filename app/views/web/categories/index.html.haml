@@ -2,12 +2,11 @@
   .span3.bs-docs-sidebar
     = render "web/shared/union_groups_list"
   .span7
-    - @category.each do |c|
-      %section{ id: "#{c.id}"} 
-        - if c.unions.any?
-          %h3= c
-        - c.unions.each do |u|
-          %h4= u
-          %ul.nav.nav-tabs.nav-stacked
-            - u.groups.each do |g|
-              %li= link_to g, union_group_path(u, g)
+    - @categories.each do |c|
+      - if c.unions.any?
+        %h3= c
+      - c.unions.each do |u|
+        %h4= u
+        %ul.nav.nav-tabs.nav-stacked
+          - u.groups.each do |g|
+            %li= link_to g, union_group_path(u, g)
