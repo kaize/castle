@@ -13,8 +13,7 @@ class Web::EventsController < Web::ApplicationController
   end
   
   def show
-    @events = Event.page(params[:page])
-    @date = params[:date]
+    @event = Event.find(params[:id])
   end
 
 end
