@@ -296,7 +296,7 @@ ru:
           schedules: *schedules
           instructors: *instructors
         partners:
-          partners: Партнеры
+          title: Партнеры
   breadcrumbs:
     web:
       application:

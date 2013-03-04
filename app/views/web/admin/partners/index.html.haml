@@ -3,12 +3,12 @@
 %table.table.table-striped
   %thead
     %tr
-      %th= sort_link @q, :id
-      %th= sort_link @q, :name
+      %th= Partner.human_attribute_name :id
+      %th= Partner.human_attribute_name :name
       %th
-  %tbody
+  %tbody.sortable{ data: { 'update-url' => mass_update_order_api_admin_partners_path } }
     - @partners.each do |partner|
-      %tr
+      %tr{ data: { id: partner.id } }
         %td= partner.id
         %td= partner.name
         %td
@@ -17,5 +17,3 @@
               %i.icon-pencil
             = link_to admin_partner_path(partner), :method => :delete, :data => { :confirm => t('.confirm') }, :class => 'btn btn-mini btn-danger' do
               %i.icon-trash
-
-= paginate @partners

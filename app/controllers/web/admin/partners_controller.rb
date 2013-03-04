@@ -1,8 +1,7 @@
 class Web::Admin::PartnersController < Web::Admin::ApplicationController
 
   def index
-    @q = Partner.ransack(params[:q])
-    @partners = @q.result.page(params[:page])
+    @partners = Partner.asc_by_order_at
   end
 
   def new
