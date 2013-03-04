@@ -1,6 +1,7 @@
 .row
   .span8
     %h4= @photo_album.name
+    = render 'web/shared/pluso'
     .carousel.slide{ :id => "carousel_#{@photo_album.id}" }
       .carousel-inner
         - @photo_album.sorted_photos.each_with_index do |photo, i|
