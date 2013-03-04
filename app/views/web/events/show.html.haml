@@ -10,6 +10,8 @@
           .img-rounded.media-object= link_to image_tag(@event.image.url), @event.image.url, data: {colorbox: true}
       .media-body
         != @event.content
+    - unless @event.photo_album_id.nil?
+      = link_to t('.photo_album'), photo_album_path(@event.photo_album_id)
     %hr
     %div{:id => "disqus_thread"}
 

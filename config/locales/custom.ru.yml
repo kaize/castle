@@ -286,6 +286,8 @@ ru:
         current_events: "Текущие события"
         begin_date: "Время начала:"
         end_date: "Время конца:"
+      show:
+        photo_album: Фотоальбом
     study_requests:
       new:
         title: Оставить заявку
@@ -312,6 +314,9 @@ ru:
       news:
         home: *home
         index: Новости
+      events:
+        home: *home
+        index: События
       instructors:
         home: *home
         index: Наши педагоги

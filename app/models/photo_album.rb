@@ -4,7 +4,8 @@ class PhotoAlbum < ActiveRecord::Base
   attr_accessible :name, :state, :description, :main
 
   validates :name, :presence => true
-
+  
+  has_many :events
   has_many :photos, :dependent => :destroy
 
   before_save do
