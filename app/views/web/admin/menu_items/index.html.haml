@@ -1,0 +1,19 @@
+= link_to t('.new'), new_admin_menu_item_path, class: 'btn btn-primary'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= MenuItem.human_attribute_name :id
+      %th= MenuItem.human_attribute_name :title
+      %th
+  %tbody
+    - @menu_items.each do |item|
+      %tr{ data: { id: item.id } }
+        %td= item.id
+        %td= item.title
+        %td
+          .pull-right.btn-group
+            = link_to edit_admin_menu_item_path(item), class: 'btn btn-mini' do
+              %i.icon-pencil
+            = link_to admin_menu_item_path(item), method: :delete, confirm: t('.confirm'), class: 'btn btn-mini btn-danger' do
+              %i.icon-trash

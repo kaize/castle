@@ -37,6 +37,7 @@ Castle::Application.routes.draw do
       resources :events
       resources :activities
       resources :blocks
+      resources :menu_items
     end
 
     resource :search, only: [:show]
