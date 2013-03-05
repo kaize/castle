@@ -17,6 +17,7 @@ class Web::EventsController < Web::ApplicationController
   
   def show
     @event = Event.find(params[:id])
+    add_breadcrumb :index, :events_path
     add_breadcrumb @event.name, :event_path
   end
 

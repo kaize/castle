@@ -328,6 +328,9 @@ ru:
           home: *home
         page_activities: 
           home: *home
+      study_requests:
+        home: *home
+        study_request: Заявка
       categories:
         home: *home
         index: Расписание
