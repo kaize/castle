@@ -1,7 +1,9 @@
 .row
-  .span8
-    %h4= @photo_album.name
+  .span4
+    %h4= link_to @photo_album.name, photo_album_path(@photo_album)
+    %p= @photo_album.description
     = render 'web/shared/pluso'
+  .span8
     .carousel.slide{ :id => "carousel_#{@photo_album.id}" }
       .carousel-inner
         - @photo_album.sorted_photos.each_with_index do |photo, i|
@@ -12,6 +14,6 @@
                 %h4= photo.name
                 %p= photo.description
       %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel_#{@photo_album.id}"} ‹
-      %a.carousel-control.right{"data-slide" => "next", :href => "#carousel_#{@photo_album.id}"} ›    
+      %a.carousel-control.right{"data-slide" => "next", :href => "#carousel_#{@photo_album.id}"} ›
 %hr
 %div{id: "disqus_thread"}
