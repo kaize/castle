@@ -7,6 +7,7 @@ FactoryGirl.define do
     begin_date "2013-01-23"
     end_date "2013-01-23"
     image { fixture_file_upload('/photos/test.png', :true) }
+    association :photo_album, factory: :photo_album
     main false
   end
 end

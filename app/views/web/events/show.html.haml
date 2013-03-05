@@ -1,0 +1,22 @@
+.row
+  .span3
+    #calendars
+  .span8
+    %h4= @event.name
+    %h5= @event.begin_date
+    .media.nav.nav-tabs.nav-stacked
+      - if @event.image.present?
+        %a.pull-left
+          .img-rounded.media-object= link_to image_tag(@event.image.url), @event.image.url, data: {colorbox: true}
+      .media-body
+        != @event.content
+    - unless @event.photo_album_id.nil?
+      = link_to t('.photo_album'), photo_album_path(@event.photo_album_id)
+    %hr
+    %div{:id => "disqus_thread"}
+
+:javascript
+  $(function() {
+    window.router = new Castle.Routers.CalendarsRouter();
+    Backbone.history.start();
+  });

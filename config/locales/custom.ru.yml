@@ -265,6 +265,7 @@ ru:
     welcome:
       index:
         news: Главные новости
+        all_event: Все события
         base_name: Ульяновский областной Дворец творчества детей и молодёжи
         me_open: " - Мы открыты для открытий!"
         do_you_want: Хотите записать своего ребенка?
@@ -278,6 +279,13 @@ ru:
         instructors: *instructors
       show:
         instructor: Педагог
+    events:
+      index:
+        current_events: "Текущие события"
+        begin_date: "Время начала:"
+        end_date: "Время конца:"
+      show:
+        photo_album: Фотоальбом
     study_requests:
       new:
         title: Оставить заявку
@@ -304,6 +312,9 @@ ru:
       news:
         home: *home
         index: Новости
+      events:
+        home: *home
+        index: События
       instructors:
         home: *home
         index: Педагоги
@@ -313,6 +324,9 @@ ru:
       activities:
         application:
           home: *home
+      study_requests:
+        home: *home
+        study_request: Заявка
       categories:
         home: *home
         index: Расписание
