@@ -7,3 +7,4 @@ module EventRepository
     multisearchable against: [:name, :content]
   end
 end
+

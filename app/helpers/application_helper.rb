@@ -32,14 +32,6 @@ module ApplicationHelper
     Partner.asc_by_order_at
   end
 
-  def contacts_page
-    Page.find_by_uri!('contacts')
-  end
-
-  def support_page
-    Page.find_by_uri!('support')
-  end
-
   def unions
     Union.all
   end
