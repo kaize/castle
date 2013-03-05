@@ -41,7 +41,7 @@ Castle::Application.routes.draw do
 
     resource :search, only: [:show]
     resources :news, only: [:index, :show]
-    resources :page, only: [:show]
+    resources :pages, only: [:show]
     resources :categories, only: [:index, :show] do
       scope module: :categories do
         resources :unions, only: [:index, :show]
