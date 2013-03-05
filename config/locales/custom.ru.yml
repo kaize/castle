@@ -296,6 +296,9 @@ ru:
       activities:
         application:
           home: *home
+      study_requests:
+        home: *home
+        study_request: Заявка
       categories:
         home: *home
         index: Расписание

@@ -1,6 +1,8 @@
 class Web::StudyRequestsController < Web::ApplicationController
 
   def new
+    add_breadcrumb :home, :root_path
+    add_breadcrumb :study_request, :new_study_request_path
     @study_request = StudyRequest.new
   end
 
