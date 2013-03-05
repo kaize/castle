@@ -12,6 +12,7 @@
         != @event.content
     - unless @event.photo_album_id.nil?
       = link_to t('.photo_album'), photo_album_path(@event.photo_album_id)
+    = render 'web/shared/pluso'
     %hr
     %div{:id => "disqus_thread"}
 
