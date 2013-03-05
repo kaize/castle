@@ -1,4 +1,6 @@
 class Page < ActiveRecord::Base
+  include PageRepository
+  
   attr_accessible :body, :title, :uri, :state_event
 
   validates :title, presence: true

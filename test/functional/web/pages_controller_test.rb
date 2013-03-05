@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Web::PageControllerTest < ActionController::TestCase
+class Web::PagesControllerTest < ActionController::TestCase
   def setup
     @page = create :page
     @params = {id: @page}
