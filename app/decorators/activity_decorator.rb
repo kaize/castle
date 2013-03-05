@@ -1,4 +1,4 @@
-class ActivityDecorator < Draper::Base
+class ActivityDecorator < ApplicationDecorator
   decorates :activity
 
   # Accessing Helpers

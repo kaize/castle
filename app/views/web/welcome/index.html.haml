@@ -32,7 +32,7 @@
 
     = render partial: 'web/shared/block', collection: @blocks
 
-- if @photo_album.try :can_view?
+- if @photo_album.can_view?
   .row
     .span12
       %hr
