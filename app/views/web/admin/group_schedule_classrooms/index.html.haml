@@ -1,3 +1,4 @@
+= link_to t('.new'), new_admin_group_schedule_classroom_path, class: 'btn btn-primary'
 %table.table.table-striped
   %thead
     %tr
@@ -12,10 +13,8 @@
               %i.icon-pencil
               = t(:edit)
             = link_to admin_group_schedule_classroom_path(n), method: :delete,
-              class: 'btn btn-mini',
+              class: 'btn btn-mini btn-danger',
               data: { confirm: t('.delete_confirm') } do
               %i.icon-trash
 
 = paginate @classrooms
-
-= render 'sidebar'
