@@ -167,6 +167,7 @@ ru:
           title: *instructors
       group_schedule_classrooms:
         index:
+          new: *new
           title: &classroom Аудитория
           delete_confirm: *confirm
           name: Аудитория
