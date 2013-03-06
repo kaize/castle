@@ -8,7 +8,10 @@ private
   def title_head
     scope = []
     scope << params[:controller].split('/')
-    scope << params[:action]
+    action = params[:action]
+    action = 'new' if action == 'create'
+    action = 'edit' if action == 'update'
+    scope << action
     t :title, scope: scope
   end
 end
