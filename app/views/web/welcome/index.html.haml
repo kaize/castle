@@ -47,26 +47,6 @@
       = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
 
     = render partial: 'web/shared/block', collection: @blocks
-- if @photo_album.can_view?
-  .row
-    .span12
-      %hr
-    .span6.offset3
-      %h4= @photo_album.name
-      %p= @photo_album.description
-      #carousel.carousel.slide
-        .carousel-inner
-          - @photo_album.sorted_photos.each_with_index do |photo, i|
-            .item{:class => i == 0 ? "active" : ''}
-              = image_tag photo.image_url(:carousel)
-              - if photo.information?
-                .carousel-caption
-                  %h4= photo.name
-                  %p= photo.description
-        %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"} ‹
-        %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"} ›
-      %p= link_to "Все фотоальбомы", photo_albums_path
-
 :javascript
   $(function() {
     window.router = new Castle.Routers.CalendarsRouter();
