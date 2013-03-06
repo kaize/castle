@@ -49,4 +49,9 @@ module ApplicationHelper
       items.join.html_safe
     end
   end
+
+  def nav_menu_items_arrange
+    MenuItem.published_arrange(2)
+  end
+
 end

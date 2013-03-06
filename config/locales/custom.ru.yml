@@ -259,6 +259,10 @@ ru:
           title: *blocks
         update:
           title: *blocks
+      menu_items:
+        index:
+          confirm: *confirm
+
       welcome:
         index:
           title: " "
