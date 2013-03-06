@@ -283,10 +283,12 @@ ru:
         instructor: Педагог
     events:
       index:
+        all_events: &all_events Все события
         current_events: "Текущие события"
         begin_date: "Время начала:"
         end_date: "Время конца:"
       show:
+        all_events: *all_events
         photo_album: Фотоальбом
     study_requests:
       new:

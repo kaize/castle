@@ -1,15 +1,11 @@
-%a{href: "#", class: "month-dec"}
-  %i.icon-chevron-left
-= @options.month
-%a{href: "#", class: "month-inc"}
-  %i.icon-chevron-right
-
-%a{href: "#", class: "year-dec"}
-  %i.icon-chevron-left
-= @options.year
-%a{href: "#", class: "year-inc"}
-  %i.icon-chevron-right
-
+%center
+  %h5= "Календарь событий"
+  %a{href: "#", class: "month-dec"}
+    %i.icon-chevron-left
+  #{@options.month} #{@options.year}
+  %a{href: "#", class: "month-inc"}
+    %i.icon-chevron-right
+%br
 %table.table.table-bordered.table-striped
   %thead
     %th= "Пн"
