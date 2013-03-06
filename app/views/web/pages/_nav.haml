@@ -1,0 +1,5 @@
+.well.well-small
+  %ul.nav.nav-pills.nav-stacked
+    %li.nav-header= @page.menu_item.title
+    - @page.menu_item.pages.each do |p|
+      = item :li, p.title, page_path(p)
