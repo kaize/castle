@@ -5,7 +5,7 @@ ru:
   comments: Коментарии
   base_name: Ульяновский областной Дворец творчества детей и молодёжи
   categories: Расписание
-  instructors: Педагоги
+  instructors: Наши педагоги
   news: Новости
   photo_albums: Фотоальбомы
   study_request: Заявка
@@ -153,7 +153,7 @@ ru:
       instructors:
         index:
           confirm: *confirm
-          title: &instructors Педагоги
+          title: &instructors Наши педагоги
           new: *new
         edit:
           title: *instructors
@@ -317,7 +317,7 @@ ru:
         index: События
       instructors:
         home: *home
-        index: Педагоги
+        index: Наши педагоги
       schedules:
         home: *home
         index: Расписание
