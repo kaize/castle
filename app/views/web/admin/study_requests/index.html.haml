@@ -1,6 +1,9 @@
 = simple_form_for @q, url: admin_study_requests_path, method: :get do |f|
   = f.input :union_id_eq, collection: unions, as: :select, label: 'Показывать только выбранное объединение',required: false
   = f.submit "Сортировать"
+= link_to admin_study_requests_path(format: :csv, q: {union_id_eq: @q.union_id_eq}), class: 'btn btn-success pull-left' do
+  %i.icon-download-alt
+  = "Скачать список в формате CSV"
 %table.table.table-striped
   %thead
     %tr
@@ -13,7 +16,7 @@
       %th= sort_link @q, :created_at
       %th
   %tbody
-    - @study_requests.each do |item|
+    - @study_requests_by_page.each do |item|
       %tr
         %td= item.id
         %td= item.parent_last_name

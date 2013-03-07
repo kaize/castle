@@ -1,7 +1,13 @@
 class Web::Admin::StudyRequestsController < Web::Admin::ApplicationController
+
   def index
     @q = StudyRequest.ransack(params[:q])
-    @study_requests = @q.result.page(params[:page])
+    @study_requests = @q.result
+    @study_requests_by_page = @study_requests.page(params[:page])
+    respond_to do |format|
+      format.html
+      format.csv { render text: ::Converters::StudyRequestConverter.to_csv(@study_requests)}
+    end
   end
 
   def show
