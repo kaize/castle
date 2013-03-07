@@ -7,15 +7,19 @@ Castle::Application.routes.draw do
 
     namespace :admin do
       resources :blocks, only: [] do
-        collection do
-          put :mass_update_order
-        end
+         put :mass_update_order, on: :collection 
       end
       resources :partners, only: [] do
-        collection do
-          put :mass_update_order
+         put :mass_update_order, on: :collection 
+      end
+      resources :menu_items, only: [] do 
+        scope module: :menu_items do
+          resources :pages, only: [] do
+            put :mass_update_order, on: :collection 
+          end
         end
       end
+      
     end
   end
 

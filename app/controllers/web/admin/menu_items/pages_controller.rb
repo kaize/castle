@@ -1,7 +1,6 @@
 class Web::Admin::MenuItems::PagesController < Web::Admin::MenuItems::ApplicationController
   def index
-    @q = resource_menu_item.pages.ransack params[:q]
-    @pages = @q.result.page(params[:page])
+    @pages = resource_menu_item.pages.asc_by_order_at
   end
 
   def new

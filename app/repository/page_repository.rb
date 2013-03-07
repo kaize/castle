@@ -3,7 +3,7 @@ module PageRepository
   include BaseRepository
   
   included do
-    scope :published, where(state: :published)
-    scope :web, published
+    scope :published, where(state: 'published')
+    scope :web, published.asc_by_order_at
   end
 end
