@@ -14,13 +14,4 @@ class StudyRequest < ActiveRecord::Base
   validates :phone, presence: true
   validates :union, presence: true
 
-  def self.to_csv
-    CSV.generate do |csv|
-      csv << column_names
-      all.each do |study_request|
-        csv << study_request.attributes.values_at(*column_names)
-      end
-    end
-  end
-
 end
