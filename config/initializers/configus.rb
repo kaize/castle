@@ -6,6 +6,16 @@ Configus.build Rails.env do
         password "123456"
       end
     end
+
+    per_page_count do
+      searches 20
+      photo_albums 5
+      instructors 24
+    end
+
+    limits do
+      news 3
+    end
   end
 
   env :development, parent: :production do
