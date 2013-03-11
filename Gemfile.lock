@@ -156,6 +156,9 @@ GEM
     net-ssh (2.6.6)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    nokogiri (1.5.6)
+    nokogiri-happymapper (0.5.6)
+      nokogiri (~> 1.5)
     orm_adapter (0.4.0)
     pg (0.14.1)
     pg_search (0.5.7)
@@ -292,6 +295,7 @@ DEPENDENCIES
   mini_magick
   minitest
   momentjs-rails
+  nokogiri-happymapper
   pg
   pg_search
   rails (~> 3.2.9)

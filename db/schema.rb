@@ -28,13 +28,6 @@ ActiveRecord::Schema.define(:version => 20130304082700) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "admin_users", :force => true do |t|
-    t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "blocks", :force => true do |t|
     t.string   "title"
     t.text     "body"
@@ -140,9 +133,9 @@ ActiveRecord::Schema.define(:version => 20130304082700) do
     t.string   "title"
     t.text     "body"
     t.string   "uri"
+    t.string   "state"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "state"
   end
 
   create_table "partners", :force => true do |t|
