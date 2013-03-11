@@ -1,0 +1,10 @@
+= link_to t('.new'), new_admin_menu_item_path, class: 'btn btn-primary'
+
+= show_tree @menu_items do |item|
+  = item.title
+  = link_to t('.pages'), admin_menu_item_pages_url(item)
+  = link_to t('.new_page'), new_admin_menu_item_page_url(item)
+  = link_to edit_admin_menu_item_path(item), class: 'btn btn-mini' do
+    %i.icon-pencil
+  = link_to admin_menu_item_path(item), method: :delete, confirm: t('.confirm'), class: 'btn btn-mini btn-danger' do
+    %i.icon-trash

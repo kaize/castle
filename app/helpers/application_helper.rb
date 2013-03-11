@@ -6,11 +6,6 @@ module ApplicationHelper
     content_tag(:li, link, options)
   end
 
-  def item_page(tag, page, link_options = {})
-    path = page_path(page)
-    item(tag, page, path, link_options)
-  end
-
   def model_item(tag, model, path, options = {})
     item(tag, model.model_name.human, path, options)
   end
@@ -37,15 +32,26 @@ module ApplicationHelper
     Partner.asc_by_order_at
   end
 
-  def contacts_page
-    Page.find_by_uri!('contacts')
-  end
-
-  def support_page
-    Page.find_by_uri!('support')
-  end
-
   def unions
     Union.all
   end
+
+  def show_tree(arrange_hash, &block)
+    return if arrange_hash.empty?
+    content_tag :ul do
+      items = arrange_hash.map do |item, children|
+        content_tag :li do
+          html = capture item, &block
+          subtree = show_tree(children, &block)
+          [html, subtree].compact.map!(&:to_s).join.html_safe
+        end
+      end
+      items.join.html_safe
+    end
+  end
+
+  def nav_menu_items_arrange
+    MenuItem.published_arrange(2)
+  end
+
 end

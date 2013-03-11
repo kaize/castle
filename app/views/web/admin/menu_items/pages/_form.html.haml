@@ -1,8 +1,7 @@
 = simple_form_for @page, :url => url, :html => { :class => 'default_class' } do |f|
   = f.input :state_event, as: :state_event
   = f.input :title
-  = f.input :uri
-  = f.input :body, as: :ckeditor, :input_html => { :class => "ckeditor", :height => 400 }
+  = f.input :body, as: :ckeditor, input_html: {:height => 400 }
   .form-actions
     = f.button :submit, :class => 'btn btn-primary'
-    = link_to t('.cancel'), admin_pages_path, :class => 'btn'
+    = link_to t('.cancel'), admin_menu_item_pages_path(resource_menu_item), :class => 'btn'

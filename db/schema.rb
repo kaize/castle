@@ -12,7 +12,7 @@
 # It's strongly recommended to check this file into your version control system.
 
 
-ActiveRecord::Schema.define(:version => 20130304082700) do
+ActiveRecord::Schema.define(:version => 20130306140723) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -27,13 +27,6 @@ ActiveRecord::Schema.define(:version => 20130304082700) do
     t.text     "body"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "admin_users", :force => true do |t|
-    t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "blocks", :force => true do |t|
@@ -121,6 +114,13 @@ ActiveRecord::Schema.define(:version => 20130304082700) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "menu_items", :force => true do |t|
+    t.string   "title"
+    t.string   "ancestry"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "news", :force => true do |t|
     t.string   "title"
     t.text     "body"
@@ -140,10 +140,11 @@ ActiveRecord::Schema.define(:version => 20130304082700) do
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.string   "uri"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.string   "state"
+    t.integer  "menu_item_id"
+    t.integer  "order_at"
   end
 
   create_table "partners", :force => true do |t|

@@ -44,5 +44,8 @@ ru:
       block:
         create: "Создать"
         update: "Сохранить"
+      menu_item:
+        create: "Создать"
+        update: "Сохранить"
       
       

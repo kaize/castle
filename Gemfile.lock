@@ -38,6 +38,9 @@ GEM
       activesupport
       builder
       json
+      girl_friday
+    ancestry (1.3.0)
+      activerecord (>= 2.3.14)
     ansi (1.4.3)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
@@ -264,6 +267,7 @@ PLATFORMS
 
 DEPENDENCIES
   airbrake
+  ancestry
   bcrypt-ruby
   better_errors
   capi

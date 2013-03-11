@@ -1,3 +1,6 @@
-- if @page.present?
-  %h3= @page
-  != @page.body
+.row
+  .span3
+    = render partial: 'nav'
+  .span9
+    %h3= @page
+    != @page.body

@@ -121,7 +121,9 @@ ru:
         body: Содержание
         state: Текущее состояние
         state_event: Действие
-
+      menu_item:
+        title: Заголовок
+        parent_id: Родительский элемент меню
     errors:
       models:
         page:
