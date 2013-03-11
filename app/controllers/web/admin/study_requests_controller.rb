@@ -6,7 +6,6 @@ class Web::Admin::StudyRequestsController < Web::Admin::ApplicationController
     @study_requests_by_page = @study_requests.page(params[:page])
     respond_to do |format|
       format.html
-      format.csv { render text: ::Converters::StudyRequestConverter.to_csv(@study_requests)}
     end
   end
 
