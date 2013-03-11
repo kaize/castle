@@ -37,5 +37,5 @@ Castle::Application.configure do
 end
 
 ActionDispatch::Reloader.to_prepare do
-  load Rails.root.join('lib/configus.rb')
+  load Rails.root.join('config/initializers/configus.rb')
 end
