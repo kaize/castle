@@ -7,7 +7,6 @@ module Converters
       attrs = [:id, :parent_last_name, :birth_date, :phone, :email, :created_at].map{|x| x.to_s}
       CSV.generate do |csv|
         csv << attrs.map{|x| StudyRequest.human_attribute_name(x)} + [StudyRequest.human_attribute_name(:union_id)]
-        #csv << StudyRequest.human_attribute_name(:union_id)
         study_requests.each do |study_request|
           csv << study_request.attributes.values_at(*attrs) + [study_request.union.name]
         end
