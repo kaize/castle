@@ -25,3 +25,7 @@
 .sortable tr{
     cursor: move;
 }
+
+.button-gap{
+    margin-left: 10em;
+}
