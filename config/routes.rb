@@ -6,6 +6,7 @@ Castle::Application.routes.draw do
     resources :events, only: [:index]
 
     namespace :admin do
+      resources :study_requests, only: [:index]
       resources :blocks, only: [] do
          put :mass_update_order, on: :collection 
       end

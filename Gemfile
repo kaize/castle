@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'rails', '~> 3.2.9'
 
+gem 'axlsx_rails'
 gem 'pg'
 gem 'ransack'
 gem 'unicorn'
