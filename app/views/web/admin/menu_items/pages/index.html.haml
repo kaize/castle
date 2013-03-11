@@ -9,7 +9,7 @@
       %th
   %tbody.sortable{ data: { 'update-url' => mass_update_order_api_admin_menu_item_pages_path(resource_menu_item) } }
     - @pages.each do |item|
-      %tr
+      %tr{ data: { id: item.id } }
         %td= item.id
         %td= item.title
         %td= item.human_state_name

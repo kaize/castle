@@ -17,8 +17,4 @@ class Api::Admin::MenuItems::PagesControllerTest < ActionController::TestCase
     assert_equal 0, @page1.order_at
   end
   
-  test "should update ids is not" do
-    put :mass_update_order, menu_item_id: @menu_item.id 
-    assert_response :success
-  end
 end

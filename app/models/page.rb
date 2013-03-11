@@ -1,7 +1,7 @@
 class Page < ActiveRecord::Base
   include PageRepository
 
-  attr_accessible :body, :title, :state_event
+  attr_accessible :body, :title, :state_event, :order_at
 
   belongs_to :menu_item
 
