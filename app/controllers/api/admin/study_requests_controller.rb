@@ -1,6 +1,5 @@
 class Api::Admin::StudyRequestsController < Api::Admin::ApplicationController
-  respond_to :xlsx
-  respond_to :csv
+  respond_to :xlsx, :csv
 
   def index
     @q = StudyRequest.ransack(params[:q])
