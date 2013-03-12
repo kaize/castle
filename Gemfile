@@ -39,7 +39,7 @@ group :assets do
   gem 'execjs'
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
-
+  gem 'turbo-sprockets-rails3'
   gem 'momentjs-rails'
 
   gem 'underscore-string-rails'
