@@ -1,12 +1,25 @@
-
 class UcozExporter
   include HappyMapper
   
-  tag 'urlset'
-  
-  namespace 'xmlns'
-  
-  has_many :news, String, tag: 'loc', namespace: 'xmlns', xpath: "xmlns:url/xmlns:loc[contains(text(), 'http://oddt.ucoz.ru/news/')]"
-  has_many :photo_albums, String, :tag => 'loc', namespace: 'xmlns', xpath: "xmlns:url/xmlns:loc[contains(text(), 'http://oddt.ucoz.ru/photo/')]"
+  def api_links(name)
+    links = SitemapParser.parse(File.read("#{Rails.root}/lib/exports/sitemap.xml"), single: true)
+    links_with_api = []
+    if name == 'news'
+      links.news.each do |l|
+        uri = URI.parse(l)
+        link = uri.path
+        uri.path = "/api#{link}"
+        links_with_api << uri
+      end
+    elsif name == 'photo_albums'
+      links.photo_albums.each do |l|
+        uri = URI.parse(l)
+        link = uri.path
+        uri.path = "/api#{link}"
+        links_with_api << uri
+      end
+    end
+    links_with_api
+  end
   
 end
