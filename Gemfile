@@ -33,6 +33,8 @@ gem 'rails-backbone'
 gem 'pg_search'
 gem 'ancestry'
 
+gem 'nokogiri-happymapper', :require => 'happymapper'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -53,6 +55,7 @@ group :assets do
 
   gem 'haml_coffee_assets'
   gem 'execjs'
+  
 end
 
 group :development do
