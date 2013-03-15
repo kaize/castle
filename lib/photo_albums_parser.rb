@@ -1,6 +1,11 @@
 class PhotoAlbumsParser
   include HappyMapper
   
+  tag "methodResponse"
+  
+  element :url, String, tag: 'string', xpath: "params/param/value/struct/member[name[contains(text(), 'CATEGORY_URL')]]/value"
+  element :name, String, tag: 'string', xpath: "params/param/value/struct/member[name[contains(text(), 'CATEGORY_NAME')]]/value"
+=begin  
   ue = UcozExporter.new
   links_photo = ue.api_links 'photo_albums'
   photo_album = {}
@@ -28,5 +33,5 @@ class PhotoAlbumsParser
    File.open("#{Rails.root}/lib/exports/photo_album.xml", 'w') do |f|
      f.write photo_album.to_xml
    end
-  
+=end  
 end
