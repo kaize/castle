@@ -1,8 +1,8 @@
 class UcozExporter
   
   def links
-    sitemap_file = File.read("#{Rails.root}/lib/exports/sitemap.xml")
-    @links ||= SitemapParser.parse(sitemap_file, single: true)
+    uri = URI.parse "http://oddt.ucoz.ru/sitemap.xml"
+    @links ||= SitemapParser.parse(uri.read, single: true)
   end
   
   def link_to_uri(link)
@@ -13,11 +13,7 @@ class UcozExporter
   end
   
   def api_links_news
-    links.news.map {|link| uri = link_to_uri(link)}
-  end
-  
-  def api_links_photo_albums
-    links.photo_albums.map {|link| uri = link_to_uri(link)}
+    links.news.map {|link| link_to_uri(link)}
   end
   
   def import_news
@@ -29,21 +25,29 @@ class UcozExporter
     end
   end
   
+  def html_photo_album_parse(html_document)
+    doc = Nokogiri::HTML html_document 
+    links = doc.xpath "/html/body/div/div/div/table/tbody/tr/td/div/span/table/tr/td/a"
+    links.map {|link| {url: link.xpath("@href").text , name: link.xpath("text()").text}}
+  end
+  
   def import_photo_albums
-    uri = api_links_photo_albums
-    uri.each do |link|
-      photo_albums = PhotoAlbumsParser.parse(link.read, single: true)
-      uri_photos = URI.parse "http://oddt.ucoz.ru/api#{photo_albums.url}"
+    uri = URI.parse "http://oddt.ucoz.ru/photo/"
+    photo_albums = html_photo_album_parse(uri.read)
+    
+    photo_albums.each do |photo_album|
+      uri_photos = URI.parse photo_album[:url]
+      
       photos = PhotoParser.parse(uri_photos.read, single: true)
       
-      photo_album = PhotoAlbum.new name: photo_albums.name
-      photo_album.publish
-    
+      photo_album_new = PhotoAlbum.new name: photo_album[:name]
+      photo_album_new.publish
+      
       photos.urls.each do |photo_url|
-        photo = PhotoAlbum::Photo.new photo_album_id: photo_album.id
+        photo = PhotoAlbum::Photo.new photo_album_id: photo_album_new.id
         photo.remote_image_url = photo_url
         photo.save
-      end 
+      end
     end
   end
   
