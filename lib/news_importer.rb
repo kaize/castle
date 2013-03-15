@@ -3,7 +3,7 @@ class NewsImporter
   def links
     uri = URI.parse "http://oddt.ucoz.ru/sitemap.xml"
     content = uri.read
-    @links ||= SitemapParser.parse content, single: true
+    SitemapParser.parse content, single: true
   end
   
   def link_to_uri(link)
