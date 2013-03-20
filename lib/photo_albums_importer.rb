@@ -2,8 +2,8 @@ class PhotoAlbumsImporter
   
   def link_to_uri(link)
     uri = URI.parse link
-    url = uri.path
-    uri.path = "/api#{url}"
+    path = uri.path
+    uri.path = "/api#{path}"
     uri
   end
   
@@ -23,7 +23,7 @@ class PhotoAlbumsImporter
       photo_album.publish
       
       photos_content = photo_album_attr[:url].read
-      photos = PhotoAlbumsParser.parse(photos_content, single: true)
+      photos = PhotoAlbumsParser.parse photos_content, single: true
       
       photos.photo_urls.each do |photo_url|
         photo = photo_album.photos.build

@@ -65,6 +65,7 @@ group :development do
 end
 
 group :test do
+  gem 'webmock'
   gem 'minitest'
   gem 'tconsole'
   gem 'turn'
