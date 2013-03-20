@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<methodResponse>
+<params>
+<param>
+<value><struct>
+<member><name>MATERIAL_ID</name><value><i4>264</i4></value></member>
+<member><name>TITLE</name><value><string>title</string></value></member>
+<member><name>MESSAGE</name><value><string>body</string></value></member>
+<member><name>ENTRY_URL</name><value><string>http://oddt.ucoz.ru/news/skazhi_zhizni_da/2013-03-14-264</string></value></member>
+<member><name>CATEGORY_NAME</name><value><string></string></value></member>
+<member><name>CATEGORY_URL</name><value><string></string></value></member>
+<member><name>COMMENTS_NUM</name><value><i4>0</i4></value></member>
+<member><name>COMMENTS_URL</name><value><string>http://oddt.ucoz.ru/news/skazhi_zhizni_da/2013-03-14-264#comments</string></value></member>
+<member><name>USER_NAME</name><value><string>Admin</string></value></member>
+<member><name>USER_ID</name><value><i4>1</i4></value></member>
+<member><name>RATING</name><value><string>5.0</string></value></member>
+<member><name>RATED</name><value><i4>1</i4></value></member>
+<member><name>READS_NUM</name><value><i4>53</i4></value></member>
+<member><name>DATE</name><value><string>14.03.2013</string></value></member>
+<member><name>TIME</name><value><string>15:13</string></value></member>
+<member><name>TIMESTAMP</name><value><i4>1363259590</i4></value></member>
+</struct></value>
+</param>
+</params>
+</methodResponse>

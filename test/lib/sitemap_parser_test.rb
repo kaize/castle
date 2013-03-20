@@ -10,11 +10,5 @@ class SitemapParserTest < ActiveSupport::TestCase
     sitemap = SitemapParser.parse(@sitemap, single: true)
     assert_equal url_news, sitemap.news.first
   end
-  
-  test "parsing xml document for photo_albums" do
-    url_photo_albums = "http://oddt.ucoz.ru/photo/test"
-    sitemap = SitemapParser.parse(@sitemap, single: true)
-    assert_equal url_photo_albums, sitemap.photo_albums.first
-  end
-  
+
 end

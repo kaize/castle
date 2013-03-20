@@ -1,7 +1,7 @@
 require 'simplecov'
 SimpleCov.start('rails') if ENV["COVERAGE"]
 require "test/unit"
-
+require 'webmock/minitest'
 require 'coveralls'
 Coveralls.wear!('rails')
 
