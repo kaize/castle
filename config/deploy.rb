@@ -1,5 +1,9 @@
+set :rvm_type, :system
 set :stages, %w(production staging)
 set :default_stage, "staging"
+set :rvm_ruby_string, 'ruby-1.9.3-p0'
+set :whenever_command, "bundle exec whenever" # update crontab
+
 
 require 'capistrano/ext/multistage'
 require 'capi/unicorn'

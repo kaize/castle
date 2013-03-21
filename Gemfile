@@ -31,6 +31,7 @@ gem 'colorbox-rails'
 gem 'airbrake'
 gem 'rails-backbone'
 gem 'pg_search'
+gem 'backup' 
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
