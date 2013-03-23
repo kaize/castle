@@ -3,7 +3,7 @@ class Activity < ActiveRecord::Base
 
   attr_accessible :name, :page_activity
  
-  has_many :page_activities
+  has_many :page_activities, dependent: :destroy
   validates :name, presence: true
  
   def to_s
