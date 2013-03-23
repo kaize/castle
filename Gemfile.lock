@@ -73,6 +73,7 @@ GEM
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
     chattyproc (1.0.0)
+    chronic (0.8.0)
     ci_reporter (1.8.4)
       builder (>= 2.1.2)
     ckeditor (4.0.2)
@@ -285,6 +286,9 @@ GEM
     webmock (1.11.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
+    whenever (0.8.0)
+      activesupport (>= 2.3.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -345,4 +349,8 @@ DEPENDENCIES
   unicorn
   usefull_scopes!
   validates
+<<<<<<< HEAD
   webmock
+=======
+  whenever
+>>>>>>> feature/backup-117
