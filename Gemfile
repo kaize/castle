@@ -34,6 +34,7 @@ gem 'pg_search'
 gem 'ancestry'
 
 gem 'nokogiri-happymapper', :require => 'happymapper'
+gem 'backup' 
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
