@@ -2,7 +2,7 @@ require  'test_helper'
 
 class SitemapParserTest < ActiveSupport::TestCase
   setup do 
-    @sitemap = fixture_read('sitemap')
+    @sitemap = fixture_file_upload('sitemap.xml', 'text/xml').read
   end
   
   test "parsing xml document for news" do
