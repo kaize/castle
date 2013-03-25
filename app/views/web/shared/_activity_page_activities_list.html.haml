@@ -1,4 +1,0 @@
-.well.well-small
-  %ul.nav.nav-pills.nav-stacked
-    - resource_activity.page_activities.each do |pa|
-      %li{class: "#{"active" if pa == @page_activity}"}= link_to pa, activity_page_activity_path(resource_activity, pa)

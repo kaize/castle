@@ -15,7 +15,6 @@ ru:
       study_request: Заявки на обучение
       partner: Партнеры
       event: События
-      activity: Деятельность
       block: Блок
     state_machines:
       events:
@@ -59,11 +58,6 @@ ru:
         finish_at: Конец в
       "group/schedule/classroom":
         name: Аудитория
-      activity:
-        name: Название
-      "activity/page_activity":
-        name: Название
-        body: Содержание
       instructor:
         first_name: Имя
         middle_name: Отчество

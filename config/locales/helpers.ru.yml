@@ -35,9 +35,6 @@ ru:
       event:
         create: "Создать"
         update: "Сохранить"
-      activity:
-        create: "Создать"
-        update: "Сохранить"
       group_schedule_classroom:
         create: "Создать"
         update: "Сохранить"
