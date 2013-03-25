@@ -26,10 +26,6 @@ module AuthHelper
   end
 end
 
-def fixture_read(name)
-  response = File.read("#{Rails.root}/test/fixtures/#{name}.xml")
-end
-
 def fixture_file_upload(path, mime_type = nil, binary = false)
   fixture_path = ActionController::TestCase.fixture_path
   Rack::Test::UploadedFile.new("#{fixture_path}#{path}", mime_type, binary)

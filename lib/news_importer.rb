@@ -23,17 +23,15 @@ class NewsImporter
     img.text
   end
   
-  def img_replace(id, body)
-    img = get_img_url body
-    return body if body.scan(img).blank?
+  def img_replace(body, path)
     img_url = get_img_url body
-    img_url.insert(0, "/system/uploads/ckeditor/pictures/#{id}")
-    body.gsub!(img, img_url)
+    return body if body.scan(img_url).blank?
+    body.gsub!(img_url, path)
   end
   
   def import_news
-    uri = api_links_news
-    uri.each do |link|
+    uris = api_links_news
+    uris.each do |link|
       news_data = NewsParser.parse(link.read, single: true)
       img_url = get_img_url news_data.body
       body = news_data.body
@@ -41,7 +39,7 @@ class NewsImporter
         picture = Ckeditor::Picture.new
         picture.remote_data_url= "http://oddt.ucoz.ru#{img_url}"
         picture.save
-        body = img_replace picture.id, news_data.body
+        body = img_replace news_data.body, picture.data_url
       end
       news = News.new body: body, title: news_data.title, published_at: news_data.published_at
       news.publish

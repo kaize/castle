@@ -2,22 +2,22 @@ require  'test_helper'
 
 class NewsImporterTest < ActiveSupport::TestCase
   setup do 
-    @news = create :news, body: "body", title: "title", published_at: Time.at(1363259590)
+    sitemap = fixture_file_upload('sitemap.xml', 'text/xml').read 
+    news = fixture_file_upload('news.xml', 'text/xml').read 
+    photo = fixture_file_upload("/photos/test.png", 'image/png', :true).read
+    @sitemap_stub = stub_request(:get, "http://oddt.ucoz.ru/sitemap.xml").to_return(status: 200, body: sitemap, headers: {})
+    @news_stub = stub_request(:get, "http://oddt.ucoz.ru/api/news/test").to_return(status: 200,  body: news, headers: {})
+    @photo_stub = stub_request(:get, "http://oddt.ucoz.ru/test.png").to_return(status: 200,  body: photo, headers: {})
+    @news_importer = NewsImporter.new
   end
   
   test "import news" do
-   url = "http://oddt.ucoz.ru/api/news/skazhi_zhizni_da/2013-03-14-264"
-   stub = stub_request(:get, url).to_return(:status => 200, :body => fixture_read('news'), :headers => {})     
-    
-    uri = URI.parse url
-    link = uri.read
-    news_data = NewsParser.parse link, single: true
-    
-    assert_requested(stub)
-    
-    assert_equal @news.title, news_data.title
-    assert_equal @news.body, news_data.body
-    assert_equal @news.published_at, news_data.published_at
+    @news_importer.import_news
+    assert_requested @sitemap_stub
+    assert_requested @news_stub
+    assert_requested @photo_stub
+    assert_equal 1, Ckeditor::Picture.count 
+    assert_equal 1, News.count
   end
   
 end
