@@ -15,13 +15,6 @@
             %ul.dropdown-menu
               - nav_categories.each do |c|
                 = item :li, c, category_unions_path(c)
-          %li.dropdown
-            %a.dropdown-toggle{ :"data-toggle" => "dropdown", :href => "#" }
-              = t('.activities')
-              %b.caret
-            %ul.dropdown-menu
-              - nav_activities.each do |c|
-                = item :li, c, activity_page_activities_path(c)
           = item :li, t('.schedules'), categories_path
           = item :li, t('.instructors'), instructors_path
           - nav_menu_items_arrange.each_pair do |menu_item, children|

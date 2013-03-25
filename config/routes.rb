@@ -38,7 +38,6 @@ Castle::Application.routes.draw do
       resources :news
       resources :partners
       resources :events
-      resources :activities
       resources :blocks
       resources :menu_items do
         scope module: :menu_items do
@@ -53,11 +52,6 @@ Castle::Application.routes.draw do
     resources :categories, only: [:index, :show] do
       scope module: :categories do
         resources :unions, only: [:index, :show]
-      end
-    end
-    resources :activities, only: [:index, :show] do
-      scope module: :activities do
-        resources :page_activities, only: [:index, :show]
       end
     end
     
