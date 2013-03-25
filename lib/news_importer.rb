@@ -39,7 +39,9 @@ class NewsImporter
         picture = Ckeditor::Picture.new
         picture.remote_data_url= "http://oddt.ucoz.ru#{img_url}"
         picture.save
-        body = img_replace news_data.body, picture.data_url
+        if picture.data_url.present?
+          body = img_replace news_data.body, picture.data_url
+        end
       end
       news = News.new body: body, title: news_data.title, published_at: news_data.published_at
       news.publish
