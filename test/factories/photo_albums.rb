@@ -4,7 +4,8 @@ FactoryGirl.define do
   factory :photo_album do
     name
     description
-
+    main false
+    
     trait :with_photo do
       after(:create) do |album|
         create 'photo_album/photo', :photo_album => album

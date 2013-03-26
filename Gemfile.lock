@@ -349,8 +349,5 @@ DEPENDENCIES
   unicorn
   usefull_scopes!
   validates
-<<<<<<< HEAD
   webmock
-=======
   whenever
->>>>>>> feature/backup-117
