@@ -13,12 +13,7 @@ class Event < ActiveRecord::Base
 
   mount_uploader :image, EventImageUploader
 
-
-  before_save do
-    if main?
-      Event.update_all main: true, main: false
-    end
-  end
+  before_save :hide_another_from_main
 
   def start_time
     begin_date
@@ -27,4 +22,12 @@ class Event < ActiveRecord::Base
   def to_s
     name
   end
+  
+private
+  def hide_another_from_main
+    if main?
+      self.class.exclude(id).update_all main: true, main: false
+    end
+  end 
+  
 end

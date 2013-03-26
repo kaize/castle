@@ -8,11 +8,7 @@ class PhotoAlbum < ActiveRecord::Base
   has_many :events
   has_many :photos, :dependent => :destroy
 
-  before_save do
-    if main?
-      PhotoAlbum.update_all main: true, main: false
-    end
-  end
+  before_save :hide_another_from_main
 
   state_machine :state, :initial => :unpublished do
     state :published
@@ -38,4 +34,11 @@ class PhotoAlbum < ActiveRecord::Base
   def can_view?
     photos.any?
   end
+  
+private
+  def hide_another_from_main
+    if main?
+      self.class.exclude(id).update_all main: true, main: false
+    end
+  end 
 end
