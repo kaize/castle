@@ -31,7 +31,7 @@ class NewsImporter
   
   def clean_tags(body_html)
     doc = Nokogiri::HTML body_html
-    doc.xpath("//@style").each {|style| style.remove }
+    doc.xpath("//@style[not(parent::img)]").each {|style| style.remove }
     doc.xpath("//span").each {|span| span.replace Nokogiri::HTML.fragment(span.text)}
     doc.xpath("//div[@align]/@align").each {|align| align.remove }
     doc.xpath("/html/body").inner_html
