@@ -6,12 +6,14 @@ class Web::Admin::MenuItemsController < Web::Admin::ApplicationController
   def new
     @menu_item = MenuItem.new
     menu_items = MenuItem.all
+    @menu_items_roots = MenuItem.roots
     @menu_items = MenuItem.sort_by_ancestry(menu_items)
   end
   
   def edit
     @menu_item = MenuItem.find params[:id]
     menu_items = MenuItem.exclude(@menu_item)
+    @menu_items_roots = menu_items.where ancestry: nil
     @menu_items = MenuItem.sort_by_ancestry(menu_items)
   end
   
