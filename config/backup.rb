@@ -39,7 +39,6 @@ Backup::Model.new(:castle_staging, "Castle backup") do
     db.name               = "castle_staging"
     db.username           = "castle_staging"
     db.password           = "a3matn6vEGvdq2jpr39A"
-    db.host               = "127.0.0.1"
   end
 
   compress_with Gzip do |compression|
