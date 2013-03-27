@@ -25,8 +25,8 @@
                   %b.caret
                 %ul.dropdown-menu
                   - children.each_key do |sub_item|
-                    = item :li, sub_item.title, page_path(sub_item.pages.first)
+                    = item :li, sub_item.title, page_path(sub_item.pages.asc_by_order_at.first)
             -else
-              = item :li, menu_item.title, page_path(menu_item.pages.first)
+              = item :li, menu_item.title, page_path(menu_item.pages.asc_by_order_at.first)
 
 
