@@ -2,6 +2,7 @@
   .span3
     = render "web/shared/category_unions_list"
   .span7
+    %h3= @category
     - @unions.each do |u|
       %div{id: u.id}
         %h4= u
