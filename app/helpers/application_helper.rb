@@ -23,6 +23,10 @@ module ApplicationHelper
   def nav_categories
     Category.scoped
   end
+  
+  def nav_category
+    Category.first
+  end
 
   def partners
     Partner.asc_by_order_at

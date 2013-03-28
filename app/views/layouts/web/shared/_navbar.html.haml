@@ -14,8 +14,8 @@
               %b.caret
             %ul.dropdown-menu
               - nav_categories.each do |c|
-                = item :li, c, category_unions_path(c)
-          = item :li, t('.schedules'), categories_path
+                = item :li, c, category_union_path(c, c.unions.first)
+          = item :li, t('.schedules'), category_path(nav_category)
           = item :li, t('.instructors'), instructors_path
           - nav_menu_items_arrange.each_pair do |menu_item, children|
             - if children.any?
