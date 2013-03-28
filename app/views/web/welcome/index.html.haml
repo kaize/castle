@@ -37,7 +37,7 @@
         .pagination-centered
           %br
           %strong
-            = @event.name
+            = link_to @event.name, event_path(@event)
         = link_to t('.all_event'), events_path
     .well
       #calendars
