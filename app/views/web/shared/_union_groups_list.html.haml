@@ -2,4 +2,4 @@
   %ul.nav.nav-pills.nav-stacked
     - @categories.each do |c|
       - if c.unions.any?
-        %li{class: "#{"active" if c == @category}"}= link_to c, category_path(c)
+        = item :li, c, category_path(c)
