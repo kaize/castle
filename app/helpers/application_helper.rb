@@ -34,9 +34,9 @@ module ApplicationHelper
 
   def show_tree(arrange_hash, &block)
     return if arrange_hash.empty?
-    content_tag :ul do
+    content_tag "ul type='none'" do
       items = arrange_hash.map do |item, children|
-        content_tag :li do
+        content_tag "li type='none'" do
           html = capture item, &block
           subtree = show_tree(children, &block)
           [html, subtree].compact.map!(&:to_s).join.html_safe
