@@ -1,6 +1,6 @@
 %p= link_to t('.new'), new_admin_menu_item_path, class: 'btn btn-primary'
 = show_tree @menu_items do |item|
-  %table.table.table-bordered.table-condensed
+  %table.table.table-condensed
     %tbody
       %tr
         %td= item.title
