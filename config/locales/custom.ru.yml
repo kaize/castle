@@ -10,8 +10,8 @@ ru:
   photo_albums: Фотоальбомы
   study_request: Заявка
   unions: Объединения
-  activities: Деятельность
   blocks: &blocks Блоки
+  menu_items: Элементы меню
   logo_title: Дворец пионеров
   add: Добавить
   edit: ""
@@ -53,38 +53,6 @@ ru:
         instructors: "Педагоги"
         description: "Описание"
     admin:
-      pages:
-        index:
-          title: &pages Страницы
-          confirm: *confirm
-          new: *new
-        create:
-          title: *pages
-        update:
-          title: *pages
-        new:
-          title: Добавление страницы
-        edit:
-          title: *pages
-        form:
-          cancel: *cancel
-      activities:
-        index:
-          confirm: *confirm
-          title: &activities Деятельность
-          new: *new
-        edit:
-          title: *activities
-        new:
-          title: Добавление деятельности
-        form:
-          cancel: *cancel
-          page_activity: Страницы деятельности
-          add: Добавить
-        create:
-          title: *activities
-        update:
-          title: *activities
       news: 
         index:
           confirm: *confirm
@@ -230,6 +198,38 @@ ru:
           title: *partners
         update:
           title: *partners
+      menu_items:
+        index:
+          confirm: *confirm
+          title: &menu_items Элементы в меню
+          new: *new
+          pages: Страницы
+          new_page: Новая страница
+        pages:
+          index:
+            title: &pages Страницы в меню
+            confirm: *confirm
+            new: *new
+          create:
+            title: *pages
+          update:
+            title: *pages
+          new:
+            title: Создание страницы
+          edit:
+            title: Редактирование страницы
+          form:
+            cancel: *cancel
+        new:
+          title: Добавление элементов в меню
+        edit:
+          title: menu_items
+        form:
+          cancel: *cancel
+        create:
+          title: *menu_items
+        update:
+          title: *menu_items
       events:
         index:
           confirm: *confirm
@@ -299,7 +299,6 @@ ru:
     web:
       shared:
         navbar:
-          activities: *activities
           categories: *categories
           news: *news
           schedules: *schedules
@@ -322,9 +321,6 @@ ru:
       schedules:
         home: *home
         index: Расписание
-      activities:
-        application:
-          home: *home
       study_requests:
         home: *home
         study_request: Заявка

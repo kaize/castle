@@ -17,13 +17,6 @@ ru:
             update:
               success: Новость отредактирована.
               error: Возникли ошибки.
-          pages:
-            create:
-              success: Страница создана.
-              error: Возникли ошибки.
-            update:
-              success: Страница отредактирована.
-              error: Возникли ошибки.
           categories:
             create:
               success: Комплекс создан.
@@ -37,13 +30,6 @@ ru:
               error: Возникли ошибки.
             update:
               success: Группа отредактирована.
-              error: Возникли ошибки.
-          activities:
-            create:
-              success: Деятельность создана.
-              error: Возникли ошибки.
-            update:
-              success: Деятельность отредактирована.
               error: Возникли ошибки.
           instructors:
             create:
@@ -104,6 +90,21 @@ ru:
             destroy:
               success: Блок удален.
               error: Возникли ошибки.
-
-
+          menu_items:
+            create:
+              success: Элемент сохранен.
+              error: Возникли ошибки.
+            update:
+              success: Элемент отредактирован.
+              error: Возникли ошибки.
+            destroy:
+              success: Элемент удален.
+              error: Возникли ошибки.
+            pages:
+              create:
+                success: Страница создана.
+                error: Возникли ошибки.
+              update:
+                success: Страница отредактирована.
+                error: Возникли ошибки.
 

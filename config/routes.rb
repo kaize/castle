@@ -8,15 +8,19 @@ Castle::Application.routes.draw do
     namespace :admin do
       resources :study_requests, only: [:index]
       resources :blocks, only: [] do
-        collection do
-          put :mass_update_order
-        end
+         put :mass_update_order, on: :collection 
       end
       resources :partners, only: [] do
-        collection do
-          put :mass_update_order
+         put :mass_update_order, on: :collection 
+      end
+      resources :menu_items, only: [] do 
+        scope module: :menu_items do
+          resources :pages, only: [] do
+            put :mass_update_order, on: :collection 
+          end
         end
       end
+      
     end
   end
 
@@ -33,11 +37,14 @@ Castle::Application.routes.draw do
       resources :instructors
       resources :photo_albums
       resources :news
-      resources :pages
       resources :partners
       resources :events
-      resources :activities
       resources :blocks
+      resources :menu_items do
+        scope module: :menu_items do
+          resources :pages
+        end
+      end
     end
 
     resource :search, only: [:show]
@@ -46,11 +53,6 @@ Castle::Application.routes.draw do
     resources :categories, only: [:index, :show] do
       scope module: :categories do
         resources :unions, only: [:index, :show]
-      end
-    end
-    resources :activities, only: [:index, :show] do
-      scope module: :activities do
-        resources :page_activities, only: [:index, :show]
       end
     end
     

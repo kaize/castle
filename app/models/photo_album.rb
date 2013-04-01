@@ -6,7 +6,7 @@ class PhotoAlbum < ActiveRecord::Base
   validates :name, :presence => true
   
   has_many :events
-  has_many :photos, :dependent => :destroy
+  has_many :photos, dependent: :destroy
 
   before_save :hide_another_from_main
 

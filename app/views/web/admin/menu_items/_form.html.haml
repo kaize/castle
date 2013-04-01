@@ -1,0 +1,8 @@
+= simple_form_for @menu_item, url: url, html: { class: 'default_class' } do |f|
+  = f.input :title
+
+  = f.input :parent_id, collection: @menu_items_roots
+
+  .form-actions
+    = f.button :submit, class: 'btn btn-primary'
+    = link_to t('.cancel'), admin_menu_items_path, class: 'btn'
