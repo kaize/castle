@@ -19,20 +19,13 @@ class NewsImporter
   
   def get_img_url(html_document)
     doc = Nokogiri::HTML html_document 
-    img = doc.xpath "//img/@src"
-    img.text
-  end
-  
-  def img_replace(body, path)
-    img_url = get_img_url body
-    return body if body.scan(img_url).blank?
-    body.gsub(img_url, path)
+    imgs = doc.xpath "//img/@src"
+    imgs.map {|img| img.text}
   end
   
   def clean_tags(body_html)
     doc = Nokogiri::HTML body_html
     doc.xpath("//@style[not(parent::img)]").each {|style| style.remove }
-    doc.xpath("//span[not(img)]").each {|span| span.replace Nokogiri::HTML.fragment(span.text)}
     doc.xpath("//div[@align]/@align").each {|align| align.remove }
     doc.xpath("/html/body").inner_html
   end
@@ -40,10 +33,13 @@ class NewsImporter
   def fetch_image(body)
     img_url = get_img_url body
     return body if img_url.nil?
-    picture = Ckeditor::Picture.new
-    picture.remote_data_url= "http://oddt.ucoz.ru#{img_url}"
-    picture.save
-    img_replace(body, picture.data_url) if picture.data_url.present?
+    img_url.each do |img|
+      picture = Ckeditor::Picture.new
+      picture.remote_data_url= "http://oddt.ucoz.ru#{img}"
+      picture.save
+      body.gsub!(img, picture.data_url) if picture.data_url.present?
+    end
+    body
   end
   
   def import_news
