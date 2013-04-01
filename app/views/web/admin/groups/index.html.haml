@@ -1,7 +1,6 @@
 = simple_form_for @q, url: admin_groups_path, method: :get do |f|
-  = f.input :union_id_eq, collection: unions, as: :select, label: 'Показывать только выбранное объединение',required: false
-  = f.submit "Сортировать"
-  
+  = f.input :union_id_eq, collection: unions, as: :select, label: t('label_sorting_union'),required: false
+  = f.submit t('sorting')
 = link_to t('.new'), new_admin_group_path, :class => 'btn btn-primary'
 
 %table.table.table-striped

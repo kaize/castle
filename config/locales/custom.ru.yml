@@ -2,6 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 ru:
+  classrooms: Аудитории
+  label_sorting_union: Показывать только выбранное объединение
+  sorting: Сортировать
   comments: Коментарии
   base_name: Ульяновский областной Дворец творчества детей и молодёжи
   categories: Расписание

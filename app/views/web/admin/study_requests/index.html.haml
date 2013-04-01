@@ -1,6 +1,6 @@
 = simple_form_for @q, url: admin_study_requests_path, method: :get do |f|
-  = f.input :union_id_eq, collection: unions, as: :select, label: 'Показывать только выбранное объединение',required: false
-  = f.submit "Сортировать"
+  = f.input :union_id_eq, collection: unions, as: :select, label: t('label_sorting_union'),required: false
+  = f.submit t('sorting')
 = link_to api_admin_study_requests_path(format: :xlsx, q: {union_id_eq: @q.union_id_eq}), class: 'btn btn-success pull-left' do
   %i.icon-download-alt
   = "Скачать XLSX"
