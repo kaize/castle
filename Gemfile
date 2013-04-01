@@ -32,6 +32,8 @@ gem 'airbrake'
 gem 'rails-backbone'
 gem 'pg_search'
 gem 'ancestry'
+gem 'backup' 
+gem 'whenever', :require => false
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
