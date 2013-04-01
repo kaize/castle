@@ -4,7 +4,7 @@ module MenuItemRepository
 
   module ClassMethods
     def published_arrange(depth)
-      published = joins(:pages).where("pages.state LIKE 'published'").all
+      published = joins(:pages).where(pages: {state: :published}).all
       ids = published.map{ |i| i.path_ids[0...depth] }.flatten.uniq
       where(id: ids).includes(:pages).arrange
     end
