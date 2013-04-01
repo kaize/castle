@@ -25,7 +25,7 @@ module ApplicationHelper
   end
   
   def nav_category
-    Category.first
+    Category.first if Category.any?
   end
 
   def partners
