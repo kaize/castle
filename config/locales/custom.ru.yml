@@ -86,13 +86,13 @@ ru:
       groups:
         index:
           confirm: *confirm
-          title: &groups Группы
+          title: &groups Расписание групп
           new: *new
           union: Объединение
         edit:
           title: *groups
         new:
-          title: Добавление группы
+          title: Добавление расписания группы
         sidebar:
           classroom: Аудитории
         form:
@@ -163,7 +163,7 @@ ru:
           title: *schedules
       photo_albums:
         index:
-          title: &photo_albums Фотоальбом
+          title: &photo_albums Фотоальбомы
           new: *new
         new:
           title: Добавление фотоальбома
