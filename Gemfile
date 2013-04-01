@@ -34,6 +34,7 @@ gem 'pg_search'
 gem 'ancestry'
 gem 'backup' 
 gem 'whenever', :require => false
+gem 'squeel'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

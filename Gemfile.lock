@@ -37,8 +37,8 @@ GEM
     airbrake (3.1.8)
       activesupport
       builder
-      json
       girl_friday
+      json
     ancestry (1.3.0)
       activerecord (>= 2.3.14)
     ansi (1.4.3)
@@ -94,6 +94,7 @@ GEM
     commonjs (0.2.6)
     configus (0.0.4)
       rake
+    connection_pool (1.0.0)
     coveralls (0.6.2)
       colorize
       multi_json (~> 1.3)
@@ -116,6 +117,9 @@ GEM
     factory_girl_sequences (4.0.0)
       activesupport (>= 3.0.0)
       factory_girl (~> 4.0)
+    girl_friday (0.11.2)
+      connection_pool (~> 1.0)
+      rubinius-actor
     haml (4.0.0)
       tilt
     haml-rails (0.4)
@@ -219,6 +223,9 @@ GEM
     request_store (1.0.5)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rubinius-actor (0.0.2)
+      rubinius-core-api
+    rubinius-core-api (0.0.1)
     rubyzip (0.9.9)
     russian (0.6.0)
       i18n (>= 0.5.0)
@@ -244,6 +251,10 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    squeel (1.0.18)
+      activerecord (~> 3.0)
+      activesupport (~> 3.0)
+      polyamorous (~> 0.5.0)
     state_machine (1.1.2)
     subexec (0.2.2)
     tconsole (1.2.8)
@@ -285,8 +296,8 @@ PLATFORMS
 
 DEPENDENCIES
   airbrake
-  axlsx_rails
   ancestry
+  axlsx_rails
   backup
   bcrypt-ruby
   better_errors
@@ -327,6 +338,7 @@ DEPENDENCIES
   select2-rails
   simple_form
   simplecov
+  squeel
   state_machine
   tconsole
   therubyracer (= 0.10.2)
