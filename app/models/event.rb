@@ -4,7 +4,6 @@ class Event < ActiveRecord::Base
   attr_accessible :begin_date, :content, :end_date, :image, :name, :main, :photo_album_id
   
   belongs_to :photo_album
-  
 
   validates :name, presence: true
   validates :begin_date, presence: true

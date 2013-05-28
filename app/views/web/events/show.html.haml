@@ -1,6 +1,7 @@
 .row
   .span3
     #calendars
+    = link_to t('.all_events'), events_path
   .span8
     %h4= @event.name
     %h5= @event.begin_date
@@ -12,6 +13,7 @@
         != @event.content
     - unless @event.photo_album_id.nil?
       = link_to t('.photo_album'), photo_album_path(@event.photo_album_id)
+    = render 'web/shared/pluso'
     %hr
     %div{:id => "disqus_thread"}
 

@@ -20,7 +20,7 @@ class Instructor < ActiveRecord::Base
   mount_uploader :avatar, InstructorAvatarUploader
   
   def to_s
-    [first_name, middle_name, last_name].compact.join(" ")
+    [last_name, first_name, middle_name].compact.join(" ")
   end
 
 end

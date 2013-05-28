@@ -1,9 +1,9 @@
 require 'simplecov'
 SimpleCov.start('rails') if ENV["COVERAGE"]
 require "test/unit"
-
-require 'coveralls'
-Coveralls.wear!('rails')
+require 'webmock/minitest'
+require 'coveralls' 
+Coveralls.wear!('rails') if ENV["COVERAGE"]
 
 ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
@@ -14,6 +14,7 @@ class ActiveSupport::TestCase
   #include AuthHelper
   #include TestSupport
   include FactoryGirl::Syntax::Methods
+  include TestAuthHelper
 end
 
 #WARNING: monkey patch for skip http auth in admin zone

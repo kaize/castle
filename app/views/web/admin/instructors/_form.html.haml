@@ -3,7 +3,7 @@
   = f.input :last_name
   = f.input :middle_name
   = f.input :avatar, as: :image_preview
-  = f.input :description, as: :ckeditor
+  = f.input :description, as: :ckeditor, :input_html => { :class => "ckeditor", :height => 400 }
   .form-actions
     = f.button :submit, :class => 'btn btn-primary'
     = link_to t('.cancel'), admin_instructors_path, :class => 'btn'

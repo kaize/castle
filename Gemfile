@@ -32,7 +32,9 @@ gem 'airbrake'
 gem 'rails-backbone'
 gem 'pg_search'
 gem 'ancestry'
-gem 'backup' 
+
+gem 'nokogiri-happymapper', :require => 'happymapper'
+gem 'backup'
 gem 'whenever', :require => false
 
 group :assets do
@@ -42,7 +44,7 @@ group :assets do
   gem 'execjs'
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
-
+  gem 'turbo-sprockets-rails3'
   gem 'momentjs-rails'
 
   gem 'underscore-string-rails'
@@ -55,6 +57,7 @@ group :assets do
 
   gem 'haml_coffee_assets'
   gem 'execjs'
+  
 end
 
 group :development do
@@ -67,6 +70,7 @@ group :development do
 end
 
 group :test do
+  gem 'webmock'
   gem 'minitest'
   gem 'tconsole'
   gem 'turn'

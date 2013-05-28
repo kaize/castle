@@ -24,6 +24,7 @@
 //= require select2
 //= require sortable
 //= require_tree
+//= require ckeditor/init
 
 (function($) { $(function() {
 

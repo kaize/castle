@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<methodResponse>
+<params>
+<param>
+<value><struct>
+<member><name>TITLE</name><value><string>title</string></value></member>
+<member><name>MESSAGE</name><value><string>body &lt;IMG src="/test.png"></string></value></member>
+<member><name>TIMESTAMP</name><value><i4>1363259590</i4></value></member>
+</struct></value>
+</param>
+</params>
+</methodResponse>

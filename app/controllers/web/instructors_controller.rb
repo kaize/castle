@@ -1,3 +1,4 @@
+
 class Web::InstructorsController < Web::ApplicationController
   
   def index

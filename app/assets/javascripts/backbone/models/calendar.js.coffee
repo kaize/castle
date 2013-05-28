@@ -99,7 +99,7 @@ class Castle.Models.Calendar extends Backbone.Model
 
   set_days: () =>
     @set("days",  @days_on_weeks(@attributes.digit_month, @attributes.year))
-
+    
   load_events: () =>
     work_date = moment(@attributes.year + "-" + @attributes.digit_month + "-01", "YYYY-MM-DD")
     $.ajax({
@@ -122,7 +122,7 @@ class Castle.Models.Calendar extends Backbone.Model
     @attributes.digit_month = now.format('MM')
     @attributes.month = _.str.capitalize(now.format('MMMM'))
     @attributes.year = now.format('YYYY')
-    @attributes.current_day = now.format('DD')
+    @attributes.current_day = parseInt(now.format('D'))
 
     @set_days()
     @load_events()

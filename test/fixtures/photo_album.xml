@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<methodResponse>
+<params>
+<param>
+<value><array><data>
+<value><struct>
+<member><name>PHOTO_URL</name><value><string>http://oddt.ucoz.ru/_ph/47/892735149.jpg</string></value></member>
+</struct></value>
+<value><struct>
+<member><name>PHOTO_URL</name><value><string>http://oddt.ucoz.ru/_ph/47/237447917.jpg</string></value></member>
+</struct></value>
+</data></array></value>
+</param>
+</params>
+</methodResponse>

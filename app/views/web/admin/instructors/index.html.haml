@@ -4,18 +4,18 @@
   %thead
     %tr
       %th= sort_link @q, :id
+      %th= sort_link @q, :last_name
       %th= sort_link @q, :first_name
       %th= sort_link @q, :middle_name
-      %th= sort_link @q, :last_name
       -#%th= sort_link @q, :description
       %th
   %tbody
     - @instructors.each do |item|
       %tr
         %td= item.id
+        %td= item.last_name
         %td= item.first_name
         %td= item.middle_name
-        %td= item.last_name
         -#%td= item.description
         %td
           .pull-right.btn-group
