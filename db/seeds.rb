@@ -7,3 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Category.create(name: "test", description: "test")
+Partner.create(image: "test", name: "test", url: "123", order_at: "123")
