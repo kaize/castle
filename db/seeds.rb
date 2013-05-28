@@ -6,6 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Category.create(name: "test", description: "test")
-Partner.create(image: "test", name: "test", url: "123", order_at: "123")
-Block.create(title: "test", body: "test", order_at: "123", on_main: true, state: "published")
+category = Category.create(name: "test", description: "test")
+Partner.create(image: "123.jpg", name: "test", url: "123", order_at: "123")
+block = Block.create(title: "test", body: "test", order_at: "123", on_main: true)
+block.publish!
+Union.create(name: "test", description: "test", category_id: category.id)
+menuitem = MenuItem.create(title: "string")
+page = Page.new(title: "test", body: "test", order_at: "123")
+page.menu_item_id = menuitem.id
+page.save!
+page.publish!
