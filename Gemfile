@@ -36,6 +36,7 @@ gem 'ancestry'
 gem 'nokogiri-happymapper', :require => 'happymapper'
 gem 'backup'
 gem 'whenever', :require => false
+gem 'fog'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
