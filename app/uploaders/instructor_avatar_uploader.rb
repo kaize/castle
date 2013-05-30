@@ -5,7 +5,7 @@ class InstructorAvatarUploader < CarrierWave::Uploader::Base
   # include Sprockets::Helpers::RailsHelper
   # include Sprockets::Helpers::IsolatedHelper
 
-  storage :file
+  storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
