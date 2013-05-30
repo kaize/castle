@@ -5,7 +5,7 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => 'PqSdE/RWrb6RnJjceP7XuFgO9MHJeGJfjqztWbmF'
   }
   config.fog_directory  = 'dvorec73'
-  config.asset_host       = 'https://s3.amazonaws.com'
+  config.asset_host       = 'https://dvorec73.s3.amazonaws.com'
   config.fog_public     = true
   config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}
 end
