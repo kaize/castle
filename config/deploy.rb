@@ -9,7 +9,7 @@ require 'capistrano/ext/multistage'
 require 'capi/unicorn'
 
 set :application, "castle"
-set :rvm_type, :user
+set :rvm_type, :system
 
 set :scm, :git
 set :repository,  "git://github.com/kaize/castle.git"
