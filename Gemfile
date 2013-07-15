@@ -1,4 +1,4 @@
-source :rubygems
+source 'http://rubygems.org'
 
 gem 'rails', '~> 3.2.9'
 
@@ -58,7 +58,7 @@ group :assets do
 
   gem 'haml_coffee_assets'
   gem 'execjs'
-  
+
 end
 
 group :development do
