@@ -14,4 +14,15 @@
 /log/*.log
 /tmp
 /public/system
+/public/uploads
 /config/database.yml
+
+
+#Ignore idea settings
+/.idea
+
+# Ignore schema
+/db/schema.rb
+
+coverage/
+*.swp

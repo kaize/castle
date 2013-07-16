@@ -10,7 +10,23 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require vk-open-api.js
+//= require disqus
 //= require jquery
+//= require colorbox-rails
 //= require jquery_ujs
+//= require jquery.ui.datepicker
+//= require jquery.ui.datepicker-ru
 //= require twitter/bootstrap
-//= require_self
+//= require select2
+//= require underscore
+//= require underscore.string
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/castle
+//= require hamlcoffee
+//= require moment
+//= require moment/ru.js
+//= require js-routes
+//= require_tree

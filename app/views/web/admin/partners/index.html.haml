@@ -1,0 +1,19 @@
+= link_to t('.new'), new_admin_partner_path, :class => 'btn btn-primary'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= Partner.human_attribute_name :id
+      %th= Partner.human_attribute_name :name
+      %th
+  %tbody.sortable{ data: { 'update-url' => mass_update_order_api_admin_partners_path } }
+    - @partners.each do |partner|
+      %tr{ data: { id: partner.id } }
+        %td= partner.id
+        %td= partner.name
+        %td
+          .pull-right.btn-group
+            = link_to edit_admin_partner_path(partner), :class => 'btn btn-mini' do
+              %i.icon-pencil
+            = link_to admin_partner_path(partner), :method => :delete, :data => { :confirm => t('.confirm') }, :class => 'btn btn-mini btn-danger' do
+              %i.icon-trash

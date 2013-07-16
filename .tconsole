@@ -1,0 +1,20 @@
+TConsole::Config.run do |config|
+ config.include_paths = ["./test"]
+
+ config.file_sets = {
+     "all" => [
+          "./test/unit/**/*_test.rb",
+          "./test/functional/**/*_test.rb",
+          "./test/integration/**/*_test.rb",
+          "./test/lib/**/*_test.rb",
+          "./test/decorators/**/*_test.rb"
+      ],
+      "lib" => ["./test/lib/**/*_test.rb"],
+      "units" => ["./test/unit/**/*_test.rb"],
+      "unit" => ["./test/unit/**/*_test.rb"],
+      "functionals" => ["./test/functional/**/*_test.rb"],
+      "functional" => ["./test/functional/**/*_test.rb"],
+      "integration" => ["./test/integration/**/*_test.rb"],
+      "decorators" => ["./test/decorators/**/*_test.rb"]
+  }
+end

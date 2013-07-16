@@ -1,0 +1,9 @@
+= simple_form_for @classroom, url: url do |f|
+  = f.input :name
+  .form-actions
+    = f.button :submit, class: 'btn btn-primary'
+    = link_to t('.cancel'), admin_group_schedule_classrooms_path, class: 'btn'
+    - if @classroom.can_destroy?
+      = link_to t('.delete'), admin_group_schedule_classroom_path(@classroom), method: :delete,
+        class: 'btn btn-danger pull-right',
+        data: { confirm: t('.delete_confirm') }

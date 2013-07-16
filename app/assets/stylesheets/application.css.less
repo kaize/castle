@@ -1,0 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap_and_overrides
+ *= require jquery.ui.datepicker
+ *= require select2
+ *= require bootstrap_bs_docs_sidenav
+ *= require_self
+ *= require colorbox-rails
+ */
+.leftimg {
+  float:left; 
+  margin: 7px 7px 7px 0px;
+}
+
+.partner-image {
+  margin: 10px;
+}  
+
+.partner.span2:nth-child(6n+1) {
+  clear: left;
+}
+
+.row.partners {
+  margin-top: 20px;
+}
+ 
+.img-rounded {
+  height: 140px;
+  width: 140px;
+}
+
+body {
+  padding-top: 60px;
+}
+.right-footer{
+    width: 220px;
+    float: right;
+    margin-top: 5px;
+}
+ul.right-footer li{
+    list-style: none;
+}
+.footer{
+    height: 100px;
+}
+nav.social-share-links{
+    text-align: center;
+}
+ul.social-share-links {
+    position: absolute;
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 350px;
+    text-align: center;
+}
+ul.social-share-links li {
+    float: left;
+}
+
+form.form-search-on-main {
+  margin-bottom: 0;
+  .input-append {
+    margin-bottom: 0;
+  }
+  input[type=search] {
+    width: 100%;
+    height: 30px;
+
+    box-sizing: border-box;
+    -mox-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+}

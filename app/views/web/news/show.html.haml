@@ -1,4 +1,14 @@
-%h2= @news
+%h3= @news
 - if @news.published_at?
   .help-block= l @news.published_at, :format => :long
+- if @news.photos.any?
+  .span4.leftimg
+    = link_to image_tag(@news.photos.first.asset_url), @news.photos.first.asset_url , data: {colorbox: true}
 != @news.body
+- @news.photos.each_with_index do |p,i|
+  - if i != 0
+    %br
+    = link_to image_tag(p.asset_url), p.asset_url , data: {colorbox: true}
+= render 'web/shared/pluso'
+%hr
+%div{:id => "disqus_thread"}

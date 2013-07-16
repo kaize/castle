@@ -5,20 +5,29 @@ ru:
   activerecord:
     models:
       union: Объединения
-      category: Комплексы
-      group: Группы
-      instructor: Предагоги
+      category: Детские и молодёжные объединения
+      group: Расписание групп
+      instructor: Педагоги
       news: Новости
       page: Страницы
       "group/schedule": Расписание занятий
+      photo_album: Фотоальбомы
+      study_request: Заявки на обучение
+      partner: Партнеры
+      event: События
+      block: Блок
     state_machines:
-      news:
-        events:
-          off: Скрыть
-          publish: Опубликовать
+      events:
+        hide: Скрыть
+        publish: Опубликовать
+        unpublish: Отменить публикацию
+      states:
+        hidden: Скрыто
+        published: Опубликованно
+      photo_album:
         states:
-          off: Скрыто
-          published: Опубликованно
+          published: Опубликованный
+          unpublished: Не опубликованный
     attributes:
       news:
         title: Название
@@ -30,17 +39,26 @@ ru:
         title: Название
         body: Содержимое
         uri: URI
+        state: Текущее состояние
+        state_event: Действие
       category:
         name: Название
         description: Описание
+      group_schedule_classroom:
+        name: Аудитория
       group:
         name: Название
         union: Объединение
+        union_id: Объединение
+        instructors: Педагоги
         schedules: Расписание
       "group/schedule":
-        date: Дата
+        week: Дни недели
+        classroom: Аудитория
         start_at: Начало в
         finish_at: Конец в
+      "group/schedule/classroom":
+        name: Аудитория
       instructor:
         first_name: Имя
         middle_name: Отчество
@@ -51,8 +69,56 @@ ru:
         name: Название
         description: Описание
         category: Категория
-        leader: Лидер
+        category_id: Категория
+        leader: Руководитель
         instructors: Педагоги
+      photo_album:
+        name: Название альбома
+        photos_count: Количество фотографий
+        created_at: Дата создания
+        state: Текущее состояние
+        state_event: Действие
+        mass_photo_loader: Массовая загрузка фото
+        description: Описание
+        main: Отобразить на главной
+      'photo_album/photo':
+        name: Название фото
+        image: Фото
+        description: Описание
+        main: Главная
+      study_request:
+        address: Адрес проживания
+        birth_date: Дата рождения ребенка
+        children_first_name: Имя ребенка
+        children_last_name: Фамилия ребенка
+        children_middle_name: Отчество ребенка
+        note: Примечание
+        parent_first_name: Имя родителя
+        parent_last_name: Фамилия родителя
+        parent_middle_name: Отчество родителя
+        phone: Контактный телефон
+        school: Школа
+        created_at: Дата подачи
+        union_id: Объединение
+      partner:
+        name: Название
+        image: Фото
+      event:
+        name: Название
+        image: Изображение
+        content: Содержание
+        begin_date: Время начала
+        end_date: Время конца
+        photo_album: Фотоальбом
+        main: Опубликовать на главной
+      block:
+        title: Заголовок
+        body: Содержание
+        state: Текущее состояние
+        state_event: Действие
+      menu_item:
+        title: Заголовок
+        parent_id: Родительский элемент меню
     errors:
       models:
         page:

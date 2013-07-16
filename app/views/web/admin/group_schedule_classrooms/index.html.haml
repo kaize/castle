@@ -1,0 +1,20 @@
+= link_to t('.new'), new_admin_group_schedule_classroom_path, class: 'btn btn-primary'
+%table.table.table-striped
+  %thead
+    %tr
+      %th= Group::Schedule::Classroom.human_attribute_name :name
+  %tbody
+    - @classrooms.each do |n|
+      %tr
+        %td= n.name
+        %td
+          .pull-right.btn-group
+            = link_to edit_admin_group_schedule_classroom_path(n), class: 'btn btn-mini' do
+              %i.icon-pencil
+              = t(:edit)
+            = link_to admin_group_schedule_classroom_path(n), method: :delete,
+              class: 'btn btn-mini btn-danger',
+              data: { confirm: t('.delete_confirm') } do
+              %i.icon-trash
+
+= paginate @classrooms

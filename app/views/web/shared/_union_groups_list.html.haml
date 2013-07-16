@@ -1,0 +1,5 @@
+.well.well-small
+  %ul.nav.nav-pills.nav-stacked
+    - @categories.each do |c|
+      - if c.unions.any?
+        = item :li, c, category_path(c)

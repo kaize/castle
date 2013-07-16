@@ -1,6 +1,3 @@
-.page-header
-  %h1=t '.title'
-
 = link_to t('.new'), new_admin_news_path, :class => 'btn btn-primary'
 
 %table.table.table-striped
@@ -16,7 +13,7 @@
       %tr
         %td= item.id
         %td= item.title
-        %td= l item.published_at, format: :short
+        %td= l(item.published_at, format: :short) if item.published_at?
         %td= item.human_state_name
         %td
           .pull-right.btn-group

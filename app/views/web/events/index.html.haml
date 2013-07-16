@@ -1,0 +1,21 @@
+.row
+  .span3
+    #calendars
+    = link_to t('.all_events'), events_path
+  .span8
+    - @events.each do |event|
+      %h4= link_to event.name, event_path(event)
+      %h5= event.begin_date
+      .media.nav.nav-tabs.nav-stacked
+        - if event.image.present?
+          .pull-left
+            .img-rounded.media-object= link_to image_tag(event.image.url), event.image.url, data: {colorbox: true}
+        .media-body
+          != truncate_sanitize_rem_br event.content, 250
+      %hr
+  
+:javascript
+  $(function() {
+    window.router = new Castle.Routers.CalendarsRouter();
+    Backbone.history.start();
+  });

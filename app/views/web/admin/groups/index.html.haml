@@ -1,6 +1,7 @@
-.page-header
-  %h1=t '.title'
-
+= simple_form_for @q, url: admin_groups_path, method: :get do |f|
+  = f.input :union_id_eq, collection: unions, as: :select, label: 'Показывать только выбранное объединение',required: false
+  = f.submit "Сортировать"
+  
 = link_to t('.new'), new_admin_group_path, :class => 'btn btn-primary'
 
 %table.table.table-striped
@@ -9,7 +10,7 @@
       %th= sort_link @q, :id
       %th= sort_link @q, :name
       -#%th= sort_link @q, :description
-      %th= sort_link @q, :union
+      %th= sort_link @q, :union_id
       %th
   %tbody
     - @groups.each do |item|

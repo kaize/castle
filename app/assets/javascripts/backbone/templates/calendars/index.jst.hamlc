@@ -1,0 +1,27 @@
+%center
+  %h5= "Календарь событий"
+  %a{href: "#", class: "month-dec"}
+    %i.icon-chevron-left
+  #{@options.month} #{@options.year}
+  %a{href: "#", class: "month-inc"}
+    %i.icon-chevron-right
+%br
+%table.table.table-bordered.table-striped
+  %thead
+    %th= "Пн"
+    %th= "Вт"
+    %th= "Ср"
+    %th= "Чт"
+    %th= "Пт"
+    %th= "Сб"
+    %th= "Вс"
+  %tbody
+    - for week of @options.days
+      %tr
+        - for day of @options.days[week]
+          %td
+            - if @options.events[@options.days[week][day]]
+              %a{ href: Routes.events_path(date: "'#{@options.year}-#{@options.digit_month}-#{@options.days[week][day]}'")}
+                = @options.days[week][day]
+            - else
+              = @options.days[week][day]

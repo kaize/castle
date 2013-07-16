@@ -2,9 +2,10 @@
 
 FactoryGirl.define do
   factory "group/schedule" do
-    date
+    week "MyString"
     start_at { generate :datetime }
     finish_at { generate :datetime }
     group
+    
   end
 end

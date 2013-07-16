@@ -19,7 +19,7 @@ production:
   encoding: unicode
   database: castle_production
   pool: 5
-  username: postgres
+  username: castle_production
   password:
 
 staging:

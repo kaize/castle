@@ -5,6 +5,10 @@ ru:
   flash:
     controllers:
       web:
+        study_requests:
+          create:
+            success: Ваша заявка успешно отправлена.
+            error: Возникли ошибки.
         admin:
           news:
             create:
@@ -12,13 +16,6 @@ ru:
               error: Возникли ошибки.
             update:
               success: Новость отредактирована.
-              error: Возникли ошибки.
-          pages:
-            create:
-              success: Страница создана.
-              error: Возникли ошибки.
-            update:
-              success: Страница отредактирована.
               error: Возникли ошибки.
           categories:
             create:
@@ -47,4 +44,67 @@ ru:
               error: Возникли ошибки.
             update:
               success: Объединение отредактировано.
+              error: Возникли ошибки.          
+          photo_albums:
+            create:
+              success: 'Фотоальбом создан.'
+            update:
+              success: 'Фотоальбом отредактирован.'
+          partners:
+            create:
+              success: Партнер сохранен.
               error: Возникли ошибки.
+            update:
+              success: Партнер отредактирован.
+              error: Возникли ошибки.
+            destroy:
+              success: Партнер удален.
+              error: Возникли ошибки.
+          events:
+            create:
+              success: Событие сохранено.
+              error: Возникли ошибки.
+            update:
+              success: Событие отредактировано.
+              error: Возникли ошибки.
+            destroy:
+              success: Событие удалено.
+              error: Возникли ошибки.
+          group_schedule_classrooms:
+            create:
+              success: Аудитория сохранена.
+              error: Возникли ошибки.
+            update:
+              success: Аудитория отредактирована.
+              error: Возникли ошибки.
+            destroy:
+              success: Аудитория удалена.
+              error: Возникли ошибки.
+          blocks:
+            create:
+              success: Блок сохранен.
+              error: Возникли ошибки.
+            update:
+              success: Блок отредактирован.
+              error: Возникли ошибки.
+            destroy:
+              success: Блок удален.
+              error: Возникли ошибки.
+          menu_items:
+            create:
+              success: Элемент сохранен.
+              error: Возникли ошибки.
+            update:
+              success: Элемент отредактирован.
+              error: Возникли ошибки.
+            destroy:
+              success: Элемент удален.
+              error: Возникли ошибки.
+            pages:
+              create:
+                success: Страница создана.
+                error: Возникли ошибки.
+              update:
+                success: Страница отредактирована.
+                error: Возникли ошибки.
+

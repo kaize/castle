@@ -1,7 +1,0 @@
-= simple_form_for @page, :url => url, :html => { :class => 'form-horizontal' } do |f|
-  = f.input :title
-  = f.input :uri
-  = f.input :body, as: :ckeditor
-  .form-actions
-    = f.button :submit, :class => 'btn-primary'
-    = link_to t('.cancel'), admin_pages_path, :class => 'btn'

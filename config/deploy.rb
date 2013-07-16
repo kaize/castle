@@ -1,11 +1,12 @@
 set :stages, %w(production staging)
 set :default_stage, "staging"
+set :whenever_command, "bundle exec whenever" # update crontab
 
 require 'capistrano/ext/multistage'
 require 'capi/unicorn'
 
 set :application, "castle"
-set :rvm_type, :user
+set :rvm_type, :system
 
 set :scm, :git
 set :repository,  "git://github.com/kaize/castle.git"
@@ -30,5 +31,8 @@ before 'deploy:finalize_update', 'deploy:symlink_db'
 after "deploy:restart", "unicorn:stop"
 after "deploy:update", "deploy:cleanup"
 
-require 'capistrano_colors'
+
 #require 'airbrake/capistrano'
+
+        require './config/boot'
+        require 'airbrake/capistrano'

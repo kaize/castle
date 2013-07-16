@@ -1,0 +1,7 @@
+= simple_form_for @partner, url: url do |f|
+  = f.input :name, input_html: { class: 'input-xxlarge' }
+  = f.input :url
+  = f.input :image, as: :image_preview
+  .form-actions
+    = f.button :submit, class: 'btn-primary'
+    = link_to t('.cancel'), admin_partners_path, class: 'btn'

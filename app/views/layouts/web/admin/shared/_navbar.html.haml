@@ -9,8 +9,14 @@
       .container.nav-collapse
         %ul.nav
           = model_item :li, News, admin_news_index_path
-          = model_item :li, Page, admin_pages_path
           = model_item :li, Category, admin_categories_path
           = model_item :li, Union, admin_unions_path
           = model_item :li, Group, admin_groups_path
           = model_item :li, Instructor, admin_instructors_path
+          = model_item :li, PhotoAlbum, admin_photo_albums_path
+          = model_item :li, StudyRequest, admin_study_requests_path
+          = model_item :li, Partner, admin_partners_path
+          = model_item :li, Event, admin_events_path
+          = item :li, t('blocks'), admin_blocks_path
+          = item :li, "Аудитории", admin_group_schedule_classrooms_path
+          = item :li, t('menu_items'), admin_menu_items_path

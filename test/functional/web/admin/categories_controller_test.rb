@@ -2,9 +2,9 @@ require 'test_helper'
 
 class Web::Admin::CategoriesControllerTest < ActionController::TestCase
   def setup
+
     @category = create :category
     @params = {id: @category.id}
-
   end
 
   test "should get index" do
@@ -24,7 +24,7 @@ class Web::Admin::CategoriesControllerTest < ActionController::TestCase
 
   test "should get create" do
     @params[:category] = attributes_for(:category)
-    get :create, @params
+    post :create, @params
     assert_response :redirect
   end
 

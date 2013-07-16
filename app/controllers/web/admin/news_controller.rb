@@ -2,7 +2,7 @@ class Web::Admin::NewsController < Web::Admin::ApplicationController
 
   def index
     @q = News.ransack params[:q]
-    @news = @q.result.page(params[:page])
+    @news = @q.result.desc_by(:published_at).page(params[:page])
   end
 
   def new
@@ -15,7 +15,6 @@ class Web::Admin::NewsController < Web::Admin::ApplicationController
 
   def create
     @news = NewsType.new params[:news]
-
     if @news.save
       flash_success
       redirect_to admin_news_index_path

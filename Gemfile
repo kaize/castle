@@ -1,17 +1,20 @@
-source :rubygems
+source 'http://rubygems.org'
 
-gem 'rails', '~> 3.2.9'
+gem 'rails', '3.2.13'
 
+gem 'axlsx_rails'
 gem 'pg'
 gem 'ransack'
 gem 'unicorn'
 gem 'bcrypt-ruby'
 
 gem 'mini_magick'
+gem 'rmagick'
 gem 'carrierwave'
 gem 'configus'
 
-#gem 'draper'
+gem 'draper'
+gem "carrierwave"
 gem 'haml-rails'
 gem 'kaminari'
 gem 'cocoon'
@@ -24,8 +27,17 @@ gem 'validates'
 #gem 'client_side_validations'
 gem 'twitter-bootstrap-rails'
 gem 'ckeditor'
+gem 'colorbox-rails'
 
-#gem 'airbrake'
+gem 'airbrake'
+gem 'rails-backbone'
+gem 'pg_search'
+gem 'ancestry'
+
+gem 'nokogiri-happymapper', :require => 'happymapper'
+gem 'backup'
+gem 'whenever', :require => false
+gem 'fog'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -34,16 +46,25 @@ group :assets do
   gem 'execjs'
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
+  gem 'turbo-sprockets-rails3'
+  gem 'momentjs-rails'
+
+  gem 'underscore-string-rails'
+
+  gem "js-routes"
 
   gem 'therubyracer','0.10.2', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'haml_coffee_assets'
+  gem 'execjs'
+
 end
 
 group :development do
   gem 'capistrano'
   gem 'capistrano-ext'
-  gem 'capistrano_colors'
   gem 'rvm-capistrano'
   gem 'capi'
   gem "better_errors"
@@ -51,6 +72,7 @@ group :development do
 end
 
 group :test do
+  gem 'webmock'
   gem 'minitest'
   gem 'tconsole'
   gem 'turn'
@@ -62,7 +84,7 @@ group :test do
 end
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'jbuilder'
 
 # To use debugger
 # gem 'debugger'

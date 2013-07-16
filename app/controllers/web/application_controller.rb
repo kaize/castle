@@ -1,14 +1,19 @@
 class Web::ApplicationController < ApplicationController
   #include AuthHelper
   include FlashHelper
-
   helper_method :title
 
+  add_breadcrumb :index, :root_path, only: :show
+  
   before_filter do
     title t('base_name')
   end
 
   private
+
+  def base_title
+    title t("title.base")
+  end
 
   def title(part = nil)
     @parts ||= []

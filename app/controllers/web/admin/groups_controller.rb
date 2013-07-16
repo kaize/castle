@@ -25,7 +25,7 @@ class Web::Admin::GroupsController < Web::Admin::ApplicationController
   end
 
   def update
-    @group = GroupType.find params[:id]
+    @group = GroupType.find(params[:id])
 
     if @group.update_attributes params[:group]
       flash_success

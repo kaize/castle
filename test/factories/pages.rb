@@ -4,6 +4,10 @@ FactoryGirl.define do
   factory :page do
     title
     body
-    uri { generate :slug }
+    menu_item
+
+    after(:create) do |p|
+      p.publish
+    end
   end
 end

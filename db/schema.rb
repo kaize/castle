@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121220162951) do
+
+ActiveRecord::Schema.define(:version => 20130325113142) do
+
+  create_table "blocks", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "order_at"
+    t.boolean  "on_main"
+    t.string   "state"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -36,13 +47,39 @@ ActiveRecord::Schema.define(:version => 20121220162951) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.date     "begin_date"
+    t.date     "end_date"
+    t.string   "image"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.boolean  "main"
+    t.integer  "photo_album_id"
+  end
+
+  create_table "group_instructor_relations", :force => true do |t|
+    t.integer  "group_id"
+    t.integer  "instructor_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "group_schedule_classrooms", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "group_schedules", :force => true do |t|
     t.time     "start_at"
     t.time     "finish_at"
     t.integer  "group_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.date     "date"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "week"
+    t.integer  "classroom_id"
   end
 
   create_table "groups", :force => true do |t|
@@ -60,6 +97,13 @@ ActiveRecord::Schema.define(:version => 20121220162951) do
     t.string   "avatar"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "menu_items", :force => true do |t|
+    t.string   "title"
+    t.string   "ancestry"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "news", :force => true do |t|
@@ -81,9 +125,67 @@ ActiveRecord::Schema.define(:version => 20121220162951) do
   create_table "pages", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.string   "uri"
+    t.string   "state"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "menu_item_id"
+    t.integer  "order_at"
+  end
+
+  create_table "partners", :force => true do |t|
+    t.string   "image"
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "url"
+    t.integer  "order_at"
+  end
+
+  create_table "pg_search_documents", :force => true do |t|
+    t.text     "content"
+    t.integer  "searchable_id"
+    t.string   "searchable_type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "photo_album_photos", :force => true do |t|
+    t.integer  "photo_album_id"
+    t.string   "image"
+    t.string   "name"
+    t.string   "string"
+    t.boolean  "main"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "description"
+  end
+
+  create_table "photo_albums", :force => true do |t|
+    t.string   "name"
+    t.string   "state"
+    t.string   "description"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.boolean  "main"
+    t.integer  "photos_count"
+  end
+
+  create_table "study_requests", :force => true do |t|
+    t.string   "parent_first_name"
+    t.string   "parent_last_name"
+    t.string   "parent_middle_name"
+    t.string   "children_first_name"
+    t.string   "children_last_name"
+    t.string   "children_middle_name"
+    t.date     "birth_date"
+    t.string   "school"
+    t.string   "address"
+    t.string   "phone"
+    t.text     "note"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.integer  "union_id"
+    t.string   "email"
   end
 
   create_table "union_instructor_relations", :force => true do |t|

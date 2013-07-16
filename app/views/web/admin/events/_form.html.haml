@@ -1,0 +1,12 @@
+= simple_form_for @event, :url => url, :html => { :class => 'default_class' } do |f|
+  = f.input :name
+  = f.input :image, as: :image_preview
+  = f.input :begin_date, as: :string
+  = f.input :end_date, as: :string
+  = f.association :photo_album
+  = f.input :main
+  = f.input :content, as: :ckeditor
+
+  .form-actions
+    = f.button :submit, class: 'btn-primary'
+    = link_to t('.cancel'), admin_events_path, class: 'btn'

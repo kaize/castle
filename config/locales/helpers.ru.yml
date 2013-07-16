@@ -22,3 +22,27 @@ ru:
       union:
         create: "Создать"
         update: "Сохранить"
+      photo_album:
+        create: "Создать"
+        update: "Сохранить"
+      study_request:
+        create: "Отправить"
+      partner:
+        create: "Создать"
+        update: "Сохранить"
+      study_request:
+        create: "Отправить"
+      event:
+        create: "Создать"
+        update: "Сохранить"
+      group_schedule_classroom:
+        create: "Создать"
+        update: "Сохранить"
+      block:
+        create: "Создать"
+        update: "Сохранить"
+      menu_item:
+        create: "Создать"
+        update: "Сохранить"
+      
+      

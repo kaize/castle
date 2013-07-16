@@ -1,23 +1,24 @@
 class News < ActiveRecord::Base
   include NewsRepository
 
-  attr_accessible :body, :published_at, :state, :title, :state_event
+  attr_accessible :body, :published_at, :title, :state_event
 
-  has_many :photos
+  has_many :photos, dependent: :destroy
 
   validates :title, presence: true
   validates :body, presence: true
 
-  state_machine :state, initial: :off do
-    state :off
+
+  state_machine :state, initial: :hidden do
+    state :hidden
     state :published
 
     event :publish do
-      transition :off => :published
+      transition :hidden => :published
     end
 
-    event :off do
-      transition all => :off
+    event :hide do
+      transition all => :hidden
     end
   end
 

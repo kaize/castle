@@ -1,0 +1,20 @@
+%h3 #{t('.schedule')} #{@group}
+%h4= t(".instructors")
+%ul.nav.nav-tabs.nav-stacked
+  - @group.instructors.each do |i|
+    %li= link_to i, instructor_path(i)
+%table.table.table-striped
+  %thead
+    %tr
+      %th= t('.week')
+      %th= t('.classroom')
+      %th= t('.start_at')
+      %th= t('.finish_at')
+  %tbody
+    - @group.schedules.each do |s|
+      %tr
+        %th= s.week
+        %th= s.classroom
+        %th= l s.start_at, format: "%H:%M"
+        %th= l s.finish_at, format: "%H:%M"
+
