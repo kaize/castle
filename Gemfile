@@ -9,6 +9,7 @@ gem 'unicorn'
 gem 'bcrypt-ruby'
 
 gem 'mini_magick'
+gem 'rmagick'
 gem 'carrierwave'
 gem 'configus'
 
