@@ -240,6 +240,7 @@ GEM
     request_store (1.0.5)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rmagick (2.13.2)
     rubinius-actor (0.0.2)
       rubinius-core-api
     rubinius-core-api (0.0.1)
@@ -354,6 +355,7 @@ DEPENDENCIES
   rails (~> 3.2.9)
   rails-backbone
   ransack
+  rmagick
   russian
   rvm-capistrano
   sass-rails (~> 3.2.3)

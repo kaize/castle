@@ -2,7 +2,7 @@
 
 class PhotoAlbum::PhotoUploader < CarrierWave::Uploader::Base
 
-  include CarrierWave::MiniMagick
+  include CarrierWave::RMagick
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
   # include Sprockets::Helpers::RailsHelper
