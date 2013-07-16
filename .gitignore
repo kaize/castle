@@ -22,8 +22,7 @@
 /.idea
 
 # Ignore schema
-schema.rb
-db/schema.rb
 /db/schema.rb
 
 coverage/
+*.swp
