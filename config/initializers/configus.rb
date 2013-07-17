@@ -16,11 +16,6 @@ Configus.build Rails.env do
     limits do
       news 3
     end
-
-    fog_credentials do
-      provider 'AWS'
-      bucket 'dvorec73'
-    end
   end
 
   env :development, parent: :production do

@@ -11,7 +11,6 @@ class NewsPhotoUploader < CarrierWave::Uploader::Base
   # include Sprockets::Helpers::IsolatedHelper
 
   # Choose what kind of storage to use for this uploader:
-  storage :fog
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -34,7 +33,7 @@ class NewsPhotoUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-  
+
   # Create different versions of your uploaded files:
   # version :thumb do
   #   process :scale => [50, 50]
