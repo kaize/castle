@@ -1,4 +1,4 @@
-class Web::Admin::InstructorsController < Web::Admin::ApplicationController
+class Web::Admin::InstructorsController < Web::Admin::ProtectedApplicationController
   def index
     @q = Instructor.ransack(params[:q])
     @instructors = @q.result.page(params[:page])

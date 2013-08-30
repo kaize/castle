@@ -1,4 +1,4 @@
-class Web::Admin::CategoriesController < Web::Admin::ApplicationController
+class Web::Admin::CategoriesController < Web::Admin::ProtectedApplicationController
   def index
     @q = Category.ransack(params[:q])
     @categories = @q.result.page(params[:page])

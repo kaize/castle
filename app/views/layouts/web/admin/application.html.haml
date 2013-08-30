@@ -2,7 +2,8 @@
 %html(lang="ru")
   = render 'layouts/web/admin/shared/head'
   %body
-    = render 'layouts/web/admin/shared/navbar'
+    - if signed_in?
+      = render 'layouts/web/admin/shared/navbar'
     .container
       .row
         %div{class: "span#{content_for?(:sidebar) ? 9 : 12}"}

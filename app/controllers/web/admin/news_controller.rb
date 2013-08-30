@@ -1,4 +1,4 @@
-class Web::Admin::NewsController < Web::Admin::ApplicationController
+class Web::Admin::NewsController < Web::Admin::ProtectedApplicationController
 
   def index
     @q = News.ransack params[:q]

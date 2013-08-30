@@ -1,4 +1,4 @@
-class Web::Admin::PartnersController < Web::Admin::ApplicationController
+class Web::Admin::PartnersController < Web::Admin::ProtectedApplicationController
 
   def index
     @partners = Partner.asc_by_order_at

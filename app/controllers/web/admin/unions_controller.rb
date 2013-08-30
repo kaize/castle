@@ -1,4 +1,4 @@
-class Web::Admin::UnionsController < Web::Admin::ApplicationController
+class Web::Admin::UnionsController < Web::Admin::ProtectedApplicationController
   def index
     @q = Union.ransack(params[:q])
     @unions = @q.result.page(params[:page])

@@ -1,0 +1,9 @@
+.row
+  .span2
+  .span8
+    .hero-unit
+      = simple_form_for :user, url: admin_session_path, class: 'form-horizontal', defaults: {input_html: {class: 'input-xlarge'}} do |f|
+        %legend= t('.authorization')
+        = f.input :email
+        = f.input :password
+        = f.button :submit, class: 'btn btn-primary btn-large'
