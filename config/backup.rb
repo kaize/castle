@@ -34,11 +34,25 @@
 #  end
 #end
 
-Backup::Model.new(:castle_staging, "Castle backup") do
+require 'yaml'
+RAILS_ENV = ENV['RAILS_ENV'] || 'development'
+APP_ROOT = File.expand_path('..', File.dirname(__FILE__))
+APP_DB_CONFIG = YAML.load_file(File.join(APP_ROOT, '/config/database.yml'))[RAILS_ENV]
+
+Backup::Model.new("castle_#{RAILS_ENV}", "Castle backup") do
   database PostgreSQL do |db|
-    db.name               = "castle_staging"
-    db.username           = "castle_staging"
-    db.password           = "a3matn6vEGvdq2jpr39A"
+    db.name               = APP_DB_CONFIG['database']
+    db.username           = APP_DB_CONFIG['username']
+    db.password           = APP_DB_CONFIG['password']
+    db.host               = APP_DB_CONFIG['host']
+  end
+
+  archive :static_files do |archive|
+    archive.add '/u/apps/castle/current/public'
+  end
+
+  archive :system_files do |archive|
+    archive.add '/u/apps/castle/shared/system'
   end
 
   compress_with Gzip do |compression|
@@ -47,7 +61,7 @@ Backup::Model.new(:castle_staging, "Castle backup") do
   end
 
   store_with Local do |local|
-    local.path = "/var/tmp/"
-    local.keep = 5
+    local.path = "/u/apps/castle/shared/system_backups/"
+    local.keep = 14
   end
 end
