@@ -2,6 +2,8 @@ require 'test_helper'
 
 class Web::Admin::PartnersControllerTest < ActionController::TestCase
   def setup
+    user = create :user
+    sign_in user
 
     @partner = create :partner
     @params = {id: @partner.id}

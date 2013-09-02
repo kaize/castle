@@ -125,3 +125,10 @@ ru:
           attributes:
             uri:
               slug: 'имеет неверное значение'
+  activemodel:
+    errors:
+      models:
+        user_sign_in_type:
+          attributes:
+            password:
+              user_or_password_invalid:  Пользователь или пароль не корректны

@@ -8,6 +8,9 @@ ru:
     error_notification:
       default_message: "Были обнаружены следующие ошибки:"
     labels:
+      defaults:
+        login: 'Логин'
+        password: 'Пароль'
       member:
         study_start: 'Начало обучения'
         study_finish: 'Окончание обучения'

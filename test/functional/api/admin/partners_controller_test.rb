@@ -2,6 +2,9 @@ require 'test_helper'
 
 class Api::Admin::PartnersControllerTest < ActionController::TestCase
   setup do
+    user = create :user
+    sign_in user
+
     @partner0 = create :partner, order_at: 0
     @partner1 = create :partner, order_at: 1
   end

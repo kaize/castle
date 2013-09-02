@@ -2,9 +2,12 @@ require 'test_helper'
 
 class Api::Admin::MenuItems::PagesControllerTest < ActionController::TestCase
   setup do
+    user = create :user
+    sign_in user
+
     @menu_item = create :menu_item
     @page0 = create :page, order_at: 0, menu_item: @menu_item
-    @page1 = create :page, order_at: 1, menu_item: @menu_item 
+    @page1 = create :page, order_at: 1, menu_item: @menu_item
   end
 
   test "should update levels order" do
@@ -16,5 +19,5 @@ class Api::Admin::MenuItems::PagesControllerTest < ActionController::TestCase
     assert_equal 1, @page0.order_at
     assert_equal 0, @page1.order_at
   end
-  
+
 end

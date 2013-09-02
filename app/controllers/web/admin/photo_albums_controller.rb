@@ -1,4 +1,4 @@
-class Web::Admin::PhotoAlbumsController < Web::Admin::ApplicationController
+class Web::Admin::PhotoAlbumsController < Web::Admin::ProtectedApplicationController
   def index
     @q = PhotoAlbum.ransack params[:q]
     @photo_albums = @q.result.page(params[:page])
