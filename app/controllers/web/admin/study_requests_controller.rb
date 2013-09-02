@@ -1,4 +1,4 @@
-class Web::Admin::StudyRequestsController < Web::Admin::ApplicationController
+class Web::Admin::StudyRequestsController < Web::Admin::ProtectedApplicationController
 
   def index
     @q = StudyRequest.ransack(params[:q])
@@ -13,7 +13,7 @@ class Web::Admin::StudyRequestsController < Web::Admin::ApplicationController
   def show
     @study_requests = StudyRequest.find(params[:id])
   end
-  
+
   def create
     @study_request = StudyRequest.new params[:study_request]
 
@@ -25,7 +25,7 @@ class Web::Admin::StudyRequestsController < Web::Admin::ApplicationController
       render action: :new
     end
   end
-  
+
   def destroy
     @study_request = StudyRequest.find(params[:id])
     @study_request.destroy

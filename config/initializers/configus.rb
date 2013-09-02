@@ -1,12 +1,5 @@
 Configus.build Rails.env do
   env :production do
-    admin do
-      auth do
-        username "admin@castle.ru"
-        password "123456"
-      end
-    end
-
     per_page_count do
       searches 20
       photo_albums 5

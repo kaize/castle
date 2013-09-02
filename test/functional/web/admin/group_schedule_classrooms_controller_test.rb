@@ -2,6 +2,8 @@ require 'test_helper'
 
 class Web::Admin::GroupScheduleClassroomsControllerTest < ActionController::TestCase
   setup do
+    user = create :user
+    sign_in user
 
     @classroom = create :group_schedule_classroom
     @attrs = attributes_for :group_schedule_classroom

@@ -1,4 +1,4 @@
-class Web::Admin::EventsController < Web::Admin::ApplicationController
+class Web::Admin::EventsController < Web::Admin::ProtectedApplicationController
 
   def index
     @q = Event.ransack(params[:q])

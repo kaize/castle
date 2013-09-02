@@ -8,19 +8,19 @@ Castle::Application.routes.draw do
     namespace :admin do
       resources :study_requests, only: [:index]
       resources :blocks, only: [] do
-         put :mass_update_order, on: :collection 
+         put :mass_update_order, on: :collection
       end
       resources :partners, only: [] do
-         put :mass_update_order, on: :collection 
+         put :mass_update_order, on: :collection
       end
-      resources :menu_items, only: [] do 
+      resources :menu_items, only: [] do
         scope module: :menu_items do
           resources :pages, only: [] do
-            put :mass_update_order, on: :collection 
+            put :mass_update_order, on: :collection
           end
         end
       end
-      
+
     end
   end
 
@@ -29,6 +29,7 @@ Castle::Application.routes.draw do
 
     namespace :admin do
       root to: "welcome#index"
+      resource :session, only: [:new, :create, :destroy]
       resources :study_requests, only: [:index, :show, :destroy]
       resources :unions
       resources :group_schedule_classrooms
@@ -55,7 +56,7 @@ Castle::Application.routes.draw do
         resources :unions, only: [:index, :show]
       end
     end
-    
+
     scope module: :categories do
       resources :unions, only: [:show] do
         scope module: :unions do
@@ -63,7 +64,7 @@ Castle::Application.routes.draw do
         end
       end
     end
-    
+
     resources :schedules, only: [:index, :show]
     resources :instructors, only: [:index, :show]
     resources :photo_albums, only: [:index, :show]

@@ -2,6 +2,8 @@ require 'test_helper'
 
 class Web::Admin::GroupsControllerTest < ActionController::TestCase
   def setup
+    user = create :user
+    sign_in user
 
     @group = create :group
     @params = {id: @group.id}

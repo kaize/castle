@@ -2,6 +2,9 @@ require 'test_helper'
 
 class Api::Admin::BlocksControllerTest < ActionController::TestCase
   setup do
+    user = create :user
+    sign_in user
+
     @block0 = create :block, order_at: 0
     @block1 = create :block, order_at: 1
   end

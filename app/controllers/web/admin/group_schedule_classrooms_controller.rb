@@ -1,4 +1,4 @@
-class Web::Admin::GroupScheduleClassroomsController < Web::Admin::ApplicationController
+class Web::Admin::GroupScheduleClassroomsController < Web::Admin::ProtectedApplicationController
   def index
     @classrooms = Group::Schedule::Classroom.page(params[:page])
   end
@@ -30,7 +30,7 @@ class Web::Admin::GroupScheduleClassroomsController < Web::Admin::ApplicationCon
       redirect_to action: :index
     else
       flash_error
-      
+
       render :edit
     end
   end

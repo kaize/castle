@@ -37,6 +37,7 @@ gem 'ancestry'
 gem 'nokogiri-happymapper', :require => 'happymapper'
 gem 'backup'
 gem 'whenever', :require => false
+gem 'virtus'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -80,6 +81,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'ci_reporter'
   gem 'coveralls', require: false
+  gem 'wrong'
 end
 
 # To use Jbuilder templates for JSON

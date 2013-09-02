@@ -7,6 +7,9 @@
         %span.icon-bar
       %a.brand(href=admin_root_path) Castle
       .container.nav-collapse
+        .navbar-text.pull-right
+          - if user_signed_in?
+            = link_to t('.exit'), admin_session_path, method: :delete
         %ul.nav
           = model_item :li, News, admin_news_index_path
           = model_item :li, Category, admin_categories_path

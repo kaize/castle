@@ -3,6 +3,8 @@ require 'test_helper'
 class Web::Admin::UnionsControllerTest < ActionController::TestCase
 
   def setup
+    user = create :user
+    sign_in user
 
     @union = create :union
     @params = {id: @union.id}

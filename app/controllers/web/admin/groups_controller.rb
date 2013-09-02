@@ -1,4 +1,4 @@
-class Web::Admin::GroupsController < Web::Admin::ApplicationController
+class Web::Admin::GroupsController < Web::Admin::ProtectedApplicationController
   def index
     @q = Group.ransack params[:q]
     @groups = @q.result.page(params[:page])

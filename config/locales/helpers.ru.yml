@@ -4,6 +4,8 @@
 ru:
   helpers:
     submit:
+      user_sign_in_type:
+        create: 'Войти'
       page:
         create: "Создать"
         update: "Сохранить"
@@ -44,5 +46,5 @@ ru:
       menu_item:
         create: "Создать"
         update: "Сохранить"
-      
-      
+
+

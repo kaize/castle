@@ -3,6 +3,8 @@ require 'test_helper'
 class Web::Admin::PhotoAlbumsControllerTest < ActionController::TestCase
 
   setup do
+    user = create :user
+    sign_in user
 
     @photo_album = create :photo_album, :with_photo
 
