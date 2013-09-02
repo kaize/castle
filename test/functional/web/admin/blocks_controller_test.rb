@@ -2,6 +2,9 @@ require 'test_helper'
 
 class Web::Admin::BlocksControllerTest < ActionController::TestCase
   def setup
+    user = create :user
+    sign_in user
+
     @block = create :block
     @params = {id: @block.id}
   end

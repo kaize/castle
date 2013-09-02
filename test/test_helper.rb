@@ -9,21 +9,13 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 Dir[Rails.root.join("test/support/**/*.rb")].each {|f| require f}
+require 'wrong'
 
 class ActiveSupport::TestCase
-  #include AuthHelper
+  include AuthHelper
   #include TestSupport
   include FactoryGirl::Syntax::Methods
-  include TestAuthHelper
-end
-
-#WARNING: monkey patch for skip http auth in admin zone
-module AuthHelper
-  def authenticate_admin
-  end
-
-  def api_authenticate_admin
-  end
+  include Wrong
 end
 
 def fixture_file_upload(path, mime_type = nil, binary = false)

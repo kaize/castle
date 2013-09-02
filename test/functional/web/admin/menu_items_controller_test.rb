@@ -2,6 +2,9 @@ require 'test_helper'
 
 class Web::Admin::MenuItemsControllerTest < ActionController::TestCase
   def setup
+    user = create :user
+    sign_in user
+
     @menu_item = create :menu_item
     @params = {id: @menu_item.id}
   end

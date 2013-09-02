@@ -53,7 +53,11 @@ ru:
         instructors: "Педагоги"
         description: "Описание"
     admin:
-      news: 
+      sessions:
+        new:
+          authorization: 'Авторизация'
+          title: 'Вход в админку'
+      news:
         index:
           confirm: *confirm
           title: &news Новости
@@ -68,7 +72,7 @@ ru:
           title: *news
         update:
           title: *news
-      categories: 
+      categories:
         index:
           confirm: *confirm
           title: &categories Детские и молодёжные объединения
@@ -301,6 +305,10 @@ ru:
         results_html: Результаты поиска по запросу <strong>%{term}</strong>
   layouts:
     web:
+      admin:
+        shared:
+          navbar:
+            exit: 'Выход'
       shared:
         navbar:
           categories: *categories

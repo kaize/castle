@@ -1,11 +1,15 @@
 class Web::Admin::SessionsController < Web::Admin::ApplicationController
   def new
+    @session = UserSignInType.new
   end
 
   def create
-    user = User.find_by_email(params[:user][:email])
+    @session = UserSignInType.new(params[:user_sign_in_type])
 
-    if user && user.authenticate(params[:user][:password])
+    if @session.valid?
+      reset_session
+
+      user = @session.user
       sign_in user
       redirect_to admin_root_path
     else

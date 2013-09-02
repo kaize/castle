@@ -2,6 +2,8 @@ require 'test_helper'
 
 class Web::Admin::CategoriesControllerTest < ActionController::TestCase
   def setup
+    user = create :user
+    sign_in user
 
     @category = create :category
     @params = {id: @category.id}

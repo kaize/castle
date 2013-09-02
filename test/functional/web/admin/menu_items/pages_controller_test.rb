@@ -2,6 +2,9 @@ require 'test_helper'
 
 class Web::Admin::MenuItems::PagesControllerTest < ActionController::TestCase
   def setup
+    user = create :user
+    sign_in user
+
     @page = create :page
     @params = { menu_item_id: @page.menu_item.id }
     @attrs = attributes_for(:page)

@@ -2,7 +2,7 @@
 %html(lang="ru")
   = render 'layouts/web/admin/shared/head'
   %body
-    - if signed_in?
+    - if user_signed_in?
       = render 'layouts/web/admin/shared/navbar'
     .container
       .row
