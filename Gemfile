@@ -6,7 +6,7 @@ gem 'axlsx_rails'
 gem 'pg'
 gem 'ransack'
 gem 'unicorn'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'mini_magick'
 gem 'rmagick'
