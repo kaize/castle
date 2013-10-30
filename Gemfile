@@ -26,6 +26,7 @@ gem 'usefull_scopes', git: 'https://github.com/kaize/usefull_scopes.git'
 gem 'validates'
 #gem 'client_side_validations'
 gem 'twitter-bootstrap-rails'
+gem "autoprefixer-rails"
 gem 'ckeditor'
 gem 'colorbox-rails'
 

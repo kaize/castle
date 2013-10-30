@@ -11,14 +11,12 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require vk-open-api.js
-//= require disqus
 //= require jquery
 //= require colorbox-rails
 //= require jquery_ujs
-//= require jquery.ui.datepicker
-//= require jquery.ui.datepicker-ru
-//= require twitter/bootstrap
-//= require select2
+//= #require jquery.ui.datepicker
+//= #require jquery.ui.datepicker-ru
+//= require bootstrap
 //= require underscore
 //= require underscore.string
 //= require backbone
@@ -29,4 +27,6 @@
 //= require moment
 //= require moment/ru.js
 //= require js-routes
-//= require_tree
+//= require fotorama
+//= require disqus
+//= #require select2

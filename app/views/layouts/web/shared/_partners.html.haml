@@ -1,4 +1,21 @@
-- if partners.any?
+.partners
+  .partner-item
+    %a.partner-item-logo{ href: "#" }
+      = image_tag("tmp/logos/itm.png")
+
+  .partner-item
+    %a.partner-item-logo{ href: "#" }
+      = image_tag("tmp/logos/interra.png")
+
+  .partner-item
+    %a.partner-item-logo{ href: "#" }
+      = image_tag("tmp/logos/kaizen.png")
+
+  .partner-item
+    %a.partner-item-logo{ href: "#" }
+      = image_tag("tmp/logos/mst.png")
+
+-# if partners.any?
   %hr
   %h3= t '.title'
   .row.partners

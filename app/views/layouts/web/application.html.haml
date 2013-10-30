@@ -1,26 +1,73 @@
-!!! 5
+!!!
 %html(lang="ru")
   = render 'layouts/web/shared/head'
   %body{"data-spy" => "scroll", "data-target" => ".bs-docs-sidebar" }
-    = render 'layouts/web/shared/navbar'
-    = javascript_include_tag "application"
-    .container
-      .content
-        = render_breadcrumbs
-        = bootstrap_flash
-        = yield
-        -#.span3
-          .well.sidebar-nav
-            %h3 Sidebar
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
 
-      = render 'layouts/web/shared/partners', partners: partners
-      %hr
-      = render 'layouts/web/shared/footer'
+    .container
+      = render 'layouts/web/shared/navbar'
+      .content
+        .row
+          .span9
+            -# = render_breadcrumbs
+            = bootstrap_flash
+            = yield
+          .span3.sidebar
+            = render 'layouts/web/shared/search_form'
+
+            %h3 Событие недели
+            .side-b.week-event
+              %a{ href: "#"}
+                = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg")
+                20 мая — новый памятный день в Ульяновске, День молодежной правовой Академии
+              .connector.left
+              .connector.right
+            .side-b.calendars
+              #calendars
+
+            %button.action-btn.red-btn Записать ребенка
+            %button.action-btn.brown-btn Задать вопрос
+
+            .announcement
+              %h5 Анонс школы вожатых
+              %hr
+              .descr
+                Небольшое рекламный текст о прекрасной школе вожатых, обязательно
+                %a{ href: "#" } со ссылкой на подробное описание
+                для заинтересовавшихся
+
+
+
+
+          -#
+            - if @event
+              .well.well-small
+                = image_tag @event.image
+                .pagination-centered
+                  %br
+                  %strong
+                    = link_to @event.name, event_path(@event)
+                = link_to t('.all_event'), events_path
+
+              #calendars
+              = link_to t('.all_event'), events_path
+            .well.sidebar-nav
+              %h3 Sidebar
+
+
+              %ul.nav.nav-list
+                %li.nav-header Sidebar
+                %li= link_to "Link 1", "/path1"
+                %li= link_to "Link 2", "/path2"
+                %li= link_to "Link 3", "/path3"
+
+            .well.well-small
+              %center
+                %h5= t('.do_you_want')
+              = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
+
+
+
+    = render 'layouts/web/shared/footer'
     = render 'layouts/web/shared/yandex_metrika'
     /
       Javascripts

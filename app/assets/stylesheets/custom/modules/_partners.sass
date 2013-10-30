@@ -1,0 +1,52 @@
+.partners
+  @include clearfix
+
+  .partner-item
+    display: table
+    width: 120px
+    margin: 0 20px 0 0
+    padding: 10px
+    border: 1px solid #f1ece6
+    background-color: rgba(255,255,255, .2)
+    border-radius: 3px
+    float: left
+
+    .partner-item-logo
+      display: table-cell
+      vertical-align: middle
+      text-align: center
+      height: 120px
+      background-color: #fff
+      border: 1px solid #fff
+      box-shadow: inset 0 0 10px rgba(0,0,0, .2)
+
+      img
+        max-width: 100px
+
+
+.subnav
+  margin: -65px 0 0
+
+  .social
+    margin: 0
+    padding: 15px 0 0
+    text-align: right
+
+    a
+      display: inline-block
+      width: 30px
+      height: 30px
+      border: 1px solid #faf5ef
+      background-color: rgba(255,255,255, .2)
+      background-image: url('/assets/sprite.png')
+      box-shadow: 0 0 3px rgba(0,0,0, .25), inset 0 0 10px rgba(0,0,0, .1)
+      border-radius: 3px
+
+      &:hover
+        background-color: #fff
+
+      &.tw
+        background-position: -75px -803px
+
+      &.vk
+        background-position: -33px -803px
