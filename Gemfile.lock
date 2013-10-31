@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/kaize/usefull_scopes.git
-  revision: b5dc29715f9a2afdba8e818cc56f20f75471f57f
+  revision: 016c3807f6154f6022d095e7fa0bb74e1aa78b96
   specs:
     usefull_scopes (0.2.1)
 
@@ -328,7 +328,7 @@ DEPENDENCIES
   autoprefixer-rails
   axlsx_rails
   backup
-  bcrypt-ruby
+  bcrypt-ruby (~> 3.0.0)
   better_errors
   capi
   capistrano
