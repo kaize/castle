@@ -32,18 +32,30 @@ body
 .container
   width: 940px
 
+hr
+  border-top: 1px solid #fefcfb
+  border-bottom: 1px solid #ccb29e
+  text-align: center
+
 h2
+  margin: 20px 0
+  font-size: 14px
+  font-weight: bold
+
+h2.tape-caption
   position: relative
   display: inline-block
-  margin: 20px 0
+  margin: 30px 0 20px
   padding: 0 40px 0 0
-  font-size: 14px
   color: #fff
-  font-weight: bold
   text-shadow: 1px 1px 2px #ab3900
   vertical-align: middle
   background: #f35500 url('/assets/sprite.png') 0 -48px repeat-x
   padding: 10px 0
+
+  &.long-caption
+    display: block
+    margin-right: 85px
 
   &:before
     content: ''
@@ -113,6 +125,7 @@ h2
     background-color: rgba(255,177,94, .15)
     border: 1px solid rgba(255,204,150, .15)
     box-shadow: 0 3px 5px rgba(0,0,0, .18)
+    border-radius: 3px
 
     ul
       margin: 10px
