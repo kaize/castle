@@ -4,7 +4,7 @@ class PhotoAlbum < ActiveRecord::Base
   attr_accessible :name, :state, :description, :main
 
   validates :name, :presence => true
-  
+
   has_many :events
   has_many :photos, dependent: :destroy
 
@@ -23,22 +23,16 @@ class PhotoAlbum < ActiveRecord::Base
     end
   end
 
-  scope :published, with_state(:published)
-
-  class << self
-    def welcome_album
-      published.random.first
-    end
-  end
+  include PhotoAlbumRepository
 
   def can_view?
     photos.any?
   end
-  
-private
+
+  private
   def hide_another_from_main
     if main?
       self.class.exclude(id).update_all main: true, main: false
     end
-  end 
+  end
 end

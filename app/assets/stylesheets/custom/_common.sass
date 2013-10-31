@@ -1,0 +1,152 @@
+b, strong
+  font-weight: bold
+
+i, em
+  font-style: italic
+
+
+\:focus
+  outline: 0
+
+a
+  color:  #000
+  text-decoration: none
+  cursor: pointer
+
+.dashed
+  border-bottom: 1px dashed
+  text-decoration: none
+
+.dotted
+  border-bottom: 1px dotted
+  text-decoration: none
+
+::selection, -moz::selection
+  background-color: #ef6600
+  color: #fff
+
+body
+  background: #e9e1d6 url('/assets/bg-body.png') repeat
+  font: 14px Tahoma, Arial, sans-serif
+
+.container
+  width: 940px
+
+h2
+  position: relative
+  display: inline-block
+  margin: 20px 0
+  padding: 0 40px 0 0
+  font-size: 14px
+  color: #fff
+  font-weight: bold
+  text-shadow: 1px 1px 2px #ab3900
+  vertical-align: middle
+  background: #f35500 url('/assets/sprite.png') 0 -48px repeat-x
+  padding: 10px 0
+
+  &:before
+    content: ''
+    display: block
+    background: url('/assets/sprite.png') -180px 0 repeat-x
+    width: 14px
+    height: 42px
+    position: absolute
+    bottom: 0
+    left: -14px
+
+  &:after
+    content: ''
+    display: block
+    background: url('/assets/sprite.png') -90px 0 repeat-x
+    width: 90px
+    height: 46px
+    position: absolute
+    bottom: -4px
+    right: -90px
+
+.action-btn
+  box-sizing: border-box
+  background: none
+  background-image: url('/assets/sprite.png')
+  text-align: center
+  color: #fff
+  width: 230px
+  height: 39px
+  padding: 0 0 10px
+  margin: 15px 0 0 -5px
+  border: 0
+
+  &.red-btn
+    background-position: 0 -658px
+
+  &.brown-btn
+    background-position: 0 -699px
+
+  &.orange-btn
+    background-position: 0 -741px
+
+  &.big-btn
+    width: 352px
+
+  .dropdown-toggle
+    background: none
+    width: 100%
+    color: #fff
+    text-shadow: 0 2px 1px rgba(225,110,12, .75)
+    font-weight: bold
+    padding: 6px 0 10px
+
+    &:focus
+      background: none
+
+    .caret
+      display: none
+
+  .dropdown-toggle:hover
+    background: none
+    color: #fff
+
+  .dropdown-menu
+    width: 292px
+    left: 30px
+    background-color: rgba(255,177,94, .15)
+    border: 1px solid rgba(255,204,150, .15)
+    box-shadow: 0 3px 5px rgba(0,0,0, .18)
+
+    ul
+      margin: 10px
+      background-color: rgba(255,112,12, .8)
+      box-shadow: 0 1px 1px rgba(0,0,0, .29)
+
+      li
+        text-align: left
+        a
+          display: block
+          color: #fff
+          font-weight: bold
+          text-shadow: 0 2px 1px rgba(225,110,12, .75)
+          padding: 5px 10px
+
+          &:hover
+            text-decoration: none
+            color: #302d27
+            text-shadow: none
+            background: rgb(245,243,235) /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjNlYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGRmZGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+            background: -moz-linear-gradient(top, rgba(245,243,235,1) 0%, rgba(224,223,223,1) 100%)
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,243,235,1)), color-stop(100%,rgba(224,223,223,1)))
+            background: -webkit-linear-gradient(top, rgba(245,243,235,1) 0%,rgba(224,223,223,1) 100%)
+            background: -o-linear-gradient(top, rgba(245,243,235,1) 0%,rgba(224,223,223,1) 100%)
+            background: -ms-linear-gradient(top, rgba(245,243,235,1) 0%,rgba(224,223,223,1) 100%)
+            background: linear-gradient(to bottom, rgba(245,243,235,1) 0%,rgba(224,223,223,1) 100%)
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f3eb', endColorstr='#e0dfdf',GradientType=0 )
+
+
+
+
+
+
+
+

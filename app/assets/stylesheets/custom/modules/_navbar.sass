@@ -1,0 +1,106 @@
+.navbar
+  position: relative
+  margin: 0 30px 75px
+  background: #f35500 url('/assets/sprite.png') 0 -48px repeat-x
+
+  &:before
+    content: ''
+    display: block
+    width: 90px
+    height: 46px
+    position: absolute
+    bottom: -4px
+    left: -37px
+    background: url('/assets/sprite.png') no-repeat
+
+  &:after
+    content: ''
+    display: block
+    width: 90px
+    height: 46px
+    position: absolute
+    bottom: -4px
+    right: -37px
+    background: url('/assets/sprite.png') -90px 0 no-repeat
+
+  .logo
+    position: absolute
+    left: 50%
+    top: -65px
+    display: block
+    width: 168px
+    height: 168px
+    margin: 0 0 0 -84px
+    background: url('/assets/sprite.png')  0 -281px no-repeat
+
+  .navbar-content
+    @include clearfix
+
+  .nav
+    li
+      a
+        color: #fff
+        font-weight: bold
+        text-shadow: 1px 1px 2px #ab3900
+
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus
+  position: relative
+  top: -5px
+  padding-top: 15px
+  padding-bottom: 15px
+  margin-bottom: -15px
+  box-shadow: 0 0 7px rgba(0,0,0, .2)
+  text-shadow: none
+  background: rgb(245,243,235) /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjNlYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2ZiZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMGNkY2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
+  background: -moz-linear-gradient(top, rgba(245,243,235,1) 0%, rgba(251,249,249,1) 50%, rgba(208,205,204,1) 100%) /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,243,235,1)), color-stop(50%,rgba(251,249,249,1)), color-stop(100%,rgba(208,205,204,1))) /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(245,243,235,1) 0%,rgba(251,249,249,1) 50%,rgba(208,205,204,1) 100%) /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(245,243,235,1) 0%,rgba(251,249,249,1) 50%,rgba(208,205,204,1) 100%) /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(245,243,235,1) 0%,rgba(251,249,249,1) 50%,rgba(208,205,204,1) 100%) /* IE10+ */
+  background: linear-gradient(to bottom, rgba(245,243,235,1) 0%,rgba(251,249,249,1) 50%,rgba(208,205,204,1) 100%) /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f3eb', endColorstr='#d0cdcc',GradientType=0 ) /* IE6-8 */
+
+
+.subnav
+  margin: -65px 0 0
+
+  .social
+    margin: 0
+    padding: 15px 0 0
+    text-align: right
+
+    a
+      display: inline-block
+      width: 30px
+      height: 30px
+      border: 1px solid #faf5ef
+      background-color: rgba(255,255,255, .2)
+      background-image: url('/assets/sprite.png')
+      box-shadow: 0 0 3px rgba(0,0,0, .25), inset 0 0 10px rgba(0,0,0, .1)
+      border-radius: 3px
+
+      &:hover
+        background-color: #fff
+
+      &.tw
+        background-position: -75px -803px
+
+      &.vk
+        background-position: -33px -803px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

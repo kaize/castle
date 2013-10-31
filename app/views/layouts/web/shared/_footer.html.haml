@@ -1,9 +1,27 @@
-%footer
-  .footer
-    .right-footer
-      %ul.right-footer
-        %li Приёмная: 8 (8422) 41-79-25
-        %li Вахта: 8 (8422) 27-05-25
-    %p © 2012 Ульяновский Областной дворец творчества детей и молодежи
-    %a{href: "mailto:dvorec_ul@mail.ru"} dvorec_ul@mail.ru
-    = render 'layouts/web/shared/social'
+.footer
+  .container.row
+    .span9.copyrights
+      %p
+        &copy; 2013 Ульяновский Областной дворец творчества детей и молодежи
+        %br
+        г. Ульяновск, ул. Минаева, д. 50
+        %br
+        E-mail:
+        %a{href: "mailto:dvorec_ul@mail.ru"} dvorec_ul@mail.ru
+        %br
+        Приёмная: +7 (8422) 41-79-25
+        %br
+        Вахта: +7 (8422) 27-05-25
+    .span3.support
+      Поддержка сайта
+      %a{href: "http://m-st.ru/"} MST
+
+
+
+  // = render 'layouts/web/shared/social'
+
+
+
+
+
+

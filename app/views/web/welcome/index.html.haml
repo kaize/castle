@@ -1,51 +1,49 @@
-.well
-  .lead
-    %h2= t('.base_name')
-    %i= t('.me_open')
-%h3= t('.news')
-.row
-  .span8
-    - @news.each do |n|
-      .well
-        %a{ href: news_path(n) }
-          %h4= n.title
+.gallery
+
+  .fotorama{ data: {nav: "thumbs", width: "100%", ratio: "500/300"} }
+    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1200/carousel_Akademiya_may2013_600x400_11.jpg", data: {caption: "Сергей Морозов"})
+    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg", data: {caption: "Дети в восторге"})
+
+
+%h2 Лента новостей
+.news
+
+  - @news.each do |n|
+    %a.news-item{ href: news_path(n) }
+      .news-item-pic
+        =image_tag n.photos.first.asset.url
+      .news-item-descr
+        %h3= n.title
         - if n.published_at?
-          .help-block= l n.published_at, format: :short
-        != truncate_sanitize_rem_br n.body, 250
-    .news_link= link_to "Все новости", news_index_path
-    %hr
-    - if @photo_album.try :can_view?
-      %h4= @photo_album.name
-      %p= @photo_album.description
-      #carousel.carousel.slide
-        .carousel-inner
-          - @photo_album.sorted_photos.each_with_index do |photo, i|
-            .item{:class => i == 0 ? "active" : ''}
-              = image_tag photo.image_url(:carousel)
-              - if photo.information?
-                .carousel-caption
-                  %h4= photo.name
-                  %p= photo.description
-        %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"} ‹
-        %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"} ›
-      %p= link_to "Все фотоальбомы", photo_albums_path
-  .span4
-    = render 'search_form'
-    - if @event
-      .well.well-small
-        = image_tag @event.image
-        .pagination-centered
-          %br
-          %strong
-            = link_to @event.name, event_path(@event)
-        = link_to t('.all_event'), events_path
-    .well
-      #calendars
-      = link_to t('.all_event'), events_path
-    .well.well-small
-      %center
-        %h5= t('.do_you_want')
-      = link_to t('.study_request'), new_study_request_path, :class => 'btn btn-success btn-block'
+          .news-item-date= l n.published_at, format: :short
+        = truncate_sanitize_rem_br n.body, 350
+
+
+
+%h2 Партнеры
+= render 'layouts/web/shared/partners', partners: partners
+
+-# %h3= t('.news')
+-# .row
+-#
+  - if @photo_album.try :can_view?
+    %h4= @photo_album.name
+    %p= @photo_album.description
+    #carousel.carousel.slide
+      .carousel-inner
+        - @photo_album.sorted_photos.each_with_index do |photo, i|
+          .item{:class => i == 0 ? "active" : ''}
+            = image_tag photo.image_url(:carousel)
+            - if photo.information?
+              .carousel-caption
+                %h4= photo.name
+                %p= photo.description
+      %a.carousel-control.left{"data-slide" => "prev", :href => "#carousel"} ‹
+      %a.carousel-control.right{"data-slide" => "next", :href => "#carousel"} ›
+    %p= link_to "Все фотоальбомы", photo_albums_path
+    .span4
+
+
 
     = render partial: 'web/shared/block', collection: @blocks
 

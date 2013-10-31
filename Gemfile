@@ -6,7 +6,7 @@ gem 'axlsx_rails'
 gem 'pg'
 gem 'ransack'
 gem 'unicorn'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'mini_magick'
 gem 'rmagick'
@@ -26,6 +26,7 @@ gem 'usefull_scopes', git: 'https://github.com/kaize/usefull_scopes.git'
 gem 'validates'
 #gem 'client_side_validations'
 gem 'twitter-bootstrap-rails'
+gem "autoprefixer-rails"
 gem 'ckeditor'
 gem 'colorbox-rails'
 
