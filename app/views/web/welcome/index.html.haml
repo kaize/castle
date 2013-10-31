@@ -11,7 +11,7 @@
   - @news.each do |n|
     %a.news-item{ href: news_path(n) }
       .news-item-pic
-        =image_tag n.photos.first.asset.url
+        = image_tag n.photos.first.asset.url if n.photos.any?
       .news-item-descr
         %h3= n.title
         - if n.published_at?
