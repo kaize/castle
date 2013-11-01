@@ -16,7 +16,8 @@
 //= require jquery_ujs
 //= #require jquery.ui.datepicker
 //= #require jquery.ui.datepicker-ru
-//= require bootstrap
+//= require twitter/bootstrap
+//= require bootstrap_and_overrides
 //= require underscore
 //= require underscore.string
 //= require backbone
@@ -27,6 +28,8 @@
 //= require moment
 //= require moment/ru.js
 //= require js-routes
+//= require microfiche
 //= require fotorama
+//= require web/custom
 //= require disqus
 //= #require select2

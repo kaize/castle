@@ -1,10 +1,9 @@
-%center
-  %h5= "Календарь событий"
-  %a{href: "#", class: "month-dec"}
-    %i.icon-chevron-left
-  #{@options.month} #{@options.year}
-  %a{href: "#", class: "month-inc"}
-    %i.icon-chevron-right
+.calend-ctrl
+  %span{href: "#", class: "month-dec"}
+    %i
+  %span.calend-opt #{@options.month} #{@options.year}
+  %span{href: "#", class: "month-inc"}
+    %i
 %br
 %table.table.table-bordered.table-striped
   %thead
