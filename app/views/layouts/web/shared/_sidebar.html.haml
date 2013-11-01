@@ -1,6 +1,6 @@
 .sidebar
   = render 'layouts/web/shared/search_form'
-  %h3 Событие недели
+  %h3= t('.week_event')
   .side-b.week-event
     %a{ href: "#"}
       = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg")
@@ -9,9 +9,10 @@
     .connector.right
   .side-b.calendars
     #calendars
+  -#TODO: Сразу ссылку со стилем кнопки
   = link_to new_study_request_path do
-    %button.action-btn.red-btn Записать ребенка
-  %button.action-btn.brown-btn Задать вопрос
+    %button.action-btn.red-btn= t('.new_request')
+  %button.action-btn.brown-btn= t('.ask_question')
 
   .announcement
     %h5 Анонс школы вожатых
