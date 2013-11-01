@@ -317,6 +317,10 @@ ru:
           instructors: *instructors
         partners:
           title: Партнеры
+        sidebar:
+          week_event: Событие недели
+          ask_question: Задать вопрос
+          new_request: Записать ребенка
   breadcrumbs:
     web:
       application:
