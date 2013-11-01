@@ -14,3 +14,40 @@
       background-color: #e7dacc
 
 
+  .calend-ctrl
+    text-align: center
+
+    span
+      display: inline-block
+      vertical-align: middle
+      cursor: pointer
+
+      i
+        display: block
+        margin: 5px
+
+    .calend-opt
+      width: 100px
+      margin: 0 10px
+      color: #553f2f
+      cursor: default
+
+    .month-dec
+      i
+        border-top: 6px solid transparent
+        border-bottom: 6px solid transparent
+        border-right: 6px solid #553f2f
+
+      &:hover
+        i
+          border-right-color: #e87b0c
+
+    .month-inc
+      i
+        border-top: 6px solid transparent
+        border-bottom: 6px solid transparent
+        border-left: 6px solid #553f2f
+
+      &:hover
+        i
+          border-left-color: #e87b0c

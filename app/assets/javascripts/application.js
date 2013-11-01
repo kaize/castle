@@ -28,6 +28,8 @@
 //= require moment
 //= require moment/ru.js
 //= require js-routes
+//= require microfiche
 //= require fotorama
+//= require web/custom
 //= require disqus
 //= #require select2

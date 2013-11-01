@@ -10,9 +10,10 @@
   .side-b.calendars
     #calendars
   -#TODO: Сразу ссылку со стилем кнопки
-  = link_to new_study_request_path do
-    %button.action-btn.red-btn= t('.new_request')
-  %button.action-btn.brown-btn= t('.ask_question')
+  = link_to new_study_request_path, class: "action-btn red-btn" do
+    = t('.new_request')
+  %a.action-btn.brown-btn{ href: "#" }
+    = t('.ask_question')
 
   .announcement
     %h5 Анонс школы вожатых

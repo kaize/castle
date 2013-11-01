@@ -1,11 +1,11 @@
 .partners
   @include clearfix
+  position: relative
 
   .partner-item
     display: table
-    width: 120px
     margin: 0 0 0 20px
-    padding: 10px
+    //padding: 10px
     border: 1px solid #f1ece6
     background-color: rgba(255,255,255, .2)
     border-radius: 3px
@@ -18,11 +18,42 @@
       display: table-cell
       vertical-align: middle
       text-align: center
+      width: 120px
       height: 120px
+      margin: 10px
       background-color: #fff
       border: 1px solid #fff
       box-shadow: inset 0 0 10px rgba(0,0,0, .2)
 
       img
         max-width: 100px
+
+  .microfiche-button
+    position: absolute
+    top: 50%
+    margin-top: -11px
+    width: 15px
+    height: 23px
+    background: none
+    border: none
+    text-indent: -9999px
+    background-image: url('/assets/sprite.png')
+
+    &[disabled="disabled"]
+      display: none
+
+  .microfiche-prev-button
+    background-position: -116px -808px
+    left: -30px
+
+    &:hover
+      background-position: -116px -845px
+
+  .microfiche-next-button
+    background-position: -147px -808px
+    right: -30px
+
+    &:hover
+      background-position: -147px -845px
+
 
