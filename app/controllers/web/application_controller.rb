@@ -6,6 +6,7 @@ class Web::ApplicationController < ApplicationController
 
   before_filter do
     title t('base_name')
+    @blocks = Block.published
   end
 
   private
