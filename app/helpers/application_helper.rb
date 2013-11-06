@@ -17,13 +17,13 @@ module ApplicationHelper
 
   def truncate_sanitize_rem_br(text, length)
     return '' if text.blank?
-    truncate( sanitize(text, :tags => []), :length => length ).gsub(/\r/, "").gsub(/\n/, "").gsub(/&[a-z]{0-5}\.\.\.$/, "...")
+    truncate(sanitize(text, :tags => []), :length => length ).gsub(/\r/, "").gsub(/\n/, "").gsub(/&[a-z]{0-5}\.\.\.$/, "...").html_safe
   end
-  
+
   def nav_categories
     Category.scoped
   end
-  
+
   def nav_category
     Category.first if Category.any?
   end
