@@ -4,8 +4,14 @@
     = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1200/carousel_Akademiya_may2013_600x400_11.jpg", data: {caption: "Сергей Морозов"})
     = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg", data: {caption: "Дети в восторге"})
 
+.row
+  .span6
+    %h2.tape-caption Лента новостей
 
-%h2.tape-caption Лента новостей
+  .span3
+    .all_news_link
+      = link_to t('.all_news'), news_index_path
+
 .news
   - @news.each do |n|
     %a.news-item{ href: news_path(n) }
@@ -18,7 +24,6 @@
         = truncate_sanitize_rem_br n.body, 350
 
 %hr
-
 
 %h2.tape-caption.long-caption Партнеры
 = render 'layouts/web/shared/partners', partners: partners

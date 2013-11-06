@@ -272,6 +272,7 @@ ru:
     welcome:
       index:
         news: Главные новости
+        all_news: Все новости
         all_event: Все события
         base_name: Ульяновский областной Дворец творчества детей и молодёжи
         me_open: " - Мы открыты для открытий!"
@@ -319,6 +320,7 @@ ru:
           title: Партнеры
         sidebar:
           week_event: Событие недели
+          all_events: *all_events
           ask_question: Задать вопрос
           new_request: Записать ребенка
   breadcrumbs:

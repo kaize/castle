@@ -37,11 +37,21 @@
     @include clearfix
 
   .nav
+    width: 100%
+    box-sizing: border-box
+    overflow: hidden
+
     li
+      margin-left: 15px
       a
         color: #fff
         font-weight: bold
         text-shadow: 1px 1px 2px #ab3900
+
+    &.l_nav
+      padding-left: 30px
+
+
 
 .navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus
   position: relative

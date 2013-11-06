@@ -1,9 +1,13 @@
-%h3= t('.news')
-- @news.each do |n|
-  .well
-    %a{ href: news_path(n) }
-      %h4= n.title
-    - if n.published_at?
-      .help-block= l n.published_at, format: :short
-    != truncate_sanitize_rem_br n.body, 250
-= paginate @news
+%h1= t('.news')
+.news
+  - @news.each do |n|
+    %a.news-item{ href: news_path(n) }
+      .news-item-pic
+        = image_tag n.photos.first.asset.url if n.photos.any?
+      .news-item-descr
+        %h3= n.title
+        - if n.published_at?
+          .news-item-date= l n.published_at, format: :short
+        = truncate_sanitize_rem_br n.body, 350
+
+  = paginate @news

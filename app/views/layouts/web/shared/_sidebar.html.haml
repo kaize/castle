@@ -5,11 +5,14 @@
     %a{ href: "#"}
       = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg")
       20 мая — новый памятный день в Ульяновске, День молодежной правовой Академии
+
+    .all_events
+      = link_to t('.all_events'), events_path
+
     .connector.left
     .connector.right
   .side-b.calendars
     #calendars
-  -#TODO: Сразу ссылку со стилем кнопки
   = link_to new_study_request_path, class: "action-btn red-btn" do
     = t('.new_request')
   %a.action-btn.brown-btn{ href: "#" }
@@ -22,3 +25,4 @@
       Небольшое рекламный текст о прекрасной школе вожатых, обязательно
       %a{ href: "#" } со ссылкой на подробное описание
       для заинтересовавшихся
+
