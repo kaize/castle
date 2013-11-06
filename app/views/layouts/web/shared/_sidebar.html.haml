@@ -2,9 +2,9 @@
   = render 'layouts/web/shared/search_form'
   %h3= t('.week_event')
   .side-b.week-event
-    %a{ href: "#"}
-      = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg")
-      20 мая — новый памятный день в Ульяновске, День молодежной правовой Академии
+    = link_to event_path(@main_event) do
+      = image_tag @main_event.image.url if @main_event.image?
+      = @main_event.name
     .connector.left
     .connector.right
   .side-b.calendars

@@ -6,6 +6,7 @@ class Web::ApplicationController < ApplicationController
 
   before_filter do
     title t('base_name')
+    @main_event = Event.main.first
   end
 
   private
