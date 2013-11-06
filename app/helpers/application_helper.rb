@@ -19,11 +19,11 @@ module ApplicationHelper
     return '' if text.blank?
     truncate( sanitize(text, :tags => []), :length => length ).gsub(/\r/, "").gsub(/\n/, "").gsub(/&[a-z]{0-5}\.\.\.$/, "...")
   end
-  
+
   def nav_categories
     Category.scoped
   end
-  
+
   def nav_category
     Category.first if Category.any?
   end
@@ -34,6 +34,10 @@ module ApplicationHelper
 
   def unions
     Union.all
+  end
+
+  def blocks
+    Block.published
   end
 
   def show_tree(arrange_hash, &block)
