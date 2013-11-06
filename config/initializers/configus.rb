@@ -8,6 +8,7 @@ Configus.build Rails.env do
 
     social_links do
       vk 'https://vk.com/club19709157'
+      tw '#'
     end
 
     limits do

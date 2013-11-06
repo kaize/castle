@@ -44,7 +44,7 @@
             - nav_categories.each do |c|
               = item :li, c, category_union_path(c, c.unions.first) if c.unions.any?
   .span4.social
-    %a.tw{href: "#"}
+    = link_to '', configus.social_links.tw, class: 'tw'
     = link_to '', configus.social_links.vk, class: 'vk'
 
 
