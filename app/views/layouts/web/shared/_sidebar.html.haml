@@ -2,9 +2,10 @@
   = render 'layouts/web/shared/search_form'
   %h3= t('.week_event')
   .side-b.week-event
-    = link_to event_path(@main_event) do
-      = image_tag @main_event.image.url if @main_event.image?
-      = @main_event.name
+    - if @main_event
+      = link_to event_path(@main_event) do
+        = image_tag @main_event.image.url if @main_event.image?
+        = @main_event.name
     .connector.left
     .connector.right
   .side-b.calendars
