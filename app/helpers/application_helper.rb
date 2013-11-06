@@ -24,6 +24,10 @@ module ApplicationHelper
     Category.scoped
   end
 
+  def main_event
+    Event.main.first
+  end
+
   def nav_category
     Category.first if Category.any?
   end
