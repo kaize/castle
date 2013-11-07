@@ -18,9 +18,10 @@
     - for week of @options.days
       %tr
         - for day of @options.days[week]
-          %td
-            - if @options.events[@options.days[week][day]]
+          - if @options.events[@options.days[week][day]]
+            %td.have_event
               %a{ href: Routes.events_path(date: "'#{@options.year}-#{@options.digit_month}-#{@options.days[week][day]}'")}
                 = @options.days[week][day]
-            - else
+          - else
+            %td
               = @options.days[week][day]

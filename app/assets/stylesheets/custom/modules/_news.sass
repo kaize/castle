@@ -1,32 +1,44 @@
-.news
-  .news-item
-    @include clearfix
-    display: block
-    margin: 0 0 20px
+.news-item
+  @include clearfix
+  display: block
+  margin: 0 0 20px
 
-    .news-item-pic
-      float: left
-      background-color: rgba(255,255,255, .2)
-      border: 1px solid #f6f1ec
+.news-item-descr
+  width: 420px
+  margin: 0 40px 0 0
+  color: #553f2f
+  font-size: 12px
+  line-height: 150%
+  float: left
 
-      img
-        width: 198px
-        border: 1px solid #fff
-        margin: 8px
+  h3
+    color: #553f2f
+    font-size: 14px
+    font-weight: bold
 
-    .news-item-descr
-      width: 420px
-      margin: 0 40px 0 20px
-      color: #553f2f
-      font-size: 12px
-      line-height: 150%
-      float: left
+  .news-item-date
+    color: #e4720c
+    margin: 0 0 7px
 
-      h3
-        color: #553f2f
-        font-size: 14px
-        font-weight: bold
+.news-item-pic
+  float: left
+  background-color: rgba(255,255,255, .2)
+  border: 1px solid #f6f1ec
+  margin: 0 20px 0 0
 
-      .news-item-date
-        color: #e4720c
-        margin: 0 0 7px
+  img
+    width: 198px
+    border: 1px solid #fff
+    margin: 8px
+
+.all_news_link
+  text-align: right
+  text-transform: lowercase
+  margin: 40px 0 0
+
+  a
+    color: #e4720c
+    text-decoration: underline
+
+    &:hover
+      text-decoration: none

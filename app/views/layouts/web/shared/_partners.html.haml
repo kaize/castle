@@ -1,36 +1,5 @@
-.partners#partners-row
-  .partner-item
-    %a.partner-item-logo{ href: "#" }
-      = image_tag("tmp/logos/itm.png")
-
-  .partner-item
-    %a.partner-item-logo{ href: "#" }
-      = image_tag("tmp/logos/interra.png")
-
-  .partner-item
-    %a.partner-item-logo{ href: "#" }
-      = image_tag("tmp/logos/kaizen.png")
-
-  .partner-item
-    %a.partner-item-logo{ href: "#" }
-      = image_tag("tmp/logos/mst.png")
-
-  .partner-item
-    %a.partner-item-logo{ href: "#" }
-      = image_tag("tmp/logos/interra.png")
-
-  .partner-item
-    %a.partner-item-logo{ href: "#" }
-      = image_tag("tmp/logos/kaizen.png")
-
-  .partner-item
-    %a.partner-item-logo{ href: "#" }
-      = image_tag("tmp/logos/mst.png")
-
--# if partners.any?
-  %hr
-  %h3= t '.title'
-  .row.partners
+- if partners.any?
+  .partners#partners-row
     - partners.each do |partner|
-      .partner.span2
-        = link_to image_tag(partner.image), partner.url
+      .partner-item
+        = link_to image_tag(partner.image), partner.url, class: "partner-item-logo"

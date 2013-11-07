@@ -15,20 +15,25 @@
 
 .navbar
   .navbar-content
-    %ul.nav
-      = item :li, t('.schedules'), category_path(nav_category)
-      = item :li, t('.instructors'), instructors_path
-      - nav_menu_items_arrange.each_pair do |menu_item, children|
-        - if children.any?
-          %li.dropdown
-            %a.dropdown-toggle{ data: {toggle: 'dropdown'}, href: '#' }
-              = menu_item.title
-              %b.caret
-            %ul.dropdown-menu
-              - children.each_key do |sub_item|
-                = item :li, sub_item.title, page_path(sub_item.pages.asc_by_order_at.first)
-        -else
-          = item :li, menu_item.title, page_path(menu_item.pages.asc_by_order_at.first)
+    .row
+      .span5
+        %ul.nav.l_nav
+          = item :li, t('.schedules'), category_path(nav_category)
+          = item :li, t('.instructors'), instructors_path
+      .span2
+      .span4
+        %ul.nav.r_nav
+          - nav_menu_items_arrange.each_pair do |menu_item, children|
+            - if children.any?
+              %li.dropdown
+                %a.dropdown-toggle{ data: {toggle: 'dropdown'}, href: '#' }
+                  = menu_item.title
+                  %b.caret
+                %ul.dropdown-menu
+                  - children.each_key do |sub_item|
+                    = item :li, sub_item.title, page_path(sub_item.pages.asc_by_order_at.first)
+            -else
+              = item :li, menu_item.title, page_path(menu_item.pages.asc_by_order_at.first)
 
   = link_to "", root_path, :class => "logo"
 
@@ -46,39 +51,4 @@
   .span4.social
     %a.tw{href: "#"}
     %a.vk{href: "#"}
-
-
-
--# .navbar
-  .navbar-c
-    .container
-      %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.brand(href=root_path)= t("logo_title")
-      .container.nav-collapse
-        %ul.nav
-          %li.dropdown
-            %a.dropdown-toggle{ :"data-toggle" => "dropdown", :href => "#" }
-              = t('.categories')
-              %b.caret
-            %ul.dropdown-menu
-              - nav_categories.each do |c|
-                = item :li, c, category_union_path(c, c.unions.first) if c.unions.any?
-
-          = item :li, t('.schedules'), category_path(nav_category)
-          = item :li, t('.instructors'), instructors_path
-          - nav_menu_items_arrange.each_pair do |menu_item, children|
-            - if children.any?
-              %li.dropdown
-                %a.dropdown-toggle{ data: {toggle: 'dropdown'}, href: '#' }
-                  = menu_item.title
-                  %b.caret
-                %ul.dropdown-menu
-                  - children.each_key do |sub_item|
-                    = item :li, sub_item.title, page_path(sub_item.pages.asc_by_order_at.first)
-            -else
-              = item :li, menu_item.title, page_path(menu_item.pages.asc_by_order_at.first)
-
 
