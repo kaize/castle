@@ -5,6 +5,7 @@ module EventRepository
 
   included do
     multisearchable against: [:name, :content]
+    scope :main, -> { where(main: true) }
   end
 end
 
