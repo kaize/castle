@@ -25,3 +25,6 @@
       %a{ href: "#" } со ссылкой на подробное описание
       для заинтересовавшихся
 
+  .social
+    - blocks.each do |block|
+      = block.body.html_safe

@@ -1,6 +1,4 @@
 class Block < ActiveRecord::Base
-  include BlockRepository
-
   attr_accessible :body, :on_main, :order_at, :state_event, :title
 
   validates :title, presence: true
@@ -18,4 +16,6 @@ class Block < ActiveRecord::Base
       transition all => :hidden
     end
   end
+
+  include BlockRepository
 end

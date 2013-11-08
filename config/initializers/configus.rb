@@ -6,6 +6,11 @@ Configus.build Rails.env do
       instructors 24
     end
 
+    social_links do
+      vk 'https://vk.com/club19709157'
+      tw '#'
+    end
+
     limits do
       news 3
     end
