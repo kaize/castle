@@ -40,6 +40,10 @@ module ApplicationHelper
     Union.all
   end
 
+  def blocks
+    Block.published
+  end
+
   def show_tree(arrange_hash, &block)
     return if arrange_hash.empty?
     content_tag "ul type='none'" do

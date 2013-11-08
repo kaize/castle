@@ -15,13 +15,13 @@
 
 .navbar
   .navbar-content
-    .row
+    .row-fluid
       .span5
         %ul.nav.l_nav
           = item :li, t('.schedules'), category_path(nav_category)
           = item :li, t('.instructors'), instructors_path
       .span2
-      .span4
+      .span5
         %ul.nav.r_nav
           - nav_menu_items_arrange.each_pair do |menu_item, children|
             - if children.any?
@@ -49,6 +49,6 @@
             - nav_categories.each do |c|
               = item :li, c, category_union_path(c, c.unions.first) if c.unions.any?
   .span4.social
-    %a.tw{href: "#"}
-    %a.vk{href: "#"}
+    = link_to '', configus.social_links.tw, class: 'tw'
+    = link_to '', configus.social_links.vk, class: 'vk'
 

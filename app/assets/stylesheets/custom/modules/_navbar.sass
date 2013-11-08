@@ -32,23 +32,33 @@
     height: 168px
     margin: 0 0 0 -84px
     background: url('/assets/sprite.png')  0 -281px no-repeat
+    z-index: 20
 
   .navbar-content
     @include clearfix
+
+    .row-fluid
+      position: relative
+      z-index: 10
 
   .nav
     width: 100%
     box-sizing: border-box
 
     li
-      margin-left: 15px
+      margin-left: 10px
+
       a
         color: #fff
         font-weight: bold
         text-shadow: 1px 1px 2px #ab3900
+        white-space: normal
 
     &.l_nav
-      padding-left: 30px
+      padding-left: 75px
+
+    &.r_nav
+      padding-left: 5px
 
 
 
