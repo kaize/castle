@@ -3,17 +3,13 @@
     = f.select :union_id, grouped_options_for_select(unions_divided_by_categories)
   .row
     .span4
-      = f.input :children_first_name
-      = f.input :children_last_name
-      = f.input :children_middle_name
-      = f.input :birth_date, :as => :string
+      = f.input :children_full_name
+      = f.input :birth_date, as: :string
       = f.input :school
       = f.input :address
       = f.input :phone
     .span8
-      = f.input :parent_first_name
-      = f.input :parent_last_name
-      = f.input :parent_middle_name
+      = f.input :parent_full_name
       = f.input :email
 
     .span9

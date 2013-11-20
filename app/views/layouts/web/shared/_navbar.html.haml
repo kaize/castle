@@ -18,7 +18,8 @@
     .row-fluid
       .span5
         %ul.nav.l_nav
-          = item :li, t('.schedules'), category_path(nav_category)
+          - if category = nav_category
+            = item :li, t('.schedules'), category_path(category)
           = item :li, t('.instructors'), instructors_path
       .span2
       .span5
