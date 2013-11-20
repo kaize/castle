@@ -17,14 +17,6 @@
   %a.action-btn.brown-btn{ href: "#" }
     = t('.ask_question')
 
-  .announcement
-    %h5 Анонс школы вожатых
-    %hr
-    .descr
-      Небольшое рекламный текст о прекрасной школе вожатых, обязательно
-      %a{ href: "#" } со ссылкой на подробное описание
-      для заинтересовавшихся
-
   .social
     - blocks.each do |block|
       = block.body.html_safe
