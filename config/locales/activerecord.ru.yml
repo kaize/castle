@@ -95,7 +95,7 @@ ru:
         phone: Контактный телефон
         school: Школа
         created_at: Дата подачи
-        union_id: Объединение
+        union: Объединение
       partner:
         name: Название
         image: Фото
