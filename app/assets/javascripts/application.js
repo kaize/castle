@@ -33,3 +33,5 @@
 //= require web/custom
 //= require disqus
 //= #require select2
+//= require web/user_echo
+//= require web/ask_button
