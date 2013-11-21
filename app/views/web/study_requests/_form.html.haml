@@ -1,5 +1,5 @@
 = simple_form_for @study_request, :url => url, :html => {:class => "form-horizontal"} do |f|
-  = f.input :union_id, as: :grouped_select, collection: unions_divided_by_categories, group_method: :last
+  = f.association :union, as: :grouped_select, collection: unions_divided_by_categories, group_method: :last
   .row
     .span4
       = f.input :children_full_name
