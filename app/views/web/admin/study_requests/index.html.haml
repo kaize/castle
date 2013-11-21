@@ -12,7 +12,7 @@
   %thead
     %tr
       %th= sort_link @q, :id
-      %th= sort_link @q, :parent_last_name
+      %th= sort_link @q, :parent_full_name
       %th= sort_link @q, :birth_date
       %th= sort_link @q, :phone
       %th= sort_link @q, :email
@@ -23,7 +23,7 @@
     - @study_requests_by_page.each do |item|
       %tr
         %td= item.id
-        %td= item.parent_last_name
+        %td= item.parent_full_name
         %td= item.birth_date
         %td= item.phone
         %td= item.email

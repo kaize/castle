@@ -3,8 +3,6 @@ require 'test_helper'
 class Web::StudyRequestsControllerTest < ActionController::TestCase
   setup do
     @study_request = create :study_request
-    @params = {}
-    @params[:study_request] = {address: @study_request.address, birth_date: @study_request.birth_date, children_first_name: @study_request.children_first_name, children_last_name: @study_request.children_last_name, children_middle_name: @study_request.children_middle_name, note: @study_request.note, parent_first_name: @study_request.parent_first_name, parent_last_name: @study_request.parent_last_name, parent_middle_name: @study_request.parent_middle_name, phone: @study_request.phone, school: @study_request.school, union_id: @study_request.union_id}
   end
 
   test "should get new" do
@@ -13,8 +11,12 @@ class Web::StudyRequestsControllerTest < ActionController::TestCase
   end
 
   test "should create study_request" do
-    post :create, @params
-
+    union = @study_request.union
+    params = attributes_for(:study_request).merge(union_id: union.id)
+    post :create, study_request: params
     assert_response :redirect
+
+    study_request = StudyRequest.last
+    assert { params[:email].eql? study_request.email }
   end
 end

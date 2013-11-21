@@ -2,7 +2,7 @@ class Web::StudyRequestsController < Web::ApplicationController
 
   add_breadcrumb :home, :root_path
   add_breadcrumb :study_request, :new_study_request_path
-  
+
   def new
     title t (:study_request)
     @study_request = StudyRequest.new

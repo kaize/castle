@@ -1,9 +1,9 @@
 module StudyRequestHelper
 
   def unions_divided_by_categories
-    options = []
+    options = {}
     Category.scoped.includes(:unions).each do |category|
-      options << [category.name, category.unions.map {|u| [u, u.id]}]
+      options[category.name] = category.unions
     end
 
     options

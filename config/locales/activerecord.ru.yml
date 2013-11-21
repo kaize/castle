@@ -89,17 +89,13 @@ ru:
       study_request:
         address: Адрес проживания
         birth_date: Дата рождения ребенка
-        children_first_name: Имя ребенка
-        children_last_name: Фамилия ребенка
-        children_middle_name: Отчество ребенка
+        children_full_name: ФИО ребенка
         note: Примечание
-        parent_first_name: Имя родителя
-        parent_last_name: Фамилия родителя
-        parent_middle_name: Отчество родителя
+        parent_full_name: ФИО родителя
         phone: Контактный телефон
         school: Школа
         created_at: Дата подачи
-        union_id: Объединение
+        union: Объединение
       partner:
         name: Название
         image: Фото
