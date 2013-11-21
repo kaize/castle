@@ -17,6 +17,6 @@ class Web::StudyRequestsControllerTest < ActionController::TestCase
     assert_response :redirect
 
     study_request = StudyRequest.last
-    assert_equal params[:email], study_request.email
+    assert { params[:email].eql? study_request.email }
   end
 end
