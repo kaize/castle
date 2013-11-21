@@ -3,5 +3,5 @@
     %i.icon-trash
   = f.input :week, collection: t("date.standalone_day_names")
   = f.association :classroom, collection: Group::Schedule::Classroom.asc_by_name
-  = f.input :start_at
-  = f.input :finish_at
+  = f.input :start_at, as: :time_picker
+  = f.input :finish_at, as: :time_picker
