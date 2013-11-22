@@ -1,8 +1,21 @@
 .gallery
 
-  .fotorama{ data: {nav: "thumbs", width: "100%", ratio: "500/300"} }
-    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1200/carousel_Akademiya_may2013_600x400_11.jpg", data: {caption: "Сергей Морозов"})
-    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg", data: {caption: "Дети в восторге"})
+  .fotorama{ data: {nav: "thumbs", width: "100%", width: "698px"} }
+    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1200/carousel_Akademiya_may2013_600x400_11.jpg", data: {caption: "<h6>Сергей Морозов</h6><p>Test</p>"})
+
+    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg", data: {caption: "<h6>Летнее научное шоу «Академия чудес»</h6><p>С 1 июня 2013 года начинает свою работу передвижная лаборатория — летнее научное шоу «Академия чудес». Проект реализуется областным Дворцом творчества детей и молодёжи. </p>"})
+
+    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1200/carousel_Akademiya_may2013_600x400_11.jpg", data: {caption: "<h6>Сергей Морозов</h6><p>Test</p>"})
+
+    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg", data: {caption: "<h6>Летнее научное шоу «Академия чудес»</h6><p>С 1 июня 2013 года начинает свою работу передвижная лаборатория — летнее научное шоу «Академия чудес». Проект реализуется областным Дворцом творчества детей и молодёжи. </p>"})
+
+    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1200/carousel_Akademiya_may2013_600x400_11.jpg", data: {caption: "<h6>Сергей Морозов</h6><p>Test</p>"})
+
+    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg", data: {caption: "<h6>Летнее научное шоу «Академия чудес»</h6><p>С 1 июня 2013 года начинает свою работу передвижная лаборатория — летнее научное шоу «Академия чудес». Проект реализуется областным Дворцом творчества детей и молодёжи. </p>"})
+
+    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1200/carousel_Akademiya_may2013_600x400_11.jpg", data: {caption: "<h6>Сергей Морозов</h6><p>Test</p>"})
+
+    = image_tag("http://dvorec73.ru/system/uploads/photo_album/photo/image/1199/carousel_prazdnik-prazdnik.jpg", data: {caption: "<h6>Летнее научное шоу «Академия чудес»</h6><p>С 1 июня 2013 года начинает свою работу передвижная лаборатория — летнее научное шоу «Академия чудес». Проект реализуется областным Дворцом творчества детей и молодёжи. </p>"})
 
 .row
   .span6
@@ -53,6 +66,7 @@
     = render partial: 'web/shared/block', collection: @blocks
 
 :javascript
+  var galleries = $('.ad-gallery').adGallery();
   $(function() {
     window.router = new Castle.Routers.CalendarsRouter();
     Backbone.history.start();
