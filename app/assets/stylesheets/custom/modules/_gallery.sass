@@ -16,6 +16,13 @@
   height: 23px
   background-image: url('/assets/sprite.png')
 
+.fotorama__wrap--no-controls .fotorama__arr, .fotorama__wrap--no-controls .fotorama__fullscreen-icon, .fotorama__wrap--video .fotorama__arr, .fotorama__wrap--video .fotorama__fullscreen-icon
+  transform: none !important
+  opacity: 1
+
+.fotorama__arr--disabled
+  display: none !important
+
 .fotorama__arr--prev
   background-position: -116px -808px
   left: 20px
@@ -30,5 +37,32 @@
   &:hover
     background-position: -147px -845px
 
+.fotorama__caption
+  background-color: rgba(0,0,0, .2)
+
+  .fotorama__caption__wrap
+    background: none
+
+    h6
+      font-size: 18px
+      color: #fff
+
+    p
+      font-size: 12px
+      margin: 0 0 5px
+      color: #fff
+
 .fotorama__thumb-border
   border-color: #d4867e
+
+.fotorama__stage
+  //overflow: visible
+
+.fotorama__stage__shaft
+  //overflow: hidden
+
+  .fotorama__stage__frame
+    opacity: 1
+    //transform: none !important
+
+

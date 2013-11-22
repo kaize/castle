@@ -45,10 +45,11 @@
         %a.dropdown-toggle{ :"data-toggle" => "dropdown", :href => "#" }
           = t('.categories')
           %b.caret
-        .dropdown-menu
-          %ul
-            - nav_categories.each do |c|
-              = item :li, c, category_union_path(c, c.unions.first) if c.unions.any?
+
+        %ul.dropdown-menu
+          - nav_categories.each do |c|
+            = item :li, c, category_union_path(c, c.unions.first) if c.unions.any?
+
   .span4.social
     = link_to '', configus.social_links.tw, class: 'tw'
     = link_to '', configus.social_links.vk, class: 'vk'

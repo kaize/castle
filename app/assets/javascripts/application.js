@@ -11,8 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require vk-open-api.js
-//= require jquery
-//= require colorbox-rails
+//= #require jquery
+//= #require colorbox-rails
 //= require jquery_ujs
 //= #require jquery.ui.datepicker
 //= #require jquery.ui.datepicker-ru
