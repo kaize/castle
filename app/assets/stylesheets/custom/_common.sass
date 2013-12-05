@@ -127,10 +127,6 @@ h2.tape-caption
   .caret
     display: none
 
-.dropdown-toggle:hover
-  background: none
-  color: #fff
-
 
 ul.dropdown-menu
   padding: 10px
@@ -142,9 +138,6 @@ ul.dropdown-menu
   border: 1px solid rgba(255,204,150, .15)
   box-shadow: 0 3px 5px rgba(0,0,0, .18)
   border-radius: 3px
-
-  &:before, &:after
-    display: none
 
   li
     background-color: rgba(255,112,12, .8)
@@ -180,5 +173,12 @@ ul.dropdown-menu
     left: 20px
 
 
+// bootstrap overrides
+.nav>li>a:hover, .nav>li>a:focus
+  background: none
+  outline: none
+
+.navbar .nav>li>.dropdown-menu:before, .navbar .nav>li>.dropdown-menu:after
+  display: none
 
 
