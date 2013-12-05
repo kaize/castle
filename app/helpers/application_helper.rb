@@ -33,7 +33,7 @@ module ApplicationHelper
   end
 
   def partners
-    Partner.asc_by_order_at
+    Partner.asc_by_order_at.decorate
   end
 
   def unions
