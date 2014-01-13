@@ -19,7 +19,7 @@
 
 .row
   .span6
-    %h2.tape-caption Лента новостей
+    %h2.tape-caption= t('.news_list')
 
   .span3
     .all_news_link
@@ -38,7 +38,7 @@
 
 %hr
 
-%h2.tape-caption.long-caption Партнеры
+%h2.tape-caption.long-caption= t('.partners')
 = render 'layouts/web/shared/partners', partners: partners
 
 -# %h3= t('.news')

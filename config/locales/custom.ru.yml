@@ -279,6 +279,8 @@ ru:
         do_you_want: Хотите записать своего ребенка?
         study_request: Оставить заявку
         main_event: Главное событие
+        partners: Партнеры
+        news_list: Лента новостей
     news:
       index:
         news: *news
