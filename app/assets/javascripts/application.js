@@ -35,3 +35,8 @@
 //= #require select2
 //= require web/user_echo
 //= require web/ask_button
+
+$(function() {
+  window.router = new Castle.Routers.CalendarsRouter();
+  Backbone.history.start();
+});
