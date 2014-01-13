@@ -36,8 +36,12 @@ module ApplicationHelper
     Partner.asc_by_order_at.decorate
   end
 
+  def photos
+    PhotoAlbum.master.map { |photo_album| photo_album.photos.master }.flatten
+  end
+
   def unions
-    Union.all
+    Union.scoped
   end
 
   def blocks

@@ -1,5 +1,7 @@
 .gallery
   .fotorama{ data: {nav: "thumbs", width: "100%", width: "698px"} }
+    - photos.each do |photo|
+      = image_tag photo.image.url, data: {caption: photo.description}
 
 .row
   .span6
