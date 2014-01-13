@@ -26,9 +26,3 @@
 
 %h2.tape-caption.long-caption= t('.partners')
 = render 'layouts/web/shared/partners', partners: partners
-
-:javascript
-  $(function() {
-    window.router = new Castle.Routers.CalendarsRouter();
-    Backbone.history.start();
-  });

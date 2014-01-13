@@ -15,9 +15,3 @@
     = render 'web/shared/pluso'
     %hr
     %div{:id => "disqus_thread"}
-
-:javascript
-  $(function() {
-    window.router = new Castle.Routers.CalendarsRouter();
-    Backbone.history.start();
-  });
