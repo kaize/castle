@@ -1,6 +1,5 @@
 .row
   .span3
-    #calendars
     = link_to t('.all_events'), events_path
   .span8
     - @events.each do |event|
@@ -13,9 +12,3 @@
         .media-body
           != truncate_sanitize_rem_br event.content, 250
       %hr
-  
-:javascript
-  $(function() {
-    window.router = new Castle.Routers.CalendarsRouter();
-    Backbone.history.start();
-  });

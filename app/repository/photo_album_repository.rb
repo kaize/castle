@@ -10,5 +10,7 @@ module PhotoAlbumRepository
     def sorted_photos
       photos.by_main
     end
+
+    scope :master, -> { where(main: true) }
   end
 end
