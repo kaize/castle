@@ -1,10 +1,10 @@
 set :rails_env, :production
 set :branch, :master
-set :user, 'dvorec'
+set :user, 'wwwuser'
 set :keep_releases, 5
 
-role :web, '91.201.202.172'
-role :app, '91.201.202.172'
-role :db,  '91.201.202.172', primary: true
+role :web, '95.104.194.54'
+role :app, '95.104.194.54'
+role :db,  '95.104.194.54', primary: true
 
-set :deploy_to, "/u/apps/castle"
+set :deploy_to, "/rest/u/apps/castle"
