@@ -25,7 +25,10 @@ gem 'state_machine'
 gem 'usefull_scopes', git: 'https://github.com/kaize/usefull_scopes.git'
 gem 'validates'
 #gem 'client_side_validations'
+gem 'sass-rails',   '~> 3.2.3'
+gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'jquery-ui-rails'
 gem "autoprefixer-rails"
 gem 'ckeditor'
 gem 'colorbox-rails'
@@ -41,12 +44,9 @@ gem 'whenever', :require => false
 gem 'virtus'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'less-rails'
   gem 'execjs'
   gem 'jquery-rails'
-  gem 'jquery-ui-rails'
   gem 'turbo-sprockets-rails3'
   gem 'momentjs-rails'
 
