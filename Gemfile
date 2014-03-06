@@ -14,7 +14,6 @@ gem 'carrierwave'
 gem 'configus'
 
 gem 'draper'
-gem "carrierwave"
 gem 'haml-rails'
 gem 'kaminari'
 gem 'cocoon'
@@ -29,15 +28,18 @@ gem 'sass-rails',   '~> 3.2.3'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-ui-rails'
+gem 'jquery-rails'
+gem 'underscore-string-rails'
+gem 'haml_coffee_assets'
+gem 'momentjs-rails'
+gem "js-routes"
 gem "autoprefixer-rails"
 gem 'ckeditor'
 gem 'colorbox-rails'
-
 gem 'airbrake'
 gem 'rails-backbone'
 gem 'pg_search'
 gem 'ancestry'
-
 gem 'nokogiri-happymapper', :require => 'happymapper'
 gem 'backup'
 gem 'whenever', :require => false
@@ -46,21 +48,10 @@ gem 'virtus'
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'execjs'
-  gem 'jquery-rails'
   gem 'turbo-sprockets-rails3'
-  gem 'momentjs-rails'
-
-  gem 'underscore-string-rails'
-
-  gem "js-routes"
-
   gem 'therubyracer'
-
   gem 'uglifier', '>= 1.0.3'
-
-  gem 'haml_coffee_assets'
   gem 'execjs'
-
 end
 
 group :development do
