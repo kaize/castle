@@ -6,9 +6,9 @@
         %td= item.title
         %td
           .btn-group.pull-right
-            = link_to admin_menu_item_pages_url(item), title: t('.pages'), class: 'btn btn-mini' do
+            = link_to admin_menu_item_pages_path(item), title: t('.pages'), class: 'btn btn-mini' do
               %i.icon-list
-            = link_to new_admin_menu_item_page_url(item), title: t('.new_page'), class: 'btn btn-mini' do
+            = link_to new_admin_menu_item_page_path(item), title: t('.new_page'), class: 'btn btn-mini' do
               %i.icon-plus
             = link_to edit_admin_menu_item_path(item), class: 'btn btn-mini' do
               %i.icon-pencil
